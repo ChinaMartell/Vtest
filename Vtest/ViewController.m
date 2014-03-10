@@ -18,12 +18,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self testCategory];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+#pragma test
+-(void)testCategory{
+    NSMutableArrayBase *mArray=[[NSMutableArrayBase alloc] init];
+    [mArray addObject:nil];
 }
 
 @end

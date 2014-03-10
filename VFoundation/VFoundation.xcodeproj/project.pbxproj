@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43667A9A18CDF0BB0002B08E /* VFoundationDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 43667A9918CDF0BB0002B08E /* VFoundationDefine.m */; };
+		43972E2718CD7E9400F1CC3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43972E2618CD7E9400F1CC3E /* Foundation.framework */; };
+		43972E2C18CD7E9400F1CC3E /* VFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43972E2B18CD7E9400F1CC3E /* VFoundation.h */; };
+		43972E2E18CD7E9400F1CC3E /* VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E2D18CD7E9400F1CC3E /* VFoundation.m */; };
+		43972E3518CD7E9400F1CC3E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43972E3418CD7E9400F1CC3E /* XCTest.framework */; };
+		43972E3618CD7E9400F1CC3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43972E2618CD7E9400F1CC3E /* Foundation.framework */; };
+		43972E3818CD7E9400F1CC3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43972E3718CD7E9400F1CC3E /* UIKit.framework */; };
+		43972E3B18CD7E9400F1CC3E /* libVFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43972E2318CD7E9400F1CC3E /* libVFoundation.a */; };
+		43972E4118CD7E9400F1CC3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43972E3F18CD7E9400F1CC3E /* InfoPlist.strings */; };
+		43972E4318CD7E9400F1CC3E /* VFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E4218CD7E9400F1CC3E /* VFoundationTests.m */; };
+		43972E5118CD7EFC00F1CC3E /* NSString+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E5018CD7EFC00F1CC3E /* NSString+VFoundation.m */; };
+		43972E5418CD7F4500F1CC3E /* NSMutableString+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E5318CD7F4500F1CC3E /* NSMutableString+VFoundation.m */; };
+		43972E5C18CD832200F1CC3E /* NSArray+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E5B18CD832200F1CC3E /* NSArray+VFoundation.m */; };
+		43972E5F18CD833400F1CC3E /* NSMutableArray+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E5E18CD833400F1CC3E /* NSMutableArray+VFoundation.m */; };
+		43972E6218CD834400F1CC3E /* NSDictionary+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E6118CD834400F1CC3E /* NSDictionary+VFoundation.m */; };
+		43972E6518CD835400F1CC3E /* NSMutableDictionary+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E6418CD835400F1CC3E /* NSMutableDictionary+VFoundation.m */; };
+		43972E6818CD836300F1CC3E /* NSSet+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E6718CD836300F1CC3E /* NSSet+VFoundation.m */; };
+		43972E6B18CD837200F1CC3E /* NSMutableSet+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E6A18CD837200F1CC3E /* NSMutableSet+VFoundation.m */; };
+		43972E6E18CD83A000F1CC3E /* NSNumber+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E6D18CD83A000F1CC3E /* NSNumber+VFoundation.m */; };
+		43972E7118CD83BD00F1CC3E /* NSData+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E7018CD83BD00F1CC3E /* NSData+VFoundation.m */; };
+		43972E7418CD83CD00F1CC3E /* NSMutableData+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E7318CD83CD00F1CC3E /* NSMutableData+VFoundation.m */; };
+		43972E7718CD83DD00F1CC3E /* NSDate+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E7618CD83DD00F1CC3E /* NSDate+VFoundation.m */; };
+		43972E7A18CD840600F1CC3E /* NSURL+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E7918CD840600F1CC3E /* NSURL+VFoundation.m */; };
+		43972E7D18CD841800F1CC3E /* NSMutableURLRequest+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E7C18CD841800F1CC3E /* NSMutableURLRequest+VFoundation.m */; };
+		43972E8018CD843800F1CC3E /* NSURLRequest+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E7F18CD843800F1CC3E /* NSURLRequest+VFoundation.m */; };
+		43972E8318CD844800F1CC3E /* NSValue+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E8218CD844800F1CC3E /* NSValue+VFoundation.m */; };
+		43972E8618CD849600F1CC3E /* NSCache+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E8518CD849600F1CC3E /* NSCache+VFoundation.m */; };
+		43972E8918CD84AD00F1CC3E /* NSBundle+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E8818CD84AD00F1CC3E /* NSBundle+VFoundation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43972E3918CD7E9400F1CC3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43972E1B18CD7E9400F1CC3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43972E2218CD7E9400F1CC3E;
+			remoteInfo = VFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43972E2118CD7E9400F1CC3E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				43972E2C18CD7E9400F1CC3E /* VFoundation.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		43667A9818CDF0BB0002B08E /* VFoundationDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFoundationDefine.h; sourceTree = "<group>"; };
+		43667A9918CDF0BB0002B08E /* VFoundationDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFoundationDefine.m; sourceTree = "<group>"; };
+		43972E2318CD7E9400F1CC3E /* libVFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		43972E2618CD7E9400F1CC3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		43972E2A18CD7E9400F1CC3E /* VFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VFoundation-Prefix.pch"; sourceTree = "<group>"; };
+		43972E2B18CD7E9400F1CC3E /* VFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFoundation.h; sourceTree = "<group>"; };
+		43972E2D18CD7E9400F1CC3E /* VFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFoundation.m; sourceTree = "<group>"; };
+		43972E3318CD7E9400F1CC3E /* VFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43972E3418CD7E9400F1CC3E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		43972E3718CD7E9400F1CC3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		43972E3E18CD7E9400F1CC3E /* VFoundationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VFoundationTests-Info.plist"; sourceTree = "<group>"; };
+		43972E4018CD7E9400F1CC3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43972E4218CD7E9400F1CC3E /* VFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFoundationTests.m; sourceTree = "<group>"; };
+		43972E4F18CD7EFC00F1CC3E /* NSString+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+VFoundation.h"; sourceTree = "<group>"; };
+		43972E5018CD7EFC00F1CC3E /* NSString+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+VFoundation.m"; sourceTree = "<group>"; };
+		43972E5218CD7F4500F1CC3E /* NSMutableString+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+VFoundation.h"; sourceTree = "<group>"; };
+		43972E5318CD7F4500F1CC3E /* NSMutableString+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+VFoundation.m"; sourceTree = "<group>"; };
+		43972E5A18CD832200F1CC3E /* NSArray+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+VFoundation.h"; sourceTree = "<group>"; };
+		43972E5B18CD832200F1CC3E /* NSArray+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+VFoundation.m"; sourceTree = "<group>"; };
+		43972E5D18CD833400F1CC3E /* NSMutableArray+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+VFoundation.h"; sourceTree = "<group>"; };
+		43972E5E18CD833400F1CC3E /* NSMutableArray+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+VFoundation.m"; sourceTree = "<group>"; };
+		43972E6018CD834400F1CC3E /* NSDictionary+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+VFoundation.h"; sourceTree = "<group>"; };
+		43972E6118CD834400F1CC3E /* NSDictionary+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+VFoundation.m"; sourceTree = "<group>"; };
+		43972E6318CD835400F1CC3E /* NSMutableDictionary+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+VFoundation.h"; sourceTree = "<group>"; };
+		43972E6418CD835400F1CC3E /* NSMutableDictionary+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+VFoundation.m"; sourceTree = "<group>"; };
+		43972E6618CD836300F1CC3E /* NSSet+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+VFoundation.h"; sourceTree = "<group>"; };
+		43972E6718CD836300F1CC3E /* NSSet+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+VFoundation.m"; sourceTree = "<group>"; };
+		43972E6918CD837200F1CC3E /* NSMutableSet+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+VFoundation.h"; sourceTree = "<group>"; };
+		43972E6A18CD837200F1CC3E /* NSMutableSet+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+VFoundation.m"; sourceTree = "<group>"; };
+		43972E6C18CD83A000F1CC3E /* NSNumber+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+VFoundation.h"; sourceTree = "<group>"; };
+		43972E6D18CD83A000F1CC3E /* NSNumber+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+VFoundation.m"; sourceTree = "<group>"; };
+		43972E6F18CD83BD00F1CC3E /* NSData+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+VFoundation.h"; sourceTree = "<group>"; };
+		43972E7018CD83BD00F1CC3E /* NSData+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+VFoundation.m"; sourceTree = "<group>"; };
+		43972E7218CD83CD00F1CC3E /* NSMutableData+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData+VFoundation.h"; sourceTree = "<group>"; };
+		43972E7318CD83CD00F1CC3E /* NSMutableData+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableData+VFoundation.m"; sourceTree = "<group>"; };
+		43972E7518CD83DD00F1CC3E /* NSDate+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+VFoundation.h"; sourceTree = "<group>"; };
+		43972E7618CD83DD00F1CC3E /* NSDate+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+VFoundation.m"; sourceTree = "<group>"; };
+		43972E7818CD840600F1CC3E /* NSURL+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+VFoundation.h"; sourceTree = "<group>"; };
+		43972E7918CD840600F1CC3E /* NSURL+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+VFoundation.m"; sourceTree = "<group>"; };
+		43972E7B18CD841800F1CC3E /* NSMutableURLRequest+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+VFoundation.h"; sourceTree = "<group>"; };
+		43972E7C18CD841800F1CC3E /* NSMutableURLRequest+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+VFoundation.m"; sourceTree = "<group>"; };
+		43972E7E18CD843800F1CC3E /* NSURLRequest+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+VFoundation.h"; sourceTree = "<group>"; };
+		43972E7F18CD843800F1CC3E /* NSURLRequest+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+VFoundation.m"; sourceTree = "<group>"; };
+		43972E8118CD844800F1CC3E /* NSValue+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+VFoundation.h"; sourceTree = "<group>"; };
+		43972E8218CD844800F1CC3E /* NSValue+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+VFoundation.m"; sourceTree = "<group>"; };
+		43972E8418CD849600F1CC3E /* NSCache+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCache+VFoundation.h"; sourceTree = "<group>"; };
+		43972E8518CD849600F1CC3E /* NSCache+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCache+VFoundation.m"; sourceTree = "<group>"; };
+		43972E8718CD84AD00F1CC3E /* NSBundle+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+VFoundation.h"; sourceTree = "<group>"; };
+		43972E8818CD84AD00F1CC3E /* NSBundle+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+VFoundation.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43972E2018CD7E9400F1CC3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43972E2718CD7E9400F1CC3E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43972E3018CD7E9400F1CC3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43972E3518CD7E9400F1CC3E /* XCTest.framework in Frameworks */,
+				43972E3818CD7E9400F1CC3E /* UIKit.framework in Frameworks */,
+				43972E3618CD7E9400F1CC3E /* Foundation.framework in Frameworks */,
+				43972E3B18CD7E9400F1CC3E /* libVFoundation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43667A9B18CDF0DC0002B08E /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				43667A9818CDF0BB0002B08E /* VFoundationDefine.h */,
+				43667A9918CDF0BB0002B08E /* VFoundationDefine.m */,
+			);
+			name = Define;
+			sourceTree = "<group>";
+		};
+		43972E1A18CD7E9400F1CC3E = {
+			isa = PBXGroup;
+			children = (
+				43972E2818CD7E9400F1CC3E /* VFoundation */,
+				43972E3C18CD7E9400F1CC3E /* VFoundationTests */,
+				43972E2518CD7E9400F1CC3E /* Frameworks */,
+				43972E2418CD7E9400F1CC3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43972E2418CD7E9400F1CC3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43972E2318CD7E9400F1CC3E /* libVFoundation.a */,
+				43972E3318CD7E9400F1CC3E /* VFoundationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43972E2518CD7E9400F1CC3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43972E2618CD7E9400F1CC3E /* Foundation.framework */,
+				43972E3418CD7E9400F1CC3E /* XCTest.framework */,
+				43972E3718CD7E9400F1CC3E /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43972E2818CD7E9400F1CC3E /* VFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				43667A9B18CDF0DC0002B08E /* Define */,
+				43972E4E18CD7EB100F1CC3E /* Category */,
+				43972E2B18CD7E9400F1CC3E /* VFoundation.h */,
+				43972E2D18CD7E9400F1CC3E /* VFoundation.m */,
+				43972E2918CD7E9400F1CC3E /* Supporting Files */,
+			);
+			path = VFoundation;
+			sourceTree = "<group>";
+		};
+		43972E2918CD7E9400F1CC3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43972E2A18CD7E9400F1CC3E /* VFoundation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43972E3C18CD7E9400F1CC3E /* VFoundationTests */ = {
+			isa = PBXGroup;
+			children = (
+				43972E4218CD7E9400F1CC3E /* VFoundationTests.m */,
+				43972E3D18CD7E9400F1CC3E /* Supporting Files */,
+			);
+			path = VFoundationTests;
+			sourceTree = "<group>";
+		};
+		43972E3D18CD7E9400F1CC3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43972E3E18CD7E9400F1CC3E /* VFoundationTests-Info.plist */,
+				43972E3F18CD7E9400F1CC3E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43972E4E18CD7EB100F1CC3E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				43972E4F18CD7EFC00F1CC3E /* NSString+VFoundation.h */,
+				43972E5018CD7EFC00F1CC3E /* NSString+VFoundation.m */,
+				43972E5218CD7F4500F1CC3E /* NSMutableString+VFoundation.h */,
+				43972E5318CD7F4500F1CC3E /* NSMutableString+VFoundation.m */,
+				43972E5A18CD832200F1CC3E /* NSArray+VFoundation.h */,
+				43972E5B18CD832200F1CC3E /* NSArray+VFoundation.m */,
+				43972E5D18CD833400F1CC3E /* NSMutableArray+VFoundation.h */,
+				43972E5E18CD833400F1CC3E /* NSMutableArray+VFoundation.m */,
+				43972E6018CD834400F1CC3E /* NSDictionary+VFoundation.h */,
+				43972E6118CD834400F1CC3E /* NSDictionary+VFoundation.m */,
+				43972E6318CD835400F1CC3E /* NSMutableDictionary+VFoundation.h */,
+				43972E6418CD835400F1CC3E /* NSMutableDictionary+VFoundation.m */,
+				43972E6618CD836300F1CC3E /* NSSet+VFoundation.h */,
+				43972E6718CD836300F1CC3E /* NSSet+VFoundation.m */,
+				43972E6918CD837200F1CC3E /* NSMutableSet+VFoundation.h */,
+				43972E6A18CD837200F1CC3E /* NSMutableSet+VFoundation.m */,
+				43972E6C18CD83A000F1CC3E /* NSNumber+VFoundation.h */,
+				43972E6D18CD83A000F1CC3E /* NSNumber+VFoundation.m */,
+				43972E6F18CD83BD00F1CC3E /* NSData+VFoundation.h */,
+				43972E7018CD83BD00F1CC3E /* NSData+VFoundation.m */,
+				43972E7218CD83CD00F1CC3E /* NSMutableData+VFoundation.h */,
+				43972E7318CD83CD00F1CC3E /* NSMutableData+VFoundation.m */,
+				43972E7518CD83DD00F1CC3E /* NSDate+VFoundation.h */,
+				43972E7618CD83DD00F1CC3E /* NSDate+VFoundation.m */,
+				43972E7818CD840600F1CC3E /* NSURL+VFoundation.h */,
+				43972E7918CD840600F1CC3E /* NSURL+VFoundation.m */,
+				43972E7B18CD841800F1CC3E /* NSMutableURLRequest+VFoundation.h */,
+				43972E7C18CD841800F1CC3E /* NSMutableURLRequest+VFoundation.m */,
+				43972E7E18CD843800F1CC3E /* NSURLRequest+VFoundation.h */,
+				43972E7F18CD843800F1CC3E /* NSURLRequest+VFoundation.m */,
+				43972E8118CD844800F1CC3E /* NSValue+VFoundation.h */,
+				43972E8218CD844800F1CC3E /* NSValue+VFoundation.m */,
+				43972E8418CD849600F1CC3E /* NSCache+VFoundation.h */,
+				43972E8518CD849600F1CC3E /* NSCache+VFoundation.m */,
+				43972E8718CD84AD00F1CC3E /* NSBundle+VFoundation.h */,
+				43972E8818CD84AD00F1CC3E /* NSBundle+VFoundation.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43972E2218CD7E9400F1CC3E /* VFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43972E4618CD7E9400F1CC3E /* Build configuration list for PBXNativeTarget "VFoundation" */;
+			buildPhases = (
+				43972E1F18CD7E9400F1CC3E /* Sources */,
+				43972E2018CD7E9400F1CC3E /* Frameworks */,
+				43972E2118CD7E9400F1CC3E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VFoundation;
+			productName = VFoundation;
+			productReference = 43972E2318CD7E9400F1CC3E /* libVFoundation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		43972E3218CD7E9400F1CC3E /* VFoundationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43972E4918CD7E9400F1CC3E /* Build configuration list for PBXNativeTarget "VFoundationTests" */;
+			buildPhases = (
+				43972E2F18CD7E9400F1CC3E /* Sources */,
+				43972E3018CD7E9400F1CC3E /* Frameworks */,
+				43972E3118CD7E9400F1CC3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43972E3A18CD7E9400F1CC3E /* PBXTargetDependency */,
+			);
+			name = VFoundationTests;
+			productName = VFoundationTests;
+			productReference = 43972E3318CD7E9400F1CC3E /* VFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43972E1B18CD7E9400F1CC3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = SJ;
+			};
+			buildConfigurationList = 43972E1E18CD7E9400F1CC3E /* Build configuration list for PBXProject "VFoundation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 43972E1A18CD7E9400F1CC3E;
+			productRefGroup = 43972E2418CD7E9400F1CC3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43972E2218CD7E9400F1CC3E /* VFoundation */,
+				43972E3218CD7E9400F1CC3E /* VFoundationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43972E3118CD7E9400F1CC3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43972E4118CD7E9400F1CC3E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43972E1F18CD7E9400F1CC3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43972E7718CD83DD00F1CC3E /* NSDate+VFoundation.m in Sources */,
+				43972E8918CD84AD00F1CC3E /* NSBundle+VFoundation.m in Sources */,
+				43667A9A18CDF0BB0002B08E /* VFoundationDefine.m in Sources */,
+				43972E6218CD834400F1CC3E /* NSDictionary+VFoundation.m in Sources */,
+				43972E6E18CD83A000F1CC3E /* NSNumber+VFoundation.m in Sources */,
+				43972E5C18CD832200F1CC3E /* NSArray+VFoundation.m in Sources */,
+				43972E2E18CD7E9400F1CC3E /* VFoundation.m in Sources */,
+				43972E6818CD836300F1CC3E /* NSSet+VFoundation.m in Sources */,
+				43972E5118CD7EFC00F1CC3E /* NSString+VFoundation.m in Sources */,
+				43972E5418CD7F4500F1CC3E /* NSMutableString+VFoundation.m in Sources */,
+				43972E7A18CD840600F1CC3E /* NSURL+VFoundation.m in Sources */,
+				43972E8318CD844800F1CC3E /* NSValue+VFoundation.m in Sources */,
+				43972E5F18CD833400F1CC3E /* NSMutableArray+VFoundation.m in Sources */,
+				43972E8018CD843800F1CC3E /* NSURLRequest+VFoundation.m in Sources */,
+				43972E6518CD835400F1CC3E /* NSMutableDictionary+VFoundation.m in Sources */,
+				43972E8618CD849600F1CC3E /* NSCache+VFoundation.m in Sources */,
+				43972E6B18CD837200F1CC3E /* NSMutableSet+VFoundation.m in Sources */,
+				43972E7118CD83BD00F1CC3E /* NSData+VFoundation.m in Sources */,
+				43972E7418CD83CD00F1CC3E /* NSMutableData+VFoundation.m in Sources */,
+				43972E7D18CD841800F1CC3E /* NSMutableURLRequest+VFoundation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43972E2F18CD7E9400F1CC3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43972E4318CD7E9400F1CC3E /* VFoundationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43972E3A18CD7E9400F1CC3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43972E2218CD7E9400F1CC3E /* VFoundation */;
+			targetProxy = 43972E3918CD7E9400F1CC3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43972E3F18CD7E9400F1CC3E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43972E4018CD7E9400F1CC3E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43972E4418CD7E9400F1CC3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		43972E4518CD7E9400F1CC3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43972E4718CD7E9400F1CC3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VFoundation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VFoundation/VFoundation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		43972E4818CD7E9400F1CC3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VFoundation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VFoundation/VFoundation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		43972E4A18CD7E9400F1CC3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VFoundation/VFoundation-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VFoundationTests/VFoundationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		43972E4B18CD7E9400F1CC3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VFoundation/VFoundation-Prefix.pch";
+				INFOPLIST_FILE = "VFoundationTests/VFoundationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43972E1E18CD7E9400F1CC3E /* Build configuration list for PBXProject "VFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43972E4418CD7E9400F1CC3E /* Debug */,
+				43972E4518CD7E9400F1CC3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43972E4618CD7E9400F1CC3E /* Build configuration list for PBXNativeTarget "VFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43972E4718CD7E9400F1CC3E /* Debug */,
+				43972E4818CD7E9400F1CC3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43972E4918CD7E9400F1CC3E /* Build configuration list for PBXNativeTarget "VFoundationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43972E4A18CD7E9400F1CC3E /* Debug */,
+				43972E4B18CD7E9400F1CC3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43972E1B18CD7E9400F1CC3E /* Project object */;
+}

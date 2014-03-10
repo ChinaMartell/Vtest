@@ -22,6 +22,7 @@
 		43667A7718CDEAB00002B08E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5618CDEAB00002B08E /* UIKit.framework */; };
 		43667A7F18CDEAB00002B08E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43667A7D18CDEAB00002B08E /* InfoPlist.strings */; };
 		43667A8118CDEAB00002B08E /* VtestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43667A8018CDEAB00002B08E /* VtestTests.m */; };
+		43667A9E18CDF6330002B08E /* libVFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A9D18CDF6330002B08E /* libVFoundation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		43667A7C18CDEAB00002B08E /* VtestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VtestTests-Info.plist"; sourceTree = "<group>"; };
 		43667A7E18CDEAB00002B08E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43667A8018CDEAB00002B08E /* VtestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VtestTests.m; sourceTree = "<group>"; };
+		43667A9D18CDF6330002B08E /* libVFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVFoundation.a; path = "VFoundation/build/Debug-iphoneos/libVFoundation.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43667A9E18CDF6330002B08E /* libVFoundation.a in Frameworks */,
 				43667A5518CDEAB00002B08E /* CoreGraphics.framework in Frameworks */,
 				43667A5718CDEAB00002B08E /* UIKit.framework in Frameworks */,
 				43667A5318CDEAB00002B08E /* Foundation.framework in Frameworks */,
@@ -103,6 +106,7 @@
 		43667A5118CDEAB00002B08E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43667A9D18CDF6330002B08E /* libVFoundation.a */,
 				43667A5218CDEAB00002B08E /* Foundation.framework */,
 				43667A5418CDEAB00002B08E /* CoreGraphics.framework */,
 				43667A5618CDEAB00002B08E /* UIKit.framework */,
@@ -350,6 +354,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
 			};
 			name = Debug;
 		};
@@ -383,6 +388,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -395,7 +401,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vtest/Vtest-Prefix.pch";
 				INFOPLIST_FILE = "Vtest/Vtest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VFoundation/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -408,7 +419,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vtest/Vtest-Prefix.pch";
 				INFOPLIST_FILE = "Vtest/Vtest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VFoundation/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +490,7 @@
 				43667A8618CDEAB00002B08E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43667A8718CDEAB00002B08E /* Build configuration list for PBXNativeTarget "VtestTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +499,7 @@
 				43667A8918CDEAB00002B08E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
