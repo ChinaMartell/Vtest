@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSMutableArray+VFoundation.h"
+#import "NSObject+VFoundation.h"
 
 /**
- *  定义VFoundaton实现的基类，使用这个定义去创建合适的类型
+ *  Define the macros, make safe the object.
  */
-#define NSMutableArrayBase  VNSMutableArray
-
+#define safe(object) [object safeClass]
 
 @interface VFoundationDefine : NSObject
 

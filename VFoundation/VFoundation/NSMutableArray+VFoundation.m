@@ -8,11 +8,13 @@
 
 #import "NSMutableArray+VFoundation.h"
 
-@implementation NSMutableArray (VFoundation)
+
+/**
+ *  NSMutableArray's subclass
+ */
+@interface VNSMutableArray : NSMutableArray
 
 @end
-
-
 
 
 @implementation VNSMutableArray
@@ -22,8 +24,15 @@
 		[super addObject:anObject];
 	}
 	else {
-		NSAssert(NO, @"the add object is nil");
 	}
+}
+
+@end
+
+
+@implementation NSMutableArray (VFoundation)
++ (Class)safeClass {
+	return [VNSMutableArray class];
 }
 
 @end

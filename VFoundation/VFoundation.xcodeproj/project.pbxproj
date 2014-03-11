@@ -35,6 +35,7 @@
 		43972E8318CD844800F1CC3E /* NSValue+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E8218CD844800F1CC3E /* NSValue+VFoundation.m */; };
 		43972E8618CD849600F1CC3E /* NSCache+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E8518CD849600F1CC3E /* NSCache+VFoundation.m */; };
 		43972E8918CD84AD00F1CC3E /* NSBundle+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E8818CD84AD00F1CC3E /* NSBundle+VFoundation.m */; };
+		43C3B49D18CED38500E3526A /* NSObject+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C3B49C18CED38500E3526A /* NSObject+VFoundation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		43972E8518CD849600F1CC3E /* NSCache+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCache+VFoundation.m"; sourceTree = "<group>"; };
 		43972E8718CD84AD00F1CC3E /* NSBundle+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+VFoundation.h"; sourceTree = "<group>"; };
 		43972E8818CD84AD00F1CC3E /* NSBundle+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+VFoundation.m"; sourceTree = "<group>"; };
+		43C3B49B18CED38500E3526A /* NSObject+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VFoundation.h"; sourceTree = "<group>"; };
+		43C3B49C18CED38500E3526A /* NSObject+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VFoundation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +253,8 @@
 				43972E8518CD849600F1CC3E /* NSCache+VFoundation.m */,
 				43972E8718CD84AD00F1CC3E /* NSBundle+VFoundation.h */,
 				43972E8818CD84AD00F1CC3E /* NSBundle+VFoundation.m */,
+				43C3B49B18CED38500E3526A /* NSObject+VFoundation.h */,
+				43C3B49C18CED38500E3526A /* NSObject+VFoundation.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 				43972E5118CD7EFC00F1CC3E /* NSString+VFoundation.m in Sources */,
 				43972E5418CD7F4500F1CC3E /* NSMutableString+VFoundation.m in Sources */,
 				43972E7A18CD840600F1CC3E /* NSURL+VFoundation.m in Sources */,
+				43C3B49D18CED38500E3526A /* NSObject+VFoundation.m in Sources */,
 				43972E8318CD844800F1CC3E /* NSValue+VFoundation.m in Sources */,
 				43972E5F18CD833400F1CC3E /* NSMutableArray+VFoundation.m in Sources */,
 				43972E8018CD843800F1CC3E /* NSURLRequest+VFoundation.m in Sources */,
@@ -420,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -452,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

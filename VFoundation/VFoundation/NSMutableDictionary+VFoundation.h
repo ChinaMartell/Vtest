@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  NSMutableDictionary' category in VFoundation
+ */
 @interface NSMutableDictionary (VFoundation)
 
 @end
