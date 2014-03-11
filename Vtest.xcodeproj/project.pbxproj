@@ -22,7 +22,7 @@
 		43667A7718CDEAB00002B08E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5618CDEAB00002B08E /* UIKit.framework */; };
 		43667A7F18CDEAB00002B08E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43667A7D18CDEAB00002B08E /* InfoPlist.strings */; };
 		43667A8118CDEAB00002B08E /* VtestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43667A8018CDEAB00002B08E /* VtestTests.m */; };
-		43667A9E18CDF6330002B08E /* libVFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A9D18CDF6330002B08E /* libVFoundation.a */; };
+		43C3B49A18CED1B600E3526A /* libVFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3B49918CED1B600E3526A /* libVFoundation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		43667A7C18CDEAB00002B08E /* VtestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VtestTests-Info.plist"; sourceTree = "<group>"; };
 		43667A7E18CDEAB00002B08E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43667A8018CDEAB00002B08E /* VtestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VtestTests.m; sourceTree = "<group>"; };
-		43667A9D18CDF6330002B08E /* libVFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVFoundation.a; path = "VFoundation/build/Debug-iphoneos/libVFoundation.a"; sourceTree = "<group>"; };
+		43C3B49918CED1B600E3526A /* libVFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVFoundation.a; path = "VFoundation/build/Debug-iphoneos/libVFoundation.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43667A9E18CDF6330002B08E /* libVFoundation.a in Frameworks */,
+				43C3B49A18CED1B600E3526A /* libVFoundation.a in Frameworks */,
 				43667A5518CDEAB00002B08E /* CoreGraphics.framework in Frameworks */,
 				43667A5718CDEAB00002B08E /* UIKit.framework in Frameworks */,
 				43667A5318CDEAB00002B08E /* Foundation.framework in Frameworks */,
@@ -106,7 +106,7 @@
 		43667A5118CDEAB00002B08E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				43667A9D18CDF6330002B08E /* libVFoundation.a */,
+				43C3B49918CED1B600E3526A /* libVFoundation.a */,
 				43667A5218CDEAB00002B08E /* Foundation.framework */,
 				43667A5418CDEAB00002B08E /* CoreGraphics.framework */,
 				43667A5618CDEAB00002B08E /* UIKit.framework */,
@@ -350,8 +350,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
@@ -385,7 +386,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";

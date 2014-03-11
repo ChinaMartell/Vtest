@@ -14,25 +14,24 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (void)viewDidLoad {
+	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self testCategory];
+	[self testCategory];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)didReceiveMemoryWarning {
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
 }
-
-
 
 #pragma test
--(void)testCategory{
-    NSMutableArrayBase *mArray=[[NSMutableArrayBase alloc] init];
-    [mArray addObject:nil];
+- (void)testCategory {
+	NSMutableArray *mArray = [[safe(NSMutableArray) alloc] init];
+	[mArray addObject:nil];
+
+	NSMutableDictionary *mDict = [[safe(NSMutableDictionary) alloc] init];
+	[mDict setObject:nil forKey:nil];
 }
 
 @end
