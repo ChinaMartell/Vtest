@@ -7,32 +7,5 @@
 //
 
 #import "NSMutableArray+VFoundation.h"
-
-
-/**
- *  NSMutableArray's subclass
- */
-@interface VNSMutableArray : NSMutableArray
-
-@end
-
-
-@implementation VNSMutableArray
-
-- (void)addObject:(id)anObject {
-	if (anObject) {
-		[super addObject:anObject];
-	}
-	else {
-	}
-}
-
-@end
-
-
 @implementation NSMutableArray (VFoundation)
-+ (Class)safeClass {
-	return [VNSMutableArray class];
-}
-
 @end

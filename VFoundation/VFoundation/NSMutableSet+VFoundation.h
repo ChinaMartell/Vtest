@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSMutableSet' category in VFoundation
+ */
 @interface NSMutableSet (VFoundation)
 
 @end

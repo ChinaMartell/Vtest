@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSDate' category in VFoundation
+ */
 @interface NSDate (VFoundation)
 
 @end

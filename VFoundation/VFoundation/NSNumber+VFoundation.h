@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSNumber' category in VFoundation
+ */
 @interface NSNumber (VFoundation)
 
 @end

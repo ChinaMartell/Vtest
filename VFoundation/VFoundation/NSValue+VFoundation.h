@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSValue' category in VFoundation
+ */
 @interface NSValue (VFoundation)
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSDictionary' category in VFoundation
+ */
 @interface NSDictionary (VFoundation)
 
 @end

@@ -9,17 +9,5 @@
 #import "NSObject+VFoundation.h"
 
 @implementation NSObject (VFoundation)
-+ (Class)safeClass {
-	return [self class];
-}
-
-+ (Class)log {
-	if ([self respondsToSelector:@selector(safeClass)]) {
-		return [self safeClass];
-	}
-	else {
-		return [self class];
-	}
-}
 
 @end

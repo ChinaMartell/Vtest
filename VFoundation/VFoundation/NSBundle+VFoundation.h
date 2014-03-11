@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSBundle' category in VFoundation
+ */
 @interface NSBundle (VFoundation)
 
 @end

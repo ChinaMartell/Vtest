@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSMutableURLRequest' category in VFoundation
+ */
 @interface NSMutableURLRequest (VFoundation)
 
 @end

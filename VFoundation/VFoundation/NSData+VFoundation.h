@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSData' category in VFoundation
+ */
 @interface NSData (VFoundation)
 
 @end

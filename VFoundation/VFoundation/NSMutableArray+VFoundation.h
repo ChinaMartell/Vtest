@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+VFoundation.h"
 /**
  *  NSMutableArray' category in VFoundation
  */

@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSString' category in VFoundation
+ */
 @interface NSString (VFoundation)
 
 @end

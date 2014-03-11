@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSURL' category in VFoundation
+ */
 @interface NSURL (VFoundation)
 
 @end

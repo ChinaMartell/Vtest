@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSCache' category in VFoundation
+ */
 @interface NSCache (VFoundation)
 
 @end

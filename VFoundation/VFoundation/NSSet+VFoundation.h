@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSMutablNSSeteDictionary' category in VFoundation
+ */
 @interface NSSet (VFoundation)
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  NSArray' category in VFoundation
+ */
 @interface NSArray (VFoundation)
 
 @end

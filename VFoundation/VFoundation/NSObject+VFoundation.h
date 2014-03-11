@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface NSObject (VFoundation)
 /**
- *  Get the safeClass that prevent crash when setObject is nil and so on
- *
- *  @return safeClass
+ *  NSObject' category in VFoundation
  */
-+ (Class)safeClass;
+@interface NSObject (VFoundation)
+
 @end
