@@ -18,8 +18,7 @@
  *  @param anObject Can be nil
  *  @param aKey     Can be nil
  *
- *  @return If set successfully i will be return YES,otherwise NO
+ *  @return If set successfully it will be return YES,otherwise NO
  */
 - (BOOL)setObjectSafe:(id)anObject forKey:(id<NSCopying>)aKey;
-
 @end

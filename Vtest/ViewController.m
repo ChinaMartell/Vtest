@@ -27,7 +27,7 @@
 #pragma test
 - (void)testCategory {
   NSMutableDictionary *mDict = [[NSMutableDictionary alloc] init];
-  BOOL a = [mDict setObjectSafe:@"fff" forKey:@"ff"];
+  [mDict setObjectSafe:@"fff" forKey:@"ff"];
 }
 
 @end
