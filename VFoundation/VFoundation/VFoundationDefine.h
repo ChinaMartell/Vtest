@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+VFoundation.h"
-
+#import "NSMutableDictionary+VFoundation.h"
 
 @interface VFoundationDefine : NSObject
 

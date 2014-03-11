@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-
 @interface ViewController ()
 
 @end
@@ -15,18 +14,20 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-	[self testCategory];
+  [super viewDidLoad];
+  // Do any additional setup after loading the view, typically from a nib.
+  [self testCategory];
 }
 
 - (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 #pragma test
 - (void)testCategory {
+  NSMutableDictionary *mDict = [[NSMutableDictionary alloc] init];
+  BOOL a = [mDict setObjectSafe:@"fff" forKey:@"ff"];
 }
 
 @end
