@@ -27,7 +27,9 @@
 #pragma test
 - (void)testCategory {
   NSMutableDictionary *mDict = [[NSMutableDictionary alloc] init];
-  [mDict setObjectSafe:@"fff" forKey:@"ff"];
+  setObject(mDict, @"ff", @"ff");
+  NSMutableArray *mArray = [[NSMutableArray alloc] init];
+  addObject(mArray, nil);
 }
 
 @end
