@@ -7,18 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSMutableDictionary+VFoundation.h"
-#import "NSMutableArray+VFoundation.h"
-/**
- *  Macros:make safe when set nil object or nil key
- */
-#define setObject(mDict, object, key) [mDict setObjectSafe:object forKey:key]
-
-/**
- *  Macros:make safe when add nil object or nil key
- */
-#define addObject(mArray, object) [mArray addObjectSafe:object]
-
+#import "VCategoryDefine.h"
+#import "VUtilityDefine.h"
 @interface VFoundationDefine : NSObject
 
 @end
