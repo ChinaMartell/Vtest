@@ -14,23 +14,38 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
-  [self testCategory];
+	[super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+	[self testCategory];
 }
 
 - (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
-
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
 }
 
 #pragma test
 - (void)testCategory {
-  NSMutableDictionary *mDict = [[NSMutableDictionary alloc] init];
-  setObject(mDict, @"ff", @"ff");
-  NSMutableArray *mArray = [[NSMutableArray alloc] init];
-  addObject(mArray, nil);
+	NSMutableDictionary *mDict = [[NSMutableDictionary alloc] init];
+	setObject(mDict, @"ff", @"ff");
+	NSMutableArray *mArray = [[NSMutableArray alloc] init];
+	addObject(mArray, nil);
+
+	mainA ( ^{
+	    NSLog(@"aaa");
+	});
+	asyncToMain ( ^{
+	    NSLog(@"downloading");
+	}, ^() {
+	    NSLog(@"refresh UI");
+	});
+
+	globalA ( ^{
+	    __block int i = 9;
+	    mainA ( ^{
+	        i = 10;
+		});
+	});
 }
 
 @end

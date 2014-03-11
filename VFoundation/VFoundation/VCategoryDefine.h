@@ -9,16 +9,27 @@
 #import <Foundation/Foundation.h>
 #import "NSMutableDictionary+VFoundation.h"
 #import "NSMutableArray+VFoundation.h"
-/**
- *  Macros:make safe when set nil object or nil key
- */
-#define setObject(mDict, object, key) [mDict setObjectSafe:object forKey:key]
-
-/**
- *  Macros:make safe when add nil object or nil key
- */
-#define addObject(mArray, object) [mArray addObjectSafe:object]
 
 @interface VCategoryDefine : NSObject
+/**
+ *  Make safe when set nil object or nil key
+ *
+ *  @param mDict    receiver
+ *  @param anObject Can be nil
+ *  @param aKey     Can be nil
+ *
+ *  @return If set successfully it will be return YES,otherwise NO
+ */
+	bool setObject(NSMutableDictionary *mDict, id object, id key);
+
+/**
+ *  Make safe when add nil object or nil key
+ *
+ *  @param mArray receiver
+ *  @param object Can be nil
+ *
+ *  @return If set successfully it will be return YES,otherwise NO
+ */
+bool addObject(NSMutableArray *mArray, id object);
 
 @end

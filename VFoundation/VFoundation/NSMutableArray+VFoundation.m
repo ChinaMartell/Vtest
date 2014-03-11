@@ -7,12 +7,7 @@
 //
 
 #import "NSMutableArray+VFoundation.h"
+
 @implementation NSMutableArray (VFoundation)
-- (BOOL)addObjectSafe:(id)anObject {
-  if (anObject) {
-    [self addObject:anObject];
-    return YES;
-  }
-  return NO;
-}
+
 @end
