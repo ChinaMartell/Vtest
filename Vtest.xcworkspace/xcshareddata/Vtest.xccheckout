@@ -5,38 +5,38 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>13280F0F-1329-43BE-B63D-4EB7BCC1F37B</string>
+	<string>5F2379C6-7D21-4B54-A1D3-1DBF051053B1</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Vtest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>092B25F4-EF42-497D-A0B7-BD24B65F83AC</key>
-		<string>https://github.com/ChinaMartell/VFoundation.git</string>
-		<key>0957CE29-5CB5-4DE4-9866-7A9D402A563D</key>
+		<key>0AA72653-5A5A-426B-974A-C51B4D1D4047</key>
 		<string>https://github.com/ChinaMartell/Vtest.git</string>
+		<key>D89DFD97-C690-44DC-8D6A-64C6573E6487</key>
+		<string>https://github.com/ChinaMartell/VFoundation.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Vtest.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>092B25F4-EF42-497D-A0B7-BD24B65F83AC</key>
-		<string>../VFoundation</string>
-		<key>0957CE29-5CB5-4DE4-9866-7A9D402A563D</key>
+		<key>0AA72653-5A5A-426B-974A-C51B4D1D4047</key>
 		<string>..</string>
+		<key>D89DFD97-C690-44DC-8D6A-64C6573E6487</key>
+		<string>../VFoundation</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ChinaMartell/Vtest.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0957CE29-5CB5-4DE4-9866-7A9D402A563D</string>
+	<string>0AA72653-5A5A-426B-974A-C51B4D1D4047</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>092B25F4-EF42-497D-A0B7-BD24B65F83AC</string>
+			<string>D89DFD97-C690-44DC-8D6A-64C6573E6487</string>
 			<key>IDESourceControlWCCName</key>
 			<string>VFoundation</string>
 		</dict>
@@ -44,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0957CE29-5CB5-4DE4-9866-7A9D402A563D</string>
+			<string>0AA72653-5A5A-426B-974A-C51B4D1D4047</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Vtest</string>
 		</dict>

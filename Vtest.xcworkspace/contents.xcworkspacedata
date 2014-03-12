@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Vtest.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:VNetwork/VNetwork.xcodeproj">
    </FileRef>
    <FileRef
