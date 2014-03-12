@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14C0450380EA4270AA5CAD9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C1B3F00304A80A418418C /* libPods.a */; };
 		43667A5318CDEAB00002B08E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5218CDEAB00002B08E /* Foundation.framework */; };
 		43667A5518CDEAB00002B08E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5418CDEAB00002B08E /* CoreGraphics.framework */; };
 		43667A5718CDEAB00002B08E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5618CDEAB00002B08E /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A5C1B3F00304A80A418418C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		43667A4F18CDEAB00002B08E /* Vtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43667A5218CDEAB00002B08E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43667A5418CDEAB00002B08E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,6 +59,7 @@
 		43667A7E18CDEAB00002B08E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43667A8018CDEAB00002B08E /* VtestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VtestTests.m; sourceTree = "<group>"; };
 		43C3B49918CED1B600E3526A /* libVFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVFoundation.a; path = "VFoundation/build/Debug-iphoneos/libVFoundation.a"; sourceTree = "<group>"; };
+		800CEB5A6A07444FA44357F4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 				43667A5518CDEAB00002B08E /* CoreGraphics.framework in Frameworks */,
 				43667A5718CDEAB00002B08E /* UIKit.framework in Frameworks */,
 				43667A5318CDEAB00002B08E /* Foundation.framework in Frameworks */,
+				14C0450380EA4270AA5CAD9D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,7 @@
 				43667A7A18CDEAB00002B08E /* VtestTests */,
 				43667A5118CDEAB00002B08E /* Frameworks */,
 				43667A5018CDEAB00002B08E /* Products */,
+				800CEB5A6A07444FA44357F4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +116,7 @@
 				43667A5418CDEAB00002B08E /* CoreGraphics.framework */,
 				43667A5618CDEAB00002B08E /* UIKit.framework */,
 				43667A7418CDEAB00002B08E /* XCTest.framework */,
+				2A5C1B3F00304A80A418418C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43667A8418CDEAB00002B08E /* Build configuration list for PBXNativeTarget "Vtest" */;
 			buildPhases = (
+				17C5D1553DA14110A99C2D6C /* Check Pods Manifest.lock */,
 				43667A4B18CDEAB00002B08E /* Sources */,
 				43667A4C18CDEAB00002B08E /* Frameworks */,
 				43667A4D18CDEAB00002B08E /* Resources */,
+				62D3D621DC9F422799BC229F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,6 +259,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17C5D1553DA14110A99C2D6C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		62D3D621DC9F422799BC229F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43667A4B18CDEAB00002B08E /* Sources */ = {
@@ -397,6 +438,7 @@
 		};
 		43667A8518CDEAB00002B08E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 800CEB5A6A07444FA44357F4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -408,13 +450,14 @@
 					"$(PROJECT_DIR)/VFoundation/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		43667A8618CDEAB00002B08E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 800CEB5A6A07444FA44357F4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -426,7 +469,7 @@
 					"$(PROJECT_DIR)/VFoundation/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

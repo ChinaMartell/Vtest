@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "VFoundationDefine.h"
+
 @interface VFoundation : NSObject
 
 @end
