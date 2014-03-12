@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43252C7818D041F0004DA6EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252C7718D041F0004DA6EC /* Foundation.framework */; };
+		43252C7D18D041F0004DA6EC /* VNetwork.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43252C7C18D041F0004DA6EC /* VNetwork.h */; };
+		43252C7F18D041F0004DA6EC /* VNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 43252C7E18D041F0004DA6EC /* VNetwork.m */; };
+		43252C8618D041F0004DA6EC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252C8518D041F0004DA6EC /* XCTest.framework */; };
+		43252C8718D041F0004DA6EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252C7718D041F0004DA6EC /* Foundation.framework */; };
+		43252C8918D041F0004DA6EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252C8818D041F0004DA6EC /* UIKit.framework */; };
+		43252C8C18D041F0004DA6EC /* libVNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252C7418D041F0004DA6EC /* libVNetwork.a */; };
+		43252C9218D041F0004DA6EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43252C9018D041F0004DA6EC /* InfoPlist.strings */; };
+		43252C9418D041F0004DA6EC /* VNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43252C9318D041F0004DA6EC /* VNetworkTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43252C8A18D041F0004DA6EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43252C6C18D041F0004DA6EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43252C7318D041F0004DA6EC;
+			remoteInfo = VNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43252C7218D041F0004DA6EC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				43252C7D18D041F0004DA6EC /* VNetwork.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		43252C7418D041F0004DA6EC /* libVNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVNetwork.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		43252C7718D041F0004DA6EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		43252C7B18D041F0004DA6EC /* VNetwork-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VNetwork-Prefix.pch"; sourceTree = "<group>"; };
+		43252C7C18D041F0004DA6EC /* VNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VNetwork.h; sourceTree = "<group>"; };
+		43252C7E18D041F0004DA6EC /* VNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VNetwork.m; sourceTree = "<group>"; };
+		43252C8418D041F0004DA6EC /* VNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43252C8518D041F0004DA6EC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		43252C8818D041F0004DA6EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		43252C8F18D041F0004DA6EC /* VNetworkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VNetworkTests-Info.plist"; sourceTree = "<group>"; };
+		43252C9118D041F0004DA6EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43252C9318D041F0004DA6EC /* VNetworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VNetworkTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43252C7118D041F0004DA6EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43252C7818D041F0004DA6EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43252C8118D041F0004DA6EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43252C8618D041F0004DA6EC /* XCTest.framework in Frameworks */,
+				43252C8918D041F0004DA6EC /* UIKit.framework in Frameworks */,
+				43252C8718D041F0004DA6EC /* Foundation.framework in Frameworks */,
+				43252C8C18D041F0004DA6EC /* libVNetwork.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43252C6B18D041F0004DA6EC = {
+			isa = PBXGroup;
+			children = (
+				43252C7918D041F0004DA6EC /* VNetwork */,
+				43252C8D18D041F0004DA6EC /* VNetworkTests */,
+				43252C7618D041F0004DA6EC /* Frameworks */,
+				43252C7518D041F0004DA6EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43252C7518D041F0004DA6EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43252C7418D041F0004DA6EC /* libVNetwork.a */,
+				43252C8418D041F0004DA6EC /* VNetworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43252C7618D041F0004DA6EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43252C7718D041F0004DA6EC /* Foundation.framework */,
+				43252C8518D041F0004DA6EC /* XCTest.framework */,
+				43252C8818D041F0004DA6EC /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43252C7918D041F0004DA6EC /* VNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				43252C7C18D041F0004DA6EC /* VNetwork.h */,
+				43252C7E18D041F0004DA6EC /* VNetwork.m */,
+				43252C7A18D041F0004DA6EC /* Supporting Files */,
+			);
+			path = VNetwork;
+			sourceTree = "<group>";
+		};
+		43252C7A18D041F0004DA6EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43252C7B18D041F0004DA6EC /* VNetwork-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43252C8D18D041F0004DA6EC /* VNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				43252C9318D041F0004DA6EC /* VNetworkTests.m */,
+				43252C8E18D041F0004DA6EC /* Supporting Files */,
+			);
+			path = VNetworkTests;
+			sourceTree = "<group>";
+		};
+		43252C8E18D041F0004DA6EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43252C8F18D041F0004DA6EC /* VNetworkTests-Info.plist */,
+				43252C9018D041F0004DA6EC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43252C7318D041F0004DA6EC /* VNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43252C9718D041F0004DA6EC /* Build configuration list for PBXNativeTarget "VNetwork" */;
+			buildPhases = (
+				43252C7018D041F0004DA6EC /* Sources */,
+				43252C7118D041F0004DA6EC /* Frameworks */,
+				43252C7218D041F0004DA6EC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VNetwork;
+			productName = VNetwork;
+			productReference = 43252C7418D041F0004DA6EC /* libVNetwork.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		43252C8318D041F0004DA6EC /* VNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43252C9A18D041F0004DA6EC /* Build configuration list for PBXNativeTarget "VNetworkTests" */;
+			buildPhases = (
+				43252C8018D041F0004DA6EC /* Sources */,
+				43252C8118D041F0004DA6EC /* Frameworks */,
+				43252C8218D041F0004DA6EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43252C8B18D041F0004DA6EC /* PBXTargetDependency */,
+			);
+			name = VNetworkTests;
+			productName = VNetworkTests;
+			productReference = 43252C8418D041F0004DA6EC /* VNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43252C6C18D041F0004DA6EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = SJ;
+			};
+			buildConfigurationList = 43252C6F18D041F0004DA6EC /* Build configuration list for PBXProject "VNetwork" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 43252C6B18D041F0004DA6EC;
+			productRefGroup = 43252C7518D041F0004DA6EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43252C7318D041F0004DA6EC /* VNetwork */,
+				43252C8318D041F0004DA6EC /* VNetworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43252C8218D041F0004DA6EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43252C9218D041F0004DA6EC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43252C7018D041F0004DA6EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43252C7F18D041F0004DA6EC /* VNetwork.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43252C8018D041F0004DA6EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43252C9418D041F0004DA6EC /* VNetworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43252C8B18D041F0004DA6EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43252C7318D041F0004DA6EC /* VNetwork */;
+			targetProxy = 43252C8A18D041F0004DA6EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43252C9018D041F0004DA6EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43252C9118D041F0004DA6EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43252C9518D041F0004DA6EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		43252C9618D041F0004DA6EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43252C9818D041F0004DA6EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VNetwork.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VNetwork/VNetwork-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		43252C9918D041F0004DA6EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VNetwork.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VNetwork/VNetwork-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		43252C9B18D041F0004DA6EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VNetwork/VNetwork-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VNetworkTests/VNetworkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		43252C9C18D041F0004DA6EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VNetwork/VNetwork-Prefix.pch";
+				INFOPLIST_FILE = "VNetworkTests/VNetworkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43252C6F18D041F0004DA6EC /* Build configuration list for PBXProject "VNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43252C9518D041F0004DA6EC /* Debug */,
+				43252C9618D041F0004DA6EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43252C9718D041F0004DA6EC /* Build configuration list for PBXNativeTarget "VNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43252C9818D041F0004DA6EC /* Debug */,
+				43252C9918D041F0004DA6EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		43252C9A18D041F0004DA6EC /* Build configuration list for PBXNativeTarget "VNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43252C9B18D041F0004DA6EC /* Debug */,
+				43252C9C18D041F0004DA6EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43252C6C18D041F0004DA6EC /* Project object */;
+}
