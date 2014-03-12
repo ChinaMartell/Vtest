@@ -53,6 +53,7 @@
 		43252CF318D042FD004DA6EC /* VCoreDataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VCoreDataTests-Info.plist"; sourceTree = "<group>"; };
 		43252CF518D042FD004DA6EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43252CF718D042FD004DA6EC /* VCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCoreDataTests.m; sourceTree = "<group>"; };
+		43252D2618D04621004DA6EC /* libVFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVFoundation.a; path = "../VFoundation/build/Debug-iphoneos/libVFoundation.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +101,7 @@
 		43252CDA18D042FD004DA6EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43252D2618D04621004DA6EC /* libVFoundation.a */,
 				43252CDB18D042FD004DA6EC /* Foundation.framework */,
 				43252CE918D042FD004DA6EC /* XCTest.framework */,
 				43252CEC18D042FD004DA6EC /* UIKit.framework */,
@@ -290,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -322,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -334,9 +336,14 @@
 				DSTROOT = /tmp/VCoreData.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VCoreData/VCoreData-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VFoundation/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../VFoundation/VFoundation/**";
 			};
 			name = Debug;
 		};
@@ -346,9 +353,14 @@
 				DSTROOT = /tmp/VCoreData.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VCoreData/VCoreData-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VFoundation/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../VFoundation/VFoundation/**";
 			};
 			name = Release;
 		};
@@ -409,6 +421,7 @@
 				43252CFD18D042FD004DA6EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43252CFE18D042FD004DA6EC /* Build configuration list for PBXNativeTarget "VCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +430,7 @@
 				43252D0018D042FD004DA6EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

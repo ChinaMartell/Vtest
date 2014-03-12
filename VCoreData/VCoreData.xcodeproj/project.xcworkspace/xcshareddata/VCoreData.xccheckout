@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>45ADCF8E-65BF-4498-AD13-CBFE6519D2C6</string>
+	<string>EE0C997E-175A-4EEA-8B87-A052B43FE20B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>VCoreData</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>6C0382B3-49A9-48C9-AF64-40ADDEBB4AF8</string>
 			<key>IDESourceControlWCCName</key>
-			<string>VUIKit</string>
+			<string>VCoreData</string>
 		</dict>
 	</array>
 </dict>

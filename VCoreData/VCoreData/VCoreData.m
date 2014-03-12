@@ -9,5 +9,8 @@
 #import "VCoreData.h"
 
 @implementation VCoreData
+- (void)log {
+	setObject([[NSMutableDictionary alloc] init], nil, nil);
+}
 
 @end

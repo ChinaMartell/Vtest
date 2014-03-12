@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "VCoreData.h"
 @interface ViewController ()
 
 @end
@@ -46,6 +47,7 @@
 	        i = 10;
 		});
 	});
+	[[[VCoreData alloc] init] log];
 }
 
 @end

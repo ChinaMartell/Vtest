@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43667A5318CDEAB00002B08E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5218CDEAB00002B08E /* Foundation.framework */; };
+		43252D1D18D044D1004DA6EC /* libVUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252D1C18D044D1004DA6EC /* libVUIKit.a */; };
+		43252D1F18D044D6004DA6EC /* libVNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252D1E18D044D6004DA6EC /* libVNetwork.a */; };
+		43252D2118D044D9004DA6EC /* libVCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252D2018D044D9004DA6EC /* libVCoreData.a */; };
+		43252D2F18D048CF004DA6EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252D2E18D048CF004DA6EC /* Foundation.framework */; };
+		43252D3118D04A04004DA6EC /* libVFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252D3018D04A04004DA6EC /* libVFoundation.a */; };
 		43667A5518CDEAB00002B08E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5418CDEAB00002B08E /* CoreGraphics.framework */; };
 		43667A5718CDEAB00002B08E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5618CDEAB00002B08E /* UIKit.framework */; };
 		43667A5D18CDEAB00002B08E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43667A5B18CDEAB00002B08E /* InfoPlist.strings */; };
@@ -18,11 +22,9 @@
 		43667A6C18CDEAB00002B08E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43667A6B18CDEAB00002B08E /* ViewController.m */; };
 		43667A6E18CDEAB00002B08E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43667A6D18CDEAB00002B08E /* Images.xcassets */; };
 		43667A7518CDEAB00002B08E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A7418CDEAB00002B08E /* XCTest.framework */; };
-		43667A7618CDEAB00002B08E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5218CDEAB00002B08E /* Foundation.framework */; };
 		43667A7718CDEAB00002B08E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5618CDEAB00002B08E /* UIKit.framework */; };
 		43667A7F18CDEAB00002B08E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43667A7D18CDEAB00002B08E /* InfoPlist.strings */; };
 		43667A8118CDEAB00002B08E /* VtestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43667A8018CDEAB00002B08E /* VtestTests.m */; };
-		43C3B49A18CED1B600E3526A /* libVFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3B49918CED1B600E3526A /* libVFoundation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43252D1C18D044D1004DA6EC /* libVUIKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVUIKit.a; path = "VUIKit/build/Debug-iphoneos/libVUIKit.a"; sourceTree = "<group>"; };
+		43252D1E18D044D6004DA6EC /* libVNetwork.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVNetwork.a; path = "VNetwork/build/Debug-iphoneos/libVNetwork.a"; sourceTree = "<group>"; };
+		43252D2018D044D9004DA6EC /* libVCoreData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVCoreData.a; path = "VCoreData/build/Debug-iphoneos/libVCoreData.a"; sourceTree = "<group>"; };
+		43252D2E18D048CF004DA6EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		43252D3018D04A04004DA6EC /* libVFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVFoundation.a; path = "VFoundation/build/Debug-iphoneos/libVFoundation.a"; sourceTree = "<group>"; };
 		43667A4F18CDEAB00002B08E /* Vtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		43667A5218CDEAB00002B08E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43667A5418CDEAB00002B08E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		43667A5618CDEAB00002B08E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		43667A5A18CDEAB00002B08E /* Vtest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Vtest-Info.plist"; sourceTree = "<group>"; };
@@ -56,7 +62,6 @@
 		43667A7C18CDEAB00002B08E /* VtestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VtestTests-Info.plist"; sourceTree = "<group>"; };
 		43667A7E18CDEAB00002B08E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43667A8018CDEAB00002B08E /* VtestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VtestTests.m; sourceTree = "<group>"; };
-		43C3B49918CED1B600E3526A /* libVFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVFoundation.a; path = "VFoundation/build/Debug-iphoneos/libVFoundation.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +69,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43C3B49A18CED1B600E3526A /* libVFoundation.a in Frameworks */,
+				43252D3118D04A04004DA6EC /* libVFoundation.a in Frameworks */,
+				43252D2F18D048CF004DA6EC /* Foundation.framework in Frameworks */,
+				43252D2118D044D9004DA6EC /* libVCoreData.a in Frameworks */,
+				43252D1F18D044D6004DA6EC /* libVNetwork.a in Frameworks */,
+				43252D1D18D044D1004DA6EC /* libVUIKit.a in Frameworks */,
 				43667A5518CDEAB00002B08E /* CoreGraphics.framework in Frameworks */,
 				43667A5718CDEAB00002B08E /* UIKit.framework in Frameworks */,
-				43667A5318CDEAB00002B08E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +85,6 @@
 			files = (
 				43667A7518CDEAB00002B08E /* XCTest.framework in Frameworks */,
 				43667A7718CDEAB00002B08E /* UIKit.framework in Frameworks */,
-				43667A7618CDEAB00002B08E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +113,11 @@
 		43667A5118CDEAB00002B08E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				43C3B49918CED1B600E3526A /* libVFoundation.a */,
-				43667A5218CDEAB00002B08E /* Foundation.framework */,
+				43252D3018D04A04004DA6EC /* libVFoundation.a */,
+				43252D2018D044D9004DA6EC /* libVCoreData.a */,
+				43252D1E18D044D6004DA6EC /* libVNetwork.a */,
+				43252D1C18D044D1004DA6EC /* libVUIKit.a */,
+				43252D2E18D048CF004DA6EC /* Foundation.framework */,
 				43667A5418CDEAB00002B08E /* CoreGraphics.framework */,
 				43667A5618CDEAB00002B08E /* UIKit.framework */,
 				43667A7418CDEAB00002B08E /* XCTest.framework */,
@@ -355,7 +365,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/** $(SRCROOT)/VCoreData/VCoreData/** $(SRCROOT)/VUIKit/VUIKit/** $(SRCROOT)/VNetwork/VNetwork/**";
 			};
 			name = Debug;
 		};
@@ -390,7 +400,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/** $(SRCROOT)/VCoreData/VCoreData/** $(SRCROOT)/VUIKit/VUIKit/** $(SRCROOT)/VNetwork/VNetwork/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -406,9 +416,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VFoundation/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/VUIKit/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/VNetwork/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/VCoreData/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/** $(SRCROOT)/VUIKit/VUIKit/** $(SRCROOT)/VNetwork/VNetwork/** $(SRCROOT)/VCoreData/VCoreData/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -424,9 +437,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VFoundation/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/VUIKit/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/VNetwork/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/VCoreData/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/** $(SRCROOT)/VUIKit/VUIKit/** $(SRCROOT)/VNetwork/VNetwork/** $(SRCROOT)/VCoreData/VCoreData/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -53,6 +53,9 @@
 		43252CC118D042E7004DA6EC /* VUIKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VUIKitTests-Info.plist"; sourceTree = "<group>"; };
 		43252CC318D042E7004DA6EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43252CC518D042E7004DA6EC /* VUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VUIKitTests.m; sourceTree = "<group>"; };
+		43252D2818D0465D004DA6EC /* libVCoreData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVCoreData.a; path = "../VCoreData/build/Debug-iphoneos/libVCoreData.a"; sourceTree = "<group>"; };
+		43252D2A18D04660004DA6EC /* libVNetwork.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVNetwork.a; path = "../VNetwork/build/Debug-iphoneos/libVNetwork.a"; sourceTree = "<group>"; };
+		43252D2C18D04663004DA6EC /* libVFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVFoundation.a; path = "../VFoundation/build/Debug-iphoneos/libVFoundation.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,9 @@
 		43252CA818D042E7004DA6EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43252D2C18D04663004DA6EC /* libVFoundation.a */,
+				43252D2A18D04660004DA6EC /* libVNetwork.a */,
+				43252D2818D0465D004DA6EC /* libVCoreData.a */,
 				43252CA918D042E7004DA6EC /* Foundation.framework */,
 				43252CB718D042E7004DA6EC /* XCTest.framework */,
 				43252CBA18D042E7004DA6EC /* UIKit.framework */,
@@ -290,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -322,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -334,9 +340,16 @@
 				DSTROOT = /tmp/VUIKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VUIKit/VUIKit-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VCoreData/build/Debug-iphoneos",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VNetwork/build/Debug-iphoneos",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VFoundation/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../VNetwork/VNetwork/** $(SRCROOT)/../VCoreData/VCoreData/** $(SRCROOT)/../VFoundation/VFoundation/**";
 			};
 			name = Debug;
 		};
@@ -346,9 +359,16 @@
 				DSTROOT = /tmp/VUIKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VUIKit/VUIKit-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VCoreData/build/Debug-iphoneos",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VNetwork/build/Debug-iphoneos",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VFoundation/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../VNetwork/VNetwork/** $(SRCROOT)/../VCoreData/VCoreData/** $(SRCROOT)/../VFoundation/VFoundation/**";
 			};
 			name = Release;
 		};
@@ -409,6 +429,7 @@
 				43252CCB18D042E7004DA6EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43252CCC18D042E7004DA6EC /* Build configuration list for PBXNativeTarget "VUIKitTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +438,7 @@
 				43252CCE18D042E7004DA6EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

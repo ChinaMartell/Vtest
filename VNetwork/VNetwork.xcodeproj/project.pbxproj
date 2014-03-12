@@ -53,6 +53,8 @@
 		43252C8F18D041F0004DA6EC /* VNetworkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VNetworkTests-Info.plist"; sourceTree = "<group>"; };
 		43252C9118D041F0004DA6EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43252C9318D041F0004DA6EC /* VNetworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VNetworkTests.m; sourceTree = "<group>"; };
+		43252D2218D0455B004DA6EC /* libVFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVFoundation.a; path = "../VFoundation/build/Debug-iphoneos/libVFoundation.a"; sourceTree = "<group>"; };
+		43252D2418D04564004DA6EC /* libVCoreData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVCoreData.a; path = "../VCoreData/build/Debug-iphoneos/libVCoreData.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,8 @@
 		43252C7618D041F0004DA6EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43252D2418D04564004DA6EC /* libVCoreData.a */,
+				43252D2218D0455B004DA6EC /* libVFoundation.a */,
 				43252C7718D041F0004DA6EC /* Foundation.framework */,
 				43252C8518D041F0004DA6EC /* XCTest.framework */,
 				43252C8818D041F0004DA6EC /* UIKit.framework */,
@@ -334,9 +338,15 @@
 				DSTROOT = /tmp/VNetwork.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VNetwork/VNetwork-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VFoundation/build/Debug-iphoneos",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VCoreData/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../VFoundation/VFoundation/** $(SRCROOT)/../VCoreData/VcoreData/**";
 			};
 			name = Debug;
 		};
@@ -346,9 +356,15 @@
 				DSTROOT = /tmp/VNetwork.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VNetwork/VNetwork-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VFoundation/build/Debug-iphoneos",
+					"/Users/abcxo/shadow/Project/DeveloperProject/IOS/Vtest/VCoreData/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../VFoundation/VFoundation/** $(SRCROOT)/../VCoreData/VcoreData/**";
 			};
 			name = Release;
 		};
@@ -409,6 +425,7 @@
 				43252C9918D041F0004DA6EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43252C9A18D041F0004DA6EC /* Build configuration list for PBXNativeTarget "VNetworkTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +434,7 @@
 				43252C9C18D041F0004DA6EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

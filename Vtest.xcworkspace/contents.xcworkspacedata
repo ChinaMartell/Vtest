@@ -5,6 +5,15 @@
       location = "group:Vtest.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:VNetwork/VNetwork.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VCoreData/VCoreData.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VUIKit/VUIKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:VFoundation/VFoundation.xcodeproj">
    </FileRef>
 </Workspace>
