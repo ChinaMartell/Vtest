@@ -7,7 +7,7 @@
 //
 
 #import "NSString+VFoundation.h"
-#import "JSONKit.h"
+
 @implementation NSString (NSStringVFoundation)
 
 
@@ -16,8 +16,5 @@
 
 @end
 @implementation NSString (NSStringJson)
-- (NSString *)toJson {
-	return [self JSONString];
-}
 
 @end

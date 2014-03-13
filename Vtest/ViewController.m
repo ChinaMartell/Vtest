@@ -27,8 +27,10 @@
 
 #pragma test
 - (void)testCategory {
-	NSString *str = [NSString stringWithFormat:@"hello json"];
-	NSLog(@"%@", [str toJson]);
+	NSString *str = @"http://programmers.stackexchange.com/questions/193629/objective-c-class-cluster-pattern";
+	NSURL *url = [NSURL URLWithString:str];
+
+	NSLog(@"ff");
 }
 
 @end
