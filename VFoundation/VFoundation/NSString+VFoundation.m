@@ -12,9 +12,15 @@
 
 
 @end
-@implementation NSString (NSStringUrl)
+@implementation NSString (NSStringURL)
 
 @end
-@implementation NSString (NSStringJson)
+
+@implementation NSString (NSStringEncryption)
+
+
+
+@end
+@implementation NSString (NSStringJSON)
 
 @end
