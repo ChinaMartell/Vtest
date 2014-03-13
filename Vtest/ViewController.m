@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "VCoreData.h"
-#import "NSMutableArray+Test.h"
 
 @interface ViewController ()
 
@@ -29,8 +27,6 @@
 
 #pragma test
 - (void)testCategory {
-	NSMutableArray *mArray = [[NSMutableArray alloc] init];
-	[mArray addObject:@"fff"];
 }
 
 @end

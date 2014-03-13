@@ -10,12 +10,5 @@
 
 @implementation NSMutableDictionary (VFoundation)
 
-bool setObject(NSMutableDictionary *mDict, id object, id key) {
-	if (object) {
-		[mDict setObject:object forKey:key];
-		return true;
-	}
-	return false;
-}
 
 @end

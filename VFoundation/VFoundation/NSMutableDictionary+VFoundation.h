@@ -12,16 +12,6 @@
  *  NSMutableDictionary' category in VFoundation
  */
 @interface NSMutableDictionary (VFoundation)
-/**
- *  Make safe when set nil object or nil key
- *
- *  @param mDict    receiver
- *  @param anObject Can be nil
- *  @param aKey     Can be nil
- *
- *  @return If set successfully it will be return YES,otherwise NO
- */
-bool setObject(NSMutableDictionary *mDict, id object, id key);
 
 
 @end
