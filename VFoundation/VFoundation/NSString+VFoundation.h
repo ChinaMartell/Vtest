@@ -17,6 +17,11 @@
 
 @end
 @interface NSString (NSStringJson)
+/**
+ *  NSString to Json
+ *
+ *  @return Json String
+ */
 - (NSString *)toJson;
 
 @end

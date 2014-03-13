@@ -27,6 +27,8 @@
 
 #pragma test
 - (void)testCategory {
+	NSString *str = [NSString stringWithFormat:@"hello json"];
+	NSLog(@"%@", [str toJson]);
 }
 
 @end
