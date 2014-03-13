@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "VCoreData.h"
+#import "NSMutableArray+Test.h"
+
 @interface ViewController ()
 
 @end
@@ -27,27 +29,8 @@
 
 #pragma test
 - (void)testCategory {
-	NSMutableDictionary *mDict = [[NSMutableDictionary alloc] init];
-	setObject(mDict, @"ff", @"ff");
 	NSMutableArray *mArray = [[NSMutableArray alloc] init];
-	addObject(mArray, nil);
-
-	mainA ( ^{
-	    NSLog(@"aaa");
-	});
-	asyncToMain ( ^{
-	    NSLog(@"downloading");
-	}, ^() {
-	    NSLog(@"refresh UI");
-	});
-
-	globalA ( ^{
-	    __block int i = 9;
-	    mainA ( ^{
-	        i = 10;
-		});
-	});
-	[[[VCoreData alloc] init] log];
+	[mArray addObject:@"fff"];
 }
 
 @end

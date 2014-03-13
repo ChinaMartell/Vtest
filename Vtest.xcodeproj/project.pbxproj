@@ -25,6 +25,7 @@
 		43667A7718CDEAB00002B08E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43667A5618CDEAB00002B08E /* UIKit.framework */; };
 		43667A7F18CDEAB00002B08E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43667A7D18CDEAB00002B08E /* InfoPlist.strings */; };
 		43667A8118CDEAB00002B08E /* VtestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43667A8018CDEAB00002B08E /* VtestTests.m */; };
+		43FCE4CD18D19A1D00D90016 /* NSMutableArray+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FCE4CC18D19A1D00D90016 /* NSMutableArray+Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		43667A7C18CDEAB00002B08E /* VtestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VtestTests-Info.plist"; sourceTree = "<group>"; };
 		43667A7E18CDEAB00002B08E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43667A8018CDEAB00002B08E /* VtestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VtestTests.m; sourceTree = "<group>"; };
+		43FCE4CB18D19A1D00D90016 /* NSMutableArray+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Test.h"; sourceTree = "<group>"; };
+		43FCE4CC18D19A1D00D90016 /* NSMutableArray+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Test.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				43667A6B18CDEAB00002B08E /* ViewController.m */,
 				43667A6D18CDEAB00002B08E /* Images.xcassets */,
 				43667A5918CDEAB00002B08E /* Supporting Files */,
+				43FCE4CB18D19A1D00D90016 /* NSMutableArray+Test.h */,
+				43FCE4CC18D19A1D00D90016 /* NSMutableArray+Test.m */,
 			);
 			path = Vtest;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43667A6C18CDEAB00002B08E /* ViewController.m in Sources */,
+				43FCE4CD18D19A1D00D90016 /* NSMutableArray+Test.m in Sources */,
 				43667A6318CDEAB00002B08E /* AppDelegate.m in Sources */,
 				43667A5F18CDEAB00002B08E /* main.m in Sources */,
 			);

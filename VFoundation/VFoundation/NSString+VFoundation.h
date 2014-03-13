@@ -10,6 +10,13 @@
 /**
  *  NSString' category in VFoundation
  */
-@interface NSString (VFoundation)
+@interface NSString (NSStringVFoundation)
+
+@end
+@interface NSString (NSStringUrl)
+
+@end
+@interface NSString (NSStringJson)
+- (NSString *)toJson;
 
 @end

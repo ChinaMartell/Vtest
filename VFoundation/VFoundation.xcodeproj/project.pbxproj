@@ -39,6 +39,7 @@
 		43972E8618CD849600F1CC3E /* NSCache+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E8518CD849600F1CC3E /* NSCache+VFoundation.m */; };
 		43972E8918CD84AD00F1CC3E /* NSBundle+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E8818CD84AD00F1CC3E /* NSBundle+VFoundation.m */; };
 		43C3B49D18CED38500E3526A /* NSObject+VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C3B49C18CED38500E3526A /* NSObject+VFoundation.m */; };
+		43FCE4C718D16AF400D90016 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FCE4C618D16AF400D90016 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		43972E8818CD84AD00F1CC3E /* NSBundle+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+VFoundation.m"; sourceTree = "<group>"; };
 		43C3B49B18CED38500E3526A /* NSObject+VFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VFoundation.h"; sourceTree = "<group>"; };
 		43C3B49C18CED38500E3526A /* NSObject+VFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VFoundation.m"; sourceTree = "<group>"; };
+		43FCE4C518D16AF400D90016 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		43FCE4C618D16AF400D90016 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,7 @@
 		436E7CCA18CF3FB30003E5A1 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				43FCE4C418D16ADC00D90016 /* Json */,
 				436E7CCD18CF3FF90003E5A1 /* File */,
 				436E7CCC18CF3FEF0003E5A1 /* Block */,
 				436E7CCB18CF3FE70003E5A1 /* GCD */,
@@ -306,6 +310,15 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		43FCE4C418D16ADC00D90016 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				43FCE4C518D16AF400D90016 /* JSONKit.h */,
+				43FCE4C618D16AF400D90016 /* JSONKit.m */,
+			);
+			name = Json;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +424,7 @@
 				43972E7118CD83BD00F1CC3E /* NSData+VFoundation.m in Sources */,
 				43972E7418CD83CD00F1CC3E /* NSMutableData+VFoundation.m in Sources */,
 				43972E7D18CD841800F1CC3E /* NSMutableURLRequest+VFoundation.m in Sources */,
+				43FCE4C718D16AF400D90016 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

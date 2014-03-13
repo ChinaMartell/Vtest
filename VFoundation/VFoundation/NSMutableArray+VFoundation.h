@@ -10,6 +10,15 @@
 /**
  *  NSMutableArray' category in VFoundation
  */
-@interface NSMutableArray (VFoundation)
+@interface NSMutableArray (NSMutableArrayVFoundation)
+/**
+ *  Make safe when add nil object or nil key
+ *
+ *  @param mArray receiver
+ *  @param object Can be nil
+ *
+ *  @return If set successfully it will be return YES,otherwise NO
+ */
+bool addObject(NSMutableArray *mArray, id object);
 
 @end
