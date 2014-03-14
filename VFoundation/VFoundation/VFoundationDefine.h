@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "VCategoryDefine.h"
 #import "VUtilityDefine.h"
+
+
+#define C_DEFAULT_ENCODING kCFStringEncodingUTF8
+#define DEFAULT_ENCODING NSUTF8StringEncoding
 @interface VFoundationDefine : NSObject
 
 @end

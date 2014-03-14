@@ -7,17 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSONKit.h"
 /**
  *  NSString' category in VFoundation
  */
 @interface NSString (NSStringVFoundation)
 /**
+ *  It is best replacement of Apple's UDID，this is never change,even though upgrate system
+ *
+ *  @return
+ */
++ (NSString *)UDID;
+/**
  *  UUID get unique string
  *
  *  @return string
  */
-- (NSString *)UUID;
++ (NSString *)UUID;
 /**
  *  Trim the entire string default
  *
@@ -33,19 +38,21 @@
 /**
  *  Replace with the specified string
  *
- *  @param str
+ *  @param string
+ *  @param target
  *
  *  @return replaced string
  */
-- (NSString *)replaceString:(NSString *)str;
+- (NSString *)replace:(NSString *)string ForTarget:(NSString *)target;
 /**
  *  Replace with the specified strings
  *
- *  @param str ...
+ *  @param string
+ *  @param target ...
  *
  *  @return replaced string
  */
-- (NSString *)replaceStrings:(NSString *)str, ...NS_REQUIRES_NIL_TERMINATION;
+- (NSString *)replace:(NSString *)string ForTargets:(NSString *)target, ...NS_REQUIRES_NIL_TERMINATION;
 /**
  *  Is contain the specified string
  *
@@ -63,11 +70,56 @@
  */
 - (BOOL)containStrings:(NSString *)str, ...NS_REQUIRES_NIL_TERMINATION;
 /**
+ *  Append the specified string rearmost
+ *
+ *  @param str
+ *
+ *  @return appended string
+ */
+- (NSString *)addString:(NSString *)str;
+/**
+ *  Append the specified strings rearmost
+ *
+ *  @param str
+ *
+ *  @return appended string
+ */
+- (NSString *)addStrings:(NSString *)str, ...NS_REQUIRES_NIL_TERMINATION;
+/**
+ *  Append the specified string with format rearmost
+ *
+ *  @param format
+ *
+ *  @return appended string
+ */
+- (NSString *)addFormat:(NSString *)format, ...NS_FORMAT_FUNCTION(1, 2);
+/**
+ *  Delete the specified string
+ *
+ *  @param str
+ *
+ *  @return deleted string
+ */
+- (NSString *)deleteString:(NSString *)str;
+/**
+ *  Delete the specified strings
+ *
+ *  @param str
+ *
+ *  @return deleted string
+ */
+- (NSString *)deleteStrings:(NSString *)str, ...NS_REQUIRES_NIL_TERMINATION;
+
+/**
  *  It is the best replacement of isEmpty that string does not include @"",[NSNull null],and nil
  *
  *  @return bool
  */
 - (BOOL)isMeaningful;
+@end
+@interface NSString (NSStringFile)
+
+
 @end
 @interface NSString (NSStringURL)
 /**
@@ -99,7 +151,7 @@
  *
  *  @return lastUrlString
  */
-- (NSString *)lastURL;
+- (NSString *)lastURLString;
 /**
  *  URL parameter for key
  *
@@ -140,13 +192,19 @@
 - (NSString *)URLDecodeAbsoluteString;
 
 @end
-@interface NSString (NSStringEncryption)
+@interface NSString (NSStringCrypto)
 /**
- *  MD5 summarise 32 bit string
+ *  MD5 summarise 32 string
  *
  *  @return string
  */
 - (NSString *)MD5Sum;
+/**
+ *  MD5 summarise 16 string
+ *
+ *  @return string
+ */
+- (NSString *)MD516Sum;
 /**
  *  SHA1 summarise 32 bit string
  *
@@ -170,7 +228,7 @@
  *
  *  @return string
  */
-- (NSString *)base64decodeString;
+- (NSString *)base64DecodeString;
 /**
  *  AES encrypt string
  *
@@ -196,9 +254,25 @@
  *  @return plain string
  */
 - (NSString *)toText;
-
-@end
-
-@interface NSString (NSStringJSON)
+/**
+ *  Escape the specified string like &amps;->&
+ *
+ *  @return escaped string
+ */
+- (NSString *)escapeHTML;
+/**
+ *  Unescape the  specified string like &->&amps;
+ *
+ *  @return unescaped string
+ */
+- (NSString *)unEscapeHTML;
+/**
+ *  Quote to unichar for "Character too large for enclosing character literal type"
+ *
+ *  @param string
+ *
+ *  @return unichar
+ */
++ (unichar)quote:(NSString *)string;
 
 @end
