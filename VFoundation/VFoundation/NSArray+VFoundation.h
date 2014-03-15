@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
+
 /**
  *  NSArray' category in VFoundation
  */
