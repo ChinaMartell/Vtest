@@ -49,22 +49,12 @@
 - (id)objectAtIndexSafe:(NSUInteger)index {
 	id obj = nil;
 	if (index < [self count]) {
-		obj = [self objectAtIndex:index];
+		obj = [self objectAtIndexSafe:index];
 	}
 	else {
 		NSLog(@"数组越界");
 	}
 	return obj;
-}
-
-
-/**
- *  make deep mutable copy of the array
- *
- *  @return the copy mutable array
- */
-- (NSMutableArray *)deepMutableCopy {
-	return (__bridge_transfer NSMutableArray *)CFPropertyListCreateDeepCopy(kCFAllocatorDefault, (__bridge CFArrayRef)self, kCFPropertyListMutableContainers);
 }
 
 

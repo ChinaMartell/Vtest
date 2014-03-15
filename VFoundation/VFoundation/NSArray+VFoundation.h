@@ -14,4 +14,6 @@
  */
 @interface NSArray (VFoundation)
 
+-(NSArray*)deepCopy;
+
 @end
