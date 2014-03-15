@@ -255,6 +255,12 @@
  */
 - (NSString *)toText;
 /**
+ *  Add the html tag to the plain text,generate the html string
+ *
+ *  @return html string
+ */
+- (NSString *)toHTML;
+/**
  *  Escape the specified string like &amps;->&
  *
  *  @return escaped string

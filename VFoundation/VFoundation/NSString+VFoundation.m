@@ -15,9 +15,11 @@
 #import "UIDevice+hardware.h"
 #import "KeyChainManager.h"
 #import <AdSupport/AdSupport.h>
+#import "NSString+HTML.h"
+#import "HTMLConverter.h"
 #define KEYCHAIN_UDID @"udid"
 @implementation NSString (NSStringVFoundation)
-+ (NSString *)UDID { //TODO
++ (NSString *)UDID {
 	NSString *udid = [KeyChainManager objectForKey:KEYCHAIN_UDID];
 	if (!udid) {
 #ifdef IOS_VERSION_OVER_7
@@ -315,7 +317,11 @@
 @end
 @implementation NSString (NSStringHTML)
 - (NSString *)toText {
-	return nil;
+	return [self stringByConvertingHTMLToPlainText];
+}
+
+- (NSString *)toHTML {
+	return [[[HTMLConverter alloc] init] toHTML:self];
 }
 
 - (NSString *)escapeHTML {

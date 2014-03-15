@@ -15,6 +15,9 @@
 		435859B518D47E35003C7E28 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 435859B318D47E35003C7E28 /* SFHFKeychainUtils.m */; };
 		435859BD18D47FBB003C7E28 /* KeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 435859BC18D47FBB003C7E28 /* KeyChainManager.m */; };
 		435859C118D48637003C7E28 /* UIDevice+hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 435859C018D48637003C7E28 /* UIDevice+hardware.m */; };
+		435859C818D497EA003C7E28 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 435859C518D497EA003C7E28 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		435859C918D497EA003C7E28 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 435859C718D497EA003C7E28 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		435859CE18D4988E003C7E28 /* HTMLConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 435859CB18D4988E003C7E28 /* HTMLConverter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		43667A9A18CDF0BB0002B08E /* VFoundationDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 43667A9918CDF0BB0002B08E /* VFoundationDefine.m */; };
 		436E7CD018CF40E70003E5A1 /* VGCDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 436E7CCF18CF40E70003E5A1 /* VGCDManager.m */; };
 		436E7CD318CF41590003E5A1 /* VCategoryDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 436E7CD218CF41590003E5A1 /* VCategoryDefine.m */; };
@@ -91,6 +94,12 @@
 		435859BC18D47FBB003C7E28 /* KeyChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainManager.m; sourceTree = "<group>"; };
 		435859BF18D48637003C7E28 /* UIDevice+hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+hardware.h"; sourceTree = "<group>"; };
 		435859C018D48637003C7E28 /* UIDevice+hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+hardware.m"; sourceTree = "<group>"; };
+		435859C418D497EA003C7E28 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		435859C518D497EA003C7E28 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		435859C618D497EA003C7E28 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		435859C718D497EA003C7E28 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		435859CA18D4988E003C7E28 /* HTMLConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLConverter.h; sourceTree = "<group>"; };
+		435859CB18D4988E003C7E28 /* HTMLConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLConverter.m; sourceTree = "<group>"; };
 		43667A9818CDF0BB0002B08E /* VFoundationDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFoundationDefine.h; sourceTree = "<group>"; };
 		43667A9918CDF0BB0002B08E /* VFoundationDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFoundationDefine.m; sourceTree = "<group>"; };
 		436E7CCE18CF40E70003E5A1 /* VGCDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VGCDManager.h; sourceTree = "<group>"; };
@@ -213,6 +222,27 @@
 			name = Hardware;
 			sourceTree = "<group>";
 		};
+		435859C318D497CA003C7E28 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				435859D018D49897003C7E28 /* HTML */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		435859D018D49897003C7E28 /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				435859CA18D4988E003C7E28 /* HTMLConverter.h */,
+				435859CB18D4988E003C7E28 /* HTMLConverter.m */,
+				435859C418D497EA003C7E28 /* GTMNSString+HTML.h */,
+				435859C518D497EA003C7E28 /* GTMNSString+HTML.m */,
+				435859C618D497EA003C7E28 /* NSString+HTML.h */,
+				435859C718D497EA003C7E28 /* NSString+HTML.m */,
+			);
+			name = HTML;
+			sourceTree = "<group>";
+		};
 		43667A9B18CDF0DC0002B08E /* Define */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +259,7 @@
 		436E7CCA18CF3FB30003E5A1 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				435859C318D497CA003C7E28 /* Web */,
 				435859BE18D48432003C7E28 /* Hardware */,
 				435859AA18D47DA8003C7E28 /* KeyChain */,
 				43526CE218D30A2C00388D89 /* Crypto */,
@@ -473,6 +504,7 @@
 				43667A9A18CDF0BB0002B08E /* VFoundationDefine.m in Sources */,
 				436E7CD318CF41590003E5A1 /* VCategoryDefine.m in Sources */,
 				43972E6218CD834400F1CC3E /* NSDictionary+VFoundation.m in Sources */,
+				435859C818D497EA003C7E28 /* GTMNSString+HTML.m in Sources */,
 				43526CF218D30BF200388D89 /* GTMBase64.m in Sources */,
 				43972E6E18CD83A000F1CC3E /* NSNumber+VFoundation.m in Sources */,
 				436E7CD018CF40E70003E5A1 /* VGCDManager.m in Sources */,
@@ -482,6 +514,7 @@
 				43972E5118CD7EFC00F1CC3E /* NSString+VFoundation.m in Sources */,
 				43972E5418CD7F4500F1CC3E /* NSMutableString+VFoundation.m in Sources */,
 				43972E7A18CD840600F1CC3E /* NSURL+VFoundation.m in Sources */,
+				435859C918D497EA003C7E28 /* NSString+HTML.m in Sources */,
 				43526CEB18D30AB700388D89 /* AESCrypt.m in Sources */,
 				435859B518D47E35003C7E28 /* SFHFKeychainUtils.m in Sources */,
 				43C3B49D18CED38500E3526A /* NSObject+VFoundation.m in Sources */,
@@ -491,6 +524,7 @@
 				43972E5F18CD833400F1CC3E /* NSMutableArray+VFoundation.m in Sources */,
 				43972E8018CD843800F1CC3E /* NSURLRequest+VFoundation.m in Sources */,
 				43526CED18D30AB700388D89 /* NSData+CommonCrypto.m in Sources */,
+				435859CE18D4988E003C7E28 /* HTMLConverter.m in Sources */,
 				43972E6518CD835400F1CC3E /* NSMutableDictionary+VFoundation.m in Sources */,
 				43972E8618CD849600F1CC3E /* NSCache+VFoundation.m in Sources */,
 				43972E6B18CD837200F1CC3E /* NSMutableSet+VFoundation.m in Sources */,
