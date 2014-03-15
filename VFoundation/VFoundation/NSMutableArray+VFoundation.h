@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+
+
 /**
  *  NSMutableArray' category in VFoundation
  */
 @interface NSMutableArray (VFoundation)
+
+-(BOOL)moveObjectFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex;
+-(BOOL)swapObjectAtIndex:(NSInteger)fromIndex withObjectAtIndex:(NSInteger)toIndex;
 
 @end
