@@ -12,9 +12,22 @@
 #import "GTMBase64.h"
 #import "JSONKit.h"
 #import "VFoundationDefine.h"
+#import "UIDevice+hardware.h"
+#import "KeyChainManager.h"
+#import <AdSupport/AdSupport.h>
+#define KEYCHAIN_UDID @"udid"
 @implementation NSString (NSStringVFoundation)
 + (NSString *)UDID { //TODO
-	return nil;
+	NSString *udid = [KeyChainManager objectForKey:KEYCHAIN_UDID];
+	if (!udid) {
+#ifdef IOS_VERSION_OVER_7
+		udid = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+#else
+		udid = [[UIDevice currentDevice] macAddress];
+#endif
+	}
+	[KeyChainManager setObject:udid forKey:KEYCHAIN_UDID];
+	return udid;
 }
 
 + (NSString *)UUID {
@@ -149,7 +162,8 @@
 }
 
 - (NSString *)bin {
-	return nil;
+	NSURL *url = [NSURL URLWithString:[self URLEncodeAbsoluteString]];
+	return [url path];
 }
 
 - (NSString *)lastURLString {
@@ -158,11 +172,20 @@
 }
 
 - (NSString *)parameterForKey:(NSString *)key {
-	return nil;
+	NSDictionary *parameters = [self parameters];
+	return [parameters objectForKey:key];
 }
 
 - (NSDictionary *)parameters {
-	return nil;
+	NSURL *url = [NSURL URLWithString:[self URLEncodeAbsoluteString]];
+	NSString *parameters = [url query];
+	NSArray *parameterArray = [parameters componentsSeparatedByString:@"&"];
+	NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
+	for (NSString *kv in parameterArray) {
+		NSArray *kvArray = [kv componentsSeparatedByString:@"="];
+		[result setObject:kvArray[1] forKey:kvArray[0]];
+	}
+	return result;
 }
 
 - (NSString *)URLEncodeString {
@@ -179,11 +202,53 @@
 }
 
 - (NSString *)URLEncodeAbsoluteString {
-	return nil;
+	if ([self containString:@"://"]) {
+		NSURL *url = [NSURL URLWithString:[self stringByAddingPercentEscapesUsingEncoding:CFStringConvertEncodingToNSStringEncoding(C_DEFAULT_ENCODING)]];
+		NSString *scheme = [[[url scheme] URLEncodeString] addString:@"://"];
+		NSString *host = [[url host] URLEncodeString];
+		NSArray *binTmpArray = [url pathComponents];
+		NSMutableArray *mBinArray = [[NSMutableArray alloc] init];
+		for (NSString *str in binTmpArray) {
+			NSString *strEncoded = str;
+			if (![str isEqualToString:@"/"]) {
+				strEncoded = [str URLEncodeString];
+			}
+			[mBinArray addObject:strEncoded];
+		}
+		NSArray *parameterTmpArray = [[url query] componentsSeparatedByString:@"&"];
+		NSMutableArray *mParameterArray = [[NSMutableArray alloc] init];
+		for (NSString *kv in parameterTmpArray) {
+			NSArray *kvArray = [kv componentsSeparatedByString:@"="];
+			[mParameterArray addObject:[[kvArray[0] URLEncodeString] addString:[kvArray[1] URLEncodeString]]];
+		}
+		return [scheme addStrings:host, [mBinArray componentsJoinedByString:@""], [mParameterArray componentsJoinedByString:@""], nil];
+	}
+	return self;
 }
 
 - (NSString *)URLDecodeAbsoluteString {
-	return nil;
+	if ([self containString:@"://"]) {
+		NSURL *url = [NSURL URLWithString:[self stringByAddingPercentEscapesUsingEncoding:CFStringConvertEncodingToNSStringEncoding(C_DEFAULT_ENCODING)]];
+		NSString *scheme = [[[url scheme] URLDecodeString] addString:@"://"];
+		NSString *host = [[url host] URLDecodeString];
+		NSArray *binTmpArray = [url pathComponents];
+		NSMutableArray *mBinArray = [[NSMutableArray alloc] init];
+		for (NSString *str in binTmpArray) {
+			NSString *strEncoded = str;
+			if (![str isEqualToString:@"/"]) {
+				strEncoded = [str URLDecodeString];
+			}
+			[mBinArray addObject:strEncoded];
+		}
+		NSArray *parameterTmpArray = [[url query] componentsSeparatedByString:@"&"];
+		NSMutableArray *mParameterArray = [[NSMutableArray alloc] init];
+		for (NSString *kv in parameterTmpArray) {
+			NSArray *kvArray = [kv componentsSeparatedByString:@"="];
+			[mParameterArray addObject:[[kvArray[0] URLDecodeString] addString:[kvArray[1] URLDecodeString]]];
+		}
+		return [scheme addStrings:host, [mBinArray componentsJoinedByString:@""], [mParameterArray componentsJoinedByString:@""], nil];
+	}
+	return self;
 }
 
 @end
