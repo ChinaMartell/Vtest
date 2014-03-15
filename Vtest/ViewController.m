@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "VCoreData.h"
+
 @interface ViewController ()
 
 @end
@@ -18,6 +19,7 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	[self testCategory];
+    [self testArray];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,5 +51,15 @@
 	});
 	[[[VCoreData alloc] init] log];
 }
+
+-(void)testArray{
+    NSArray *array = @[@1,@2];
+    NSMutableArray *arr = [[NSMutableArray alloc] initWithArray:array];
+    [arr addObject:nil];
+    [arr removeAllObjects];
+    [arr removeLastObject];
+    [arr objectAtIndex:2];
+}
+
 
 @end
