@@ -57,4 +57,25 @@
 	return obj;
 }
 
+
+/**
+ *  make deep mutable copy of the array
+ *
+ *  @return the copy mutable array
+ */
+- (NSMutableArray *)deepMutableCopy {
+	return (__bridge_transfer NSMutableArray *)CFPropertyListCreateDeepCopy(kCFAllocatorDefault, (__bridge CFArrayRef)self, kCFPropertyListMutableContainers);
+}
+
+
+/**
+ *  make deep copy of the array
+ *
+ *  @return the copy array
+ */
+- (NSArray *)deepCopy {
+	return [NSKeyedUnarchiver unarchiveObjectWithData:
+	        [NSKeyedArchiver archivedDataWithRootObject:self]];
+}
+
 @end
