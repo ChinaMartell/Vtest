@@ -147,12 +147,6 @@
  */
 - (NSString *)bin;
 /**
- *  URL lastUrl by deleted the host like "/search?txt...."
- *
- *  @return lastUrlString
- */
-- (NSString *)lastURLString;
-/**
  *  URL parameter for key
  *
  *  @param key
@@ -179,7 +173,7 @@
  */
 - (NSString *)URLDecodeString;
 /**
- *  URL auto encode url,Recommend
+ *  URL auto encode url,Recommend,except value has &
  *
  *  @return encoded absoluteString
  */
