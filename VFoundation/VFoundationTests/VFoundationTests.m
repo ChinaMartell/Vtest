@@ -117,4 +117,24 @@
 	                                            AESEncryptForKey:@"123"] AESDecryptForKey:@"123"]);
 }
 
+- (void)testCategoryBundle {
+}
+
+- (void)testCategoryURL {
+}
+
+- (void)testCategoryDate {
+	NSDate *date = [NSDate date];
+	NSLog(@"shadow test year:%d month:%d day:%d weekday:%d hour:%d min:%d second:%d weekOfMonth:%d weekOfYear:%d", [date year], [date month], [date day], [date weekDay], [date hour], [date minute], [date second], [date weekOfMonth], [date weekOfYear]);
+	NSDate *firstD = [date beginningOfDay];
+	NSDate *endD = [date endOfDay];
+	NSDate *firstW = [date beginningOfWeek];
+	NSDate *endW = [date endOfWeek];
+	NSDate *firstM = [date beginningOfMonth];
+	NSDate *endM = [date endOfMonth];
+	NSDate *firstY = [date beginningOfYear];
+	NSDate *endY = [date endOfYear];
+	NSLog(@"shadow test timestamp:%@", [date timestampString]);
+}
+
 @end
