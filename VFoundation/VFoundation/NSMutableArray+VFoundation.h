@@ -12,7 +12,7 @@
 /**
  *  NSMutableArray' category in VFoundation
  */
-@interface NSMutableArray (VFoundation)
+@interface NSMutableArray (NSMutableArrayVFoundation)
 
 -(BOOL)moveObjectFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex;
 -(BOOL)swapObjectAtIndex:(NSInteger)fromIndex withObjectAtIndex:(NSInteger)toIndex;

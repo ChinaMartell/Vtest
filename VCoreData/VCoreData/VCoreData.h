@@ -9,5 +9,4 @@
 #import <Foundation/Foundation.h>
 #import "VFoundation.h"
 @interface VCoreData : NSObject
-- (void)log;
 @end

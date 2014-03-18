@@ -9,7 +9,8 @@
 #import "NSMutableArray+VFoundation.h"
 #import "NSObject+VFoundation.h"
 
-@implementation NSMutableArray (VFoundation)
+@implementation NSMutableArray (NSMutableArrayVFoundation)
+
 
 /**
  *  swap Objects in array
