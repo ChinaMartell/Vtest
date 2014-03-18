@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "VCoreData.h"
+#import "NSArray+VFoundation.h"
+#import "TestTableViewController.h"
 
 @interface ViewController ()
 
@@ -19,7 +21,7 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	[self testCategory];
-    [self testArray];
+	[self testArray];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,14 +54,16 @@
 	[[[VCoreData alloc] init] log];
 }
 
--(void)testArray{
-    NSArray *array = @[@1,@2];
-    NSMutableArray *arr = [[NSMutableArray alloc] initWithArray:array];
-    [arr addObject:nil];
-    [arr removeAllObjects];
-    [arr removeLastObject];
-    [arr objectAtIndex:2];
+- (void)testArray {
+    TestTableViewController *t1 = [[TestTableViewController alloc] init];
+    TestTableViewController *t2 = [[TestTableViewController alloc] init];
+	NSArray *array = @[t1, t2];
+	NSArray *array1 = [array copy];
+	NSMutableArray *array2 = [array mutableCopy];
+	NSArray *array3 = [array trueDeepCopy];
+	NSLog(@"123");
 }
+
 
 
 @end
