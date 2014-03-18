@@ -12,5 +12,8 @@
  *  NSMutableDictionary' category in VFoundation
  */
 @interface NSMutableDictionary (VFoundation)
-- (BOOL)setObjectSafe:(id)anObject forKey:(id <NSCopying> )aKey;
+
+- (BOOL)removeObject:(id)aObject;
+- (void)mergeDictionary:(NSDictionary*)aMergedDict;
+
 @end

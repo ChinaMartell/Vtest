@@ -12,4 +12,6 @@
  */
 @interface NSDictionary (VFoundation)
 
++ (NSDictionary *)dictionaryWithDictionaries:(NSDictionary *)dict, ...NS_REQUIRES_NIL_TERMINATION;
+
 @end

@@ -58,14 +58,16 @@
 }
 
 
+
 /**
  *  make deep copy of the array
  *
  *  @return the copy array
  */
-- (NSArray *)deepCopy {
+- (NSArray *)trueDeepCopy {
 	return [NSKeyedUnarchiver unarchiveObjectWithData:
 	        [NSKeyedArchiver archivedDataWithRootObject:self]];
 }
+
 
 @end
