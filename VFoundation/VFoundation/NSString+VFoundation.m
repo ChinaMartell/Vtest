@@ -136,7 +136,7 @@
 }
 - (BOOL)isMeaningful {
 	NSString *tmp = [self trim];
-	if (![tmp isEqualToString:@""] && tmp.length > 0 && ![tmp isEqual:[NSNull null]]) {
+	if (tmp.length > 0 && ![tmp isEqual:[NSNull null]]) {
 		return YES;
 	}
 	return NO;
