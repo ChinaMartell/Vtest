@@ -65,6 +65,11 @@
 	NSString *mean = @"     ";
 	NSLog(@"shadow test log mean:%d", [mean isMeaningful]);
 	XCTAssert(mean, @"shadow assert string mean:%@", mean);
+	//test file
+	NSString *fileSize = @"2.5M";
+	NSLog(@"shadow test fileSize:%llu", [fileSize fileSize]);
+	NSLog(@"shadow test fileSizeString:%@", [NSString fileSizeString:[fileSize fileSize]]);
+
 	//test url
 	NSString *url = @"http://www.baidu.com/s?wd=我调你啊&rsv_spt=15#$%&issp=1&rsv_bp=0&ie=utf-8&tn=baiduhome_pg&rsv_sug3=6&rsv_sug=0&rsv_sug1=3&rsv_sug4=478";
 	NSString *a = @"!*'();:@&=+$,/?%#[]我草你吗";

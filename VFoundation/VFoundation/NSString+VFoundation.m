@@ -144,7 +144,45 @@
 
 @end
 @implementation NSString (NSStringFile)
+- (unsigned long long)fileSize {
+	NSArray *components = nil;
+	NSString *source = [[self lowercaseString] trim];
+	NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:@"01234567890. "] invertedSet];
+	NSRange range = [source rangeOfCharacterFromSet:cs];
+	if (range.location != NSNotFound) {
+		components = @[[source substringToIndex:range.location],
+		               [source substringFromIndex:range.location]];
+		NSArray *units  = @[@"t",  @"tb", @"g", @"gb", @"m", @"mb", @"k", @"kb", @"b"];
+		NSArray *values = @[@1.024e12, @1.024e12, @1.024e9, @1.024e9,  @1.024e6, @1.024e6,  @1.024e3, @1.024e3,  @1.024];
+		for (int i = 0; i < units.count; ++i) {
+			if ([[components lastObject] caseInsensitiveCompare:[units objectAtIndex:i]] == NSOrderedSame) {
+				return (unsigned long long)([[components objectAtIndex:0] doubleValue] * [[values objectAtIndex:i] doubleValue]);
+			}
+		}
+	}
+	return 0;
+}
 
++ (NSString *)fileSizeString:(unsigned long long)filesize {
+	if (filesize < 1024) {
+		return [NSString stringWithFormat:@"%lldB", filesize];
+	}
+	else if (filesize < 10240) {
+		return [NSString stringWithFormat:@"%0.1lfK", ceil(filesize / 1024.0f * 10) / 10];
+	}
+	else if (filesize < 1024 * 1024) {
+		return [NSString stringWithFormat:@"%lldK", (unsigned long long)ceil(filesize / 1024.0f)];
+	}
+	else if (filesize < 1024 * 10240) {
+		return [NSString stringWithFormat:@"%0.1lfM", ceil(filesize / 1024.0f / 1024.0f * 10) / 10];
+	}
+	else if (filesize < 1024 * 1024 * 1024) {
+		return [NSString stringWithFormat:@"%lldM", (unsigned long long)ceil(filesize / 1024.0f / 1024.0f)];
+	}
+	else {
+		return [NSString stringWithFormat:@"%0.1lfG", ceil(filesize / 1024.0f / 1024.0f / 1024.0f * 10) / 10];
+	}
+}
 
 @end
 

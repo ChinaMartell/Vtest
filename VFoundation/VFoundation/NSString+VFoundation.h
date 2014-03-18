@@ -118,7 +118,20 @@
 - (BOOL)isMeaningful;
 @end
 @interface NSString (NSStringFile)
-
+/**
+ *  Transform kb,k,b,m,g to size like "1kb=1024"
+ *
+ *  @return longlong value
+ */
+- (unsigned long long)fileSize;
+/**
+ *  Transform size to units like "1024=1kb"
+ *
+ *  @param filesize
+ *
+ *  @return filesize units
+ */
++ (NSString *)fileSizeString:(unsigned long long)filesize;
 
 @end
 @interface NSString (NSStringURL)
