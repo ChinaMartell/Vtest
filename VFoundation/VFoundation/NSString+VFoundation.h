@@ -119,11 +119,11 @@
 @end
 @interface NSString (NSStringFile)
 /**
- *  Get string preffix like "readMe.txt" will return readMe
+ *  Get string prefix like "readMe.txt" will return readMe
  *
  *  @return string
  */
-- (NSString *)preffix;
+- (NSString *)prefix;
 /**
  *  Get string suffix like "readMe.txt" will return txt
  *
@@ -131,13 +131,13 @@
  */
 - (NSString *)suffix;
 /**
- *  Get string by deleted preffix like "readMe.t.txt" will return t.txt
+ *  Get string by deleted prefix like "readMe.t.txt" will return t.txt
  *
  *  @return deleted string
  */
-- (NSString *)deletePreffixString;
+- (NSString *)deleteprefixString;
 /**
- *  Get string by deleted preffix like "readMe.t.txt" will return readMe.t
+ *  Get string by deleted prefix like "readMe.t.txt" will return readMe.t
  *
  *  @return deleted string
  */

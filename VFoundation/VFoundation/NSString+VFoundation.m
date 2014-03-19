@@ -144,7 +144,7 @@
 
 @end
 @implementation NSString (NSStringFile)
-- (NSString *)preffix {
+- (NSString *)prefix {
 	return [[self componentsSeparatedByString:@"."] firstObject];
 }
 
@@ -152,7 +152,7 @@
 	return [[self componentsSeparatedByString:@"."] lastObject];
 }
 
-- (NSString *)deletePreffixString {
+- (NSString *)deleteprefixString {
 	NSMutableArray *mArray = [NSMutableArray arrayWithArray:[self componentsSeparatedByString:@"."]];
 	[mArray removeFirstObject];
 	return [mArray componentsJoinedByString:@"."];

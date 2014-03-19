@@ -130,6 +130,10 @@
 }
 
 - (void)testCategoryURL {
+	NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/s?wd=nsurl&rsv_spt=1&issp=1&rsv_bp=0&ie=utf-8&tn=baiduhome_pg&rsv_sug3=3&rsv_sug=0&rsv_sug1=2&rsv_sug4=141"];
+	NSLog(@"shadow test parameters:%@", [url parameters]);
+	NSLog(@"shadow test parameterForKey:%@", [url parameterForKey:@"rsv_bp"]);
+	NSLog(@"shadow test bin:%@", [url bin]);
 }
 
 - (void)testCategoryDate {
