@@ -118,6 +118,15 @@
 }
 
 - (void)testCategoryBundle {
+	//在真实的项目就会生效
+	NSLog(@"shadow test buildVersion:%@", [NSBundle buildVersion]);
+	NSLog(@"shadow test appVersion:%@", [NSBundle appVersion]);
+	NSLog(@"shadow test appName:%@", [NSBundle appName]);
+	NSLog(@"shadow test appDisplayName:%@", [NSBundle appDisplayName]);
+	NSLog(@"shadow test identifier:%@", [NSBundle identifier]);
+	NSLog(@"shadow test executable:%@", [NSBundle executable]);
+	NSLog(@"shadow test pathForFile:%@", [NSBundle pathForFile:@"InfoPlist.strings"]);
+	NSLog(@"shadow test dataForFile:%@", [NSBundle dataForFile:@"InfoPlist.strings"]);
 }
 
 - (void)testCategoryURL {

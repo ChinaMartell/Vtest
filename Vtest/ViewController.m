@@ -22,6 +22,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	[self testCategory];
 	[self testArray];
+	[self testCategoryBundle];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,15 +35,13 @@
 }
 
 - (void)testArray {
-    TestTableViewController *t1 = [[TestTableViewController alloc] init];
-    TestTableViewController *t2 = [[TestTableViewController alloc] init];
-	NSArray *array = @[t1, t2];
-	NSArray *array1 = [array copy];
-	NSMutableArray *array2 = [array mutableCopy];
-	NSArray *array3 = [array trueDeepCopy];
-	NSLog(@"123");
+//	TestTableViewController *t1 = [[TestTableViewController alloc] init];
+//	TestTableViewController *t2 = [[TestTableViewController alloc] init];
+//	NSArray *array = @[t1, t2];
+//	NSArray *array1 = [array copy];
+//	NSMutableArray *array2 = [array mutableCopy];
+//	NSArray *array3 = [array trueDeepCopy];
+//	NSLog(@"123");
 }
-
-
 
 @end

@@ -49,9 +49,12 @@
 }
 
 + (NSData *)dataForFile:(NSString *)fileName {
-	NSError *err = nil;
 	NSString *filePath = [self pathForFile:fileName];
-	return [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&err];
+	if ([filePath isMeaningful]) {
+		NSError *err = nil;
+		return [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&err];
+	}
+	return nil;
 }
 
 @end
