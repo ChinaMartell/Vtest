@@ -119,6 +119,30 @@
 @end
 @interface NSString (NSStringFile)
 /**
+ *  Get string preffix like "readMe.txt" will return readMe
+ *
+ *  @return string
+ */
+- (NSString *)preffix;
+/**
+ *  Get string suffix like "readMe.txt" will return txt
+ *
+ *  @return string
+ */
+- (NSString *)suffix;
+/**
+ *  Get string by deleted preffix like "readMe.t.txt" will return t.txt
+ *
+ *  @return deleted string
+ */
+- (NSString *)deletePreffixString;
+/**
+ *  Get string by deleted preffix like "readMe.t.txt" will return readMe.t
+ *
+ *  @return deleted string
+ */
+- (NSString *)deleteSuffixString;
+/**
  *  Transform kb,k,b,m,g to size like "1kb=1024"
  *
  *  @return longlong value

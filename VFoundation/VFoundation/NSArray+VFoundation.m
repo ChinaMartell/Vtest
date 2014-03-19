@@ -57,8 +57,6 @@
 	return obj;
 }
 
-
-
 /**
  *  make deep copy of the array
  *
@@ -68,6 +66,5 @@
 	return [NSKeyedUnarchiver unarchiveObjectWithData:
 	        [NSKeyedArchiver archivedDataWithRootObject:self]];
 }
-
 
 @end
