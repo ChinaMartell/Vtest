@@ -14,7 +14,9 @@
  */
 @interface NSMutableArray (NSMutableArrayVFoundation)
 
--(BOOL)moveObjectFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex;
--(BOOL)swapObjectAtIndex:(NSInteger)fromIndex withObjectAtIndex:(NSInteger)toIndex;
+- (BOOL)moveObjectFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex;
+- (BOOL)swapObjectAtIndex:(NSInteger)fromIndex withObjectAtIndex:(NSInteger)toIndex;
+
+- (BOOL)removeFirstObject;
 
 @end

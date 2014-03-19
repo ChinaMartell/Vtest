@@ -14,7 +14,7 @@
 @interface NSMutableDictionary (VFoundation)
 
 - (BOOL)removeObject:(id)aObject;
-- (void)mergeDictionary:(NSDictionary*)aMergedDict;
+- (void)mergeDictionary:(NSDictionary *)aMergedDict;
 
 
 
