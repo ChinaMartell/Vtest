@@ -150,4 +150,13 @@
 	NSLog(@"shadow test timestamp:%@", [date timestampString]);
 }
 
+- (void)testCategoryNumber {
+	NSNumber *num = [NSNumber numberWithX:10 andY:30];
+	NSLog(@"shadow test number x:%d", [num x]);
+	NSLog(@"shadow test number y:%d", [num y]);
+	num = [@([num x])xAndY : 50];
+	NSLog(@"shadow test number x:%d", [num x]);
+	NSLog(@"shadow test number y:%d", [num y]);
+}
+
 @end
