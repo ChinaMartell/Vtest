@@ -10,6 +10,6 @@
 /**
  *  NSURLRequest' category in VFoundation
  */
-@interface NSURLRequest (VFoundation)
+@interface NSURLRequest (NSURLRequestVFoundation)
 
 @end

@@ -10,7 +10,7 @@
 /**
  *  NSDictionary' category in VFoundation
  */
-@interface NSDictionary (VFoundation)
+@interface NSDictionary (NSDictionaryVFoundation)
 
 + (NSDictionary *)dictionaryWithDictionaries:(NSDictionary *)dict, ...NS_REQUIRES_NIL_TERMINATION;
 

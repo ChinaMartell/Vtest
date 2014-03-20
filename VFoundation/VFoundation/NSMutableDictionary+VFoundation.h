@@ -11,7 +11,7 @@
 /**
  *  NSMutableDictionary' category in VFoundation
  */
-@interface NSMutableDictionary (VFoundation)
+@interface NSMutableDictionary (NSMutableDictionaryVFoundation)
 
 - (BOOL)removeObject:(id)aObject;
 - (void)mergeDictionary:(NSDictionary *)aMergedDict;

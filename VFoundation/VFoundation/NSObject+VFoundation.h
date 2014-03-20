@@ -10,6 +10,6 @@
 /**
  *  NSObject' category in VFoundation
  */
-@interface NSObject (VFoundation)
+@interface NSObject (NSObjectVFoundation)
 
 @end

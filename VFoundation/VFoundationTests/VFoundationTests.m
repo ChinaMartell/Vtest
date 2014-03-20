@@ -159,4 +159,9 @@
 	NSLog(@"shadow test number y:%d", [num y]);
 }
 
+- (void)testCategorySet {
+	NSMutableSet *mSet = [[NSMutableSet alloc] init];
+	[mSet addObject:nil];
+}
+
 @end

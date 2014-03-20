@@ -8,7 +8,7 @@
 
 #import "NSMutableDictionary+VFoundation.h"
 
-@implementation NSMutableDictionary (VFoundation)
+@implementation NSMutableDictionary (NSMutableDictionaryVFoundation)
 
 /**
  *  Merge the dictionary with another dictionary

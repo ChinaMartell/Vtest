@@ -8,6 +8,6 @@
 
 #import "NSCache+VFoundation.h"
 
-@implementation NSCache (VFoundation)
+@implementation NSCache (NSCacheVFoundation)
 
 @end

@@ -8,7 +8,7 @@
 
 #import "NSArray+VFoundation.h"
 
-@implementation NSArray (VFoundation)
+@implementation NSArray (NSArrayVFoundation)
 
 /**
  *  Method swizzling for NSArray

@@ -10,6 +10,6 @@
 /**
  *  NSMutableSet' category in VFoundation
  */
-@interface NSMutableSet (VFoundation)
+@interface NSMutableSet (NSMutableSetVFoundation)
 
 @end

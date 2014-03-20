@@ -12,7 +12,7 @@
 /**
  *  NSArray' category in VFoundation
  */
-@interface NSArray (VFoundation)
+@interface NSArray (NSArrayVFoundation)
 - (NSArray *)trueDeepCopy;
 
 

@@ -8,6 +8,6 @@
 
 #import "NSObject+VFoundation.h"
 
-@implementation NSObject (VFoundation)
+@implementation NSObject (NSObjectVFoundation)
 
 @end
