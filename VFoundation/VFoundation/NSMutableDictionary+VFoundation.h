@@ -2,7 +2,7 @@
 //  NSMutableDictionary+VFoundation.h
 //  VFoundation
 //
-//  Created by shadow on 14-3-10.
+//  Created by JessieYong on 14-3-10.
 //  Copyright (c) 2014年 SJ. All rights reserved.
 //
 
@@ -13,7 +13,13 @@
  */
 @interface NSMutableDictionary (VFoundation)
 
-- (BOOL)removeObject:(id)aObject;
+
+
+/**
+ *  Merge the dictionary with another dictionary
+ *
+ *  @param aMergedDict : the dictionary needs to be merged in
+ */
 - (void)mergeDictionary:(NSDictionary*)aMergedDict;
 
 

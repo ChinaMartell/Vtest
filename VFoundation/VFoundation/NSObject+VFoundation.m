@@ -10,4 +10,11 @@
 
 @implementation NSObject (VFoundation)
 
+/**
+ *  catch the error of setValue for undefined key
+ */
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key  {
+    NSAssert(NO, @"setValue:%@ for undefinedKey:%@", value, key);
+}
+
 @end

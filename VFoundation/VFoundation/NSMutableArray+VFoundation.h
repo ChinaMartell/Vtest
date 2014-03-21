@@ -2,7 +2,7 @@
 //  NSMutableArray+VFoundation.h
 //  VFoundation
 //
-//  Created by shadow on 14-3-10.
+//  Created by JessieYong on 14-3-10.
 //  Copyright (c) 2014年 SJ. All rights reserved.
 //
 
@@ -14,7 +14,18 @@
  */
 @interface NSMutableArray (NSMutableArrayVFoundation)
 
--(BOOL)moveObjectFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex;
--(BOOL)swapObjectAtIndex:(NSInteger)fromIndex withObjectAtIndex:(NSInteger)toIndex;
 
+/**
+ *  move object
+ *
+ *  @return move Successful
+ */
+- (BOOL)moveObjectFromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+
+/*
+ *  swap Objects in array
+ *
+ *  @return swap Successful
+ */
+- (BOOL)swapObjectAtIndex:(NSUInteger)fromIndex withObjectAtIndex:(NSUInteger)toIndex;
 @end

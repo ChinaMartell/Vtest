@@ -2,7 +2,7 @@
 //  NSMutableDictionary+VFoundation.m
 //  VFoundation
 //
-//  Created by shadow on 14-3-10.
+//  Created by JessieYong on 14-3-10.
 //  Copyright (c) 2014年 SJ. All rights reserved.
 //
 
@@ -10,11 +10,7 @@
 
 @implementation NSMutableDictionary (VFoundation)
 
-/**
- *  Merge the dictionary with another dictionary
- *
- *  @param aMergedDict : the dictionary needs to be merged in
- */
+
 - (void)mergeDictionary:(NSDictionary*)aMergedDict
 {
     NSArray* keys = [self allKeys];
@@ -53,27 +49,6 @@
     }
 }
 
-
-/**
- *  remove certain object from dictionary
- *
- *  @param aObject : the object needs to be deleted
- *
- *  @return delete successfully
- */
-- (BOOL)removeObject:(id)aObject {
-	NSUInteger index = NSNotFound;
-	NSEnumerator *enumerator = [self objectEnumerator];
-	id branch;
-	while ((branch = [enumerator nextObject])) {
-		index = [branch indexOfObject:aObject];
-		if (index != NSNotFound) {
-			[branch removeObjectAtIndex:index];
-			return TRUE;
-		}
-	}
-	return FALSE;
-}
 
 
 @end

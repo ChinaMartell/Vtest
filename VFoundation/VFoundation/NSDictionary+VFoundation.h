@@ -2,7 +2,7 @@
 //  NSDictionary+VFoundation.h
 //  VFoundation
 //
-//  Created by shadow on 14-3-10.
+//  Created by JessieYong on 14-3-10.
 //  Copyright (c) 2014年 SJ. All rights reserved.
 //
 
@@ -13,5 +13,5 @@
 @interface NSDictionary (VFoundation)
 
 + (NSDictionary *)dictionaryWithDictionaries:(NSDictionary *)dict, ...NS_REQUIRES_NIL_TERMINATION;
-
+- (NSMutableDictionary *)deepMutableCopy NS_RETURNS_RETAINED;
 @end

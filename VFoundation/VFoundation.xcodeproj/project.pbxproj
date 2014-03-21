@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27CB2CE418DAA5BF0055BAD6 /* SJHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2CE318DAA5BF0055BAD6 /* SJHelper.m */; };
 		43526CEB18D30AB700388D89 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 43526CE418D30AB700388D89 /* AESCrypt.m */; };
 		43526CEC18D30AB700388D89 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 43526CE618D30AB700388D89 /* NSData+Base64.m */; };
 		43526CED18D30AB700388D89 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 43526CE818D30AB700388D89 /* NSData+CommonCrypto.m */; };
@@ -77,6 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27CB2CE218DAA5BF0055BAD6 /* SJHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJHelper.h; sourceTree = "<group>"; };
+		27CB2CE318DAA5BF0055BAD6 /* SJHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJHelper.m; sourceTree = "<group>"; };
 		43526CE318D30AB700388D89 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
 		43526CE418D30AB700388D89 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
 		43526CE518D30AB700388D89 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -184,6 +187,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27CB2CDD18DAA2BB0055BAD6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				27CB2CE218DAA5BF0055BAD6 /* SJHelper.h */,
+				27CB2CE318DAA5BF0055BAD6 /* SJHelper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		43526CE218D30A2C00388D89 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +271,7 @@
 		436E7CCA18CF3FB30003E5A1 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				27CB2CDD18DAA2BB0055BAD6 /* Helper */,
 				435859C318D497CA003C7E28 /* Web */,
 				435859BE18D48432003C7E28 /* Hardware */,
 				435859AA18D47DA8003C7E28 /* KeyChain */,
@@ -505,6 +518,7 @@
 				436E7CD318CF41590003E5A1 /* VCategoryDefine.m in Sources */,
 				43972E6218CD834400F1CC3E /* NSDictionary+VFoundation.m in Sources */,
 				435859C818D497EA003C7E28 /* GTMNSString+HTML.m in Sources */,
+				27CB2CE418DAA5BF0055BAD6 /* SJHelper.m in Sources */,
 				43526CF218D30BF200388D89 /* GTMBase64.m in Sources */,
 				43972E6E18CD83A000F1CC3E /* NSNumber+VFoundation.m in Sources */,
 				436E7CD018CF40E70003E5A1 /* VGCDManager.m in Sources */,

@@ -2,11 +2,12 @@
 //  NSArray+VFoundation.m
 //  VFoundation
 //
-//  Created by shadow on 14-3-10.
+//  Created by JessieYong on 14-3-10.
 //  Copyright (c) 2014年 SJ. All rights reserved.
 //
 
 #import "NSArray+VFoundation.h"
+#import "SJHelper.h"
 
 @implementation NSArray (VFoundation)
 
@@ -18,12 +19,12 @@
 	Class arrayClass = NSClassFromString(@"__NSArrayM");
 
 	Method originalMethod = class_getInstanceMethod(arrayClass, @selector(addObject:));
-	Method categoryMethod = class_getInstanceMethod([NSArray class], @selector(addObjectSafe:));
-	method_exchangeImplementations(originalMethod, categoryMethod);
+	Method categoryMethod = class_getInstanceMethod([NSArray class], @selector(sjAddObjectSafe:));
+	[[SJHelper sharedHelper] swizzlingMethod:originalMethod withAnotherMethod:categoryMethod];
 
 	originalMethod = class_getInstanceMethod(arrayClass, @selector(objectAtIndex:));
-	categoryMethod = class_getInstanceMethod([NSArray class], @selector(objectAtIndexSafe:));
-	method_exchangeImplementations(originalMethod, categoryMethod);
+	categoryMethod = class_getInstanceMethod([NSArray class], @selector(sjObjectAtIndexSafe:));
+	[[SJHelper sharedHelper] swizzlingMethod:originalMethod withAnotherMethod:categoryMethod];
 }
 
 /**
@@ -33,10 +34,12 @@
  *
  *  @return void
  */
-- (void)addObjectSafe:(id)anObject {
+- (void)sjAddObjectSafe:(id)anObject {
 	if (anObject != nil) {
-		[self addObjectSafe:anObject];
-	}
+		[self sjAddObjectSafe:anObject];
+	}else{
+        NSAssert(NO, @"addObject:nil");
+    }
 }
 
 /**
@@ -46,28 +49,21 @@
  *
  *  @return the valid object at index or nil
  */
-- (id)objectAtIndexSafe:(NSUInteger)index {
+- (id)sjObjectAtIndexSafe:(NSUInteger)index {
 	id obj = nil;
 	if (index < [self count]) {
-		obj = [self objectAtIndexSafe:index];
+		obj = [self sjObjectAtIndexSafe:index];
 	}
 	else {
-		NSLog(@"数组越界");
+		NSAssert(NO, @"index %d is beyond the count of the array", index);
 	}
 	return obj;
 }
 
 
-
-/**
- *  make deep copy of the array
- *
- *  @return the copy array
- */
 - (NSArray *)trueDeepCopy {
 	return [NSKeyedUnarchiver unarchiveObjectWithData:
 	        [NSKeyedArchiver archivedDataWithRootObject:self]];
 }
-
 
 @end
