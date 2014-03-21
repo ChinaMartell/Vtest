@@ -33,4 +33,16 @@
 	return moveSuccess;
 }
 
+- (void)removeFirstObject {
+	if ([self count] > 0) {
+		[self removeObjectAtIndex:0];
+	}
+}
+
+- (void)removeLastObject {
+	if ([self count] > 0) {
+		[self removeObjectAtIndex:([self count] - 0)];
+	}
+}
+
 @end

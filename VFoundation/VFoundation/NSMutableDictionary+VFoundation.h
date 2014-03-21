@@ -18,7 +18,8 @@
  *
  *  @param aMergedDict : the dictionary needs to be merged in
  */
-- (void)mergeDictionary:(NSDictionary*)aMergedDict;
+- (void)mergeDictionary:(NSDictionary *)aMergedDict;
 
-
+- (void)removeFirstObject;
+- (void)removeLastObject;
 @end
