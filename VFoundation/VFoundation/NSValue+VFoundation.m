@@ -8,6 +8,6 @@
 
 #import "NSValue+VFoundation.h"
 
-@implementation NSValue (VFoundation)
+@implementation NSValue (NSValueVFoundation)
 
 @end

@@ -117,4 +117,51 @@
 	                                            AESEncryptForKey:@"123"] AESDecryptForKey:@"123"]);
 }
 
+- (void)testCategoryBundle {
+	//在真实的项目就会生效
+	NSLog(@"shadow test buildVersion:%@", [NSBundle buildVersion]);
+	NSLog(@"shadow test appVersion:%@", [NSBundle appVersion]);
+	NSLog(@"shadow test appName:%@", [NSBundle appName]);
+	NSLog(@"shadow test appDisplayName:%@", [NSBundle appDisplayName]);
+	NSLog(@"shadow test identifier:%@", [NSBundle identifier]);
+	NSLog(@"shadow test executable:%@", [NSBundle executable]);
+	NSLog(@"shadow test pathForFile:%@", [NSBundle pathForFile:@"InfoPlist.strings"]);
+	NSLog(@"shadow test dataForFile:%@", [NSBundle dataForFile:@"InfoPlist.strings"]);
+}
+
+- (void)testCategoryURL {
+	NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/s?wd=nsurl&rsv_spt=1&issp=1&rsv_bp=0&ie=utf-8&tn=baiduhome_pg&rsv_sug3=3&rsv_sug=0&rsv_sug1=2&rsv_sug4=141"];
+	NSLog(@"shadow test parameters:%@", [url parameters]);
+	NSLog(@"shadow test parameterForKey:%@", [url parameterForKey:@"rsv_bp"]);
+	NSLog(@"shadow test bin:%@", [url bin]);
+}
+
+- (void)testCategoryDate {
+	NSDate *date = [NSDate date];
+	NSLog(@"shadow test year:%d month:%d day:%d weekday:%d hour:%d min:%d second:%d weekOfMonth:%d weekOfYear:%d", [date year], [date month], [date day], [date weekDay], [date hour], [date minute], [date second], [date weekOfMonth], [date weekOfYear]);
+	NSDate *firstD = [date beginningOfDay];
+	NSDate *endD = [date endOfDay];
+	NSDate *firstW = [date beginningOfWeek];
+	NSDate *endW = [date endOfWeek];
+	NSDate *firstM = [date beginningOfMonth];
+	NSDate *endM = [date endOfMonth];
+	NSDate *firstY = [date beginningOfYear];
+	NSDate *endY = [date endOfYear];
+	NSLog(@"shadow test timestamp:%@", [date timestampString]);
+}
+
+- (void)testCategoryNumber {
+	NSNumber *num = [NSNumber numberWithX:10 andY:30];
+	NSLog(@"shadow test number x:%d", [num x]);
+	NSLog(@"shadow test number y:%d", [num y]);
+	num = [@([num x])xAndY : 50];
+	NSLog(@"shadow test number x:%d", [num x]);
+	NSLog(@"shadow test number y:%d", [num y]);
+}
+
+- (void)testCategorySet {
+	NSMutableSet *mSet = [[NSMutableSet alloc] init];
+	[mSet addObject:nil];
+}
+
 @end

@@ -8,6 +8,6 @@
 
 #import "NSSet+VFoundation.h"
 
-@implementation NSSet (VFoundation)
+@implementation NSSet (NSSetVFoundation)
 
 @end

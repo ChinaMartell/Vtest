@@ -7,7 +7,7 @@
 //
 
 #import "NSNumber+VFoundation.h"
+@implementation NSNumber (NSNumberVFoundation)
 
-@implementation NSNumber (VFoundation)
 
 @end

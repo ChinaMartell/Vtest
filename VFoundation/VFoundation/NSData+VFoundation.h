@@ -10,6 +10,6 @@
 /**
  *  NSData' category in VFoundation
  */
-@interface NSData (VFoundation)
+@interface NSData (NSDataVFoundation)
 
 @end

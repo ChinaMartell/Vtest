@@ -8,6 +8,6 @@
 
 #import "NSURLRequest+VFoundation.h"
 
-@implementation NSURLRequest (VFoundation)
+@implementation NSURLRequest (NSURLRequestVFoundation)
 
 @end

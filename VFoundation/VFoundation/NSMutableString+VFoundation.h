@@ -11,6 +11,6 @@
  *  NSMutableString' category in VFoundation
  */
 
-@interface NSMutableString (VFoundation)
+@interface NSMutableString (NSMutableStringVFoundation)
 
 @end

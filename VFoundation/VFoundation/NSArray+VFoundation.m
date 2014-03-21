@@ -9,7 +9,7 @@
 #import "NSArray+VFoundation.h"
 #import "SJHelper.h"
 
-@implementation NSArray (VFoundation)
+@implementation NSArray (NSArrayVFoundation)
 
 /**
  *  Method swizzling for NSArray
@@ -60,7 +60,11 @@
 	return obj;
 }
 
-
+/**
+ *  make deep copy of the array
+ *
+ *  @return the copy array
+ */
 - (NSArray *)trueDeepCopy {
 	return [NSKeyedUnarchiver unarchiveObjectWithData:
 	        [NSKeyedArchiver archivedDataWithRootObject:self]];

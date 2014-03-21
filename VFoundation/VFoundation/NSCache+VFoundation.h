@@ -10,6 +10,6 @@
 /**
  *  NSCache' category in VFoundation
  */
-@interface NSCache (VFoundation)
+@interface NSCache (NSCacheVFoundation)
 
 @end

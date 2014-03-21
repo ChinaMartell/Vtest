@@ -10,6 +10,6 @@
 /**
  *  NSMutableURLRequest' category in VFoundation
  */
-@interface NSMutableURLRequest (VFoundation)
+@interface NSMutableURLRequest (NSMutableURLRequestVFoundation)
 
 @end

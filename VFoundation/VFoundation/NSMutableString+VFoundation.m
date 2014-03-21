@@ -8,6 +8,6 @@
 
 #import "NSMutableString+VFoundation.h"
 
-@implementation NSMutableString (VFoundation)
+@implementation NSMutableString (NSMutableStringVFoundation)
 
 @end

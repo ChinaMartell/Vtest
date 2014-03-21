@@ -10,6 +10,5 @@
 /**
  *  NSNumber' category in VFoundation
  */
-@interface NSNumber (VFoundation)
-
+@interface NSNumber (NSNumberVFoundation)
 @end

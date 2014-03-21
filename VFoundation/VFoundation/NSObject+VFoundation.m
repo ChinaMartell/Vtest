@@ -8,7 +8,7 @@
 
 #import "NSObject+VFoundation.h"
 
-@implementation NSObject (VFoundation)
+@implementation NSObject (NSObjectVFoundation)
 
 /**
  *  catch the error of setValue for undefined key

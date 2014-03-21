@@ -10,6 +10,6 @@
 /**
  *  NSValue' category in VFoundation
  */
-@interface NSValue (VFoundation)
+@interface NSValue (NSValueVFoundation)
 
 @end

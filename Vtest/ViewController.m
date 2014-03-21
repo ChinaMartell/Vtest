@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "VCoreData.h"
 #import "NSArray+VFoundation.h"
-//#import "NSDictionary+VFoundation.h"
+#import "NSDictionary+VFoundation.h"
 
 @interface ViewController ()
 
@@ -23,6 +23,7 @@
 	[self testCategory];
 	[self testArray];
 	[self testDic];
+	[self testCategoryBundle];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +50,7 @@
 	[dic setValue:@"1" forKey:@"1"];
 
 //   NSArray *array = @[@1, @2];
-  NSMutableDictionary *mutableDic = [[NSMutableDictionary alloc] init];
+	NSMutableDictionary *mutableDic = [[NSMutableDictionary alloc] init];
 	[mutableDic setValue:@"123" forKey:@"1"];
 //    [dic setObject:nil forKey:@"2"];
 //      [array setValue:[NSNull null] forKey:@"1"];
@@ -58,8 +59,7 @@
 
 	[NSDictionary dictionaryWithDictionaries:nil, nil];
 	NSLog(@"%@", [dic valueForKey:@"2"]);
-    [mutableDic removeOb
-//	NSLog(@"%@ and %@ and %@", [mutableDic valueForKey:@"1"], [mutableDic valueForKey:@"2"], [dic valueForKey:nil]);
+	//	NSLog(@"%@ and %@ and %@", [mutableDic valueForKey:@"1"], [mutableDic valueForKey:@"2"], [dic valueForKey:nil]);
 }
 
 @end

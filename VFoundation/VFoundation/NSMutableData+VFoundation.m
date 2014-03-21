@@ -8,6 +8,6 @@
 
 #import "NSMutableData+VFoundation.h"
 
-@implementation NSMutableData (VFoundation)
+@implementation NSMutableData (NSMutableDataVFoundation)
 
 @end

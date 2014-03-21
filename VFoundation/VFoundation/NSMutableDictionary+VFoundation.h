@@ -11,9 +11,7 @@
 /**
  *  NSMutableDictionary' category in VFoundation
  */
-@interface NSMutableDictionary (VFoundation)
-
-
+@interface NSMutableDictionary (NSMutableDictionaryVFoundation)
 
 /**
  *  Merge the dictionary with another dictionary
@@ -21,7 +19,6 @@
  *  @param aMergedDict : the dictionary needs to be merged in
  */
 - (void)mergeDictionary:(NSDictionary*)aMergedDict;
-
 
 
 @end

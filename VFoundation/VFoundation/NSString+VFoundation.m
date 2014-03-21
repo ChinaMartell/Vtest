@@ -136,7 +136,7 @@
 }
 - (BOOL)isMeaningful {
 	NSString *tmp = [self trim];
-	if (![tmp isEqualToString:@""] && tmp.length > 0 && ![tmp isEqual:[NSNull null]]) {
+	if (tmp.length > 0 && ![tmp isEqual:[NSNull null]]) {
 		return YES;
 	}
 	return NO;
@@ -144,6 +144,26 @@
 
 @end
 @implementation NSString (NSStringFile)
+- (NSString *)prefix {
+	return [[self componentsSeparatedByString:@"."] firstObject];
+}
+
+- (NSString *)suffix {
+	return [[self componentsSeparatedByString:@"."] lastObject];
+}
+
+- (NSString *)deleteprefixString {
+	NSMutableArray *mArray = [NSMutableArray arrayWithArray:[self componentsSeparatedByString:@"."]];
+	[mArray removeFirstObject];
+	return [mArray componentsJoinedByString:@"."];
+}
+
+- (NSString *)deleteSuffixString {
+	NSMutableArray *mArray = [NSMutableArray arrayWithArray:[self componentsSeparatedByString:@"."]];
+	[mArray removeLastObject];
+	return [mArray componentsJoinedByString:@"."];
+}
+
 - (unsigned long long)fileSize {
 	NSArray *components = nil;
 	NSString *source = [[self lowercaseString] trim];

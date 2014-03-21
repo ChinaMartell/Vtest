@@ -12,7 +12,7 @@
 
 
 
-@implementation NSDictionary (VFoundation)
+@implementation NSDictionary (NSDictionaryVFoundation)
 
 
 + (NSDictionary *)dictionaryWithDictionaries:(NSDictionary *)dict, ...NS_REQUIRES_NIL_TERMINATION

@@ -10,6 +10,6 @@
 /**
  *  NSMutablNSSeteDictionary' category in VFoundation
  */
-@interface NSSet (VFoundation)
+@interface NSSet (NSSetVFoundation)
 
 @end

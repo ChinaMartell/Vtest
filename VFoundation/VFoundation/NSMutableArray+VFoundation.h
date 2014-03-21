@@ -14,7 +14,6 @@
  */
 @interface NSMutableArray (NSMutableArrayVFoundation)
 
-
 /**
  *  move object
  *

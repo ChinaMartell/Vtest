@@ -8,8 +8,7 @@
 
 #import "NSMutableDictionary+VFoundation.h"
 
-@implementation NSMutableDictionary (VFoundation)
-
+@implementation NSMutableDictionary (NSMutableDictionaryVFoundation)
 
 - (void)mergeDictionary:(NSDictionary*)aMergedDict
 {
@@ -48,7 +47,5 @@
         }
     }
 }
-
-
 
 @end
