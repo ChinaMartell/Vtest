@@ -8,7 +8,7 @@
 
 #import "NSArray+VFoundation.h"
 #import "SJHelper.h"
-
+#import "VFoundation.h"
 @implementation NSArray (NSArrayVFoundation)
 
 /**
@@ -37,9 +37,10 @@
 - (void)sjAddObjectSafe:(id)anObject {
 	if (anObject != nil) {
 		[self sjAddObjectSafe:anObject];
-	}else{
-        NSAssert(NO, @"addObject:nil");
-    }
+	}
+	else {
+		NSAssert(NO, @"addObject:nil");
+	}
 }
 
 /**
@@ -68,6 +69,14 @@
 - (NSArray *)trueDeepCopy {
 	return [NSKeyedUnarchiver unarchiveObjectWithData:
 	        [NSKeyedArchiver archivedDataWithRootObject:self]];
+}
+
+- (BOOL)isEmpty {
+	BOOL isEmpty = [super isEmpty];
+	if (!isEmpty) {
+		isEmpty = !(self.count > 0 && self.count != NSNotFound);
+	}
+	return isEmpty;
 }
 
 @end

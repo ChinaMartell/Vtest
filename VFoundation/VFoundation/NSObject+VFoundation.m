@@ -9,12 +9,15 @@
 #import "NSObject+VFoundation.h"
 
 @implementation NSObject (NSObjectVFoundation)
-
 /**
  *  catch the error of setValue for undefined key
  */
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key  {
-    NSAssert(NO, @"setValue:%@ for undefinedKey:%@", value, key);
+	NSAssert(NO, @"setValue:%@ for undefinedKey:%@", value, key);
+}
+
+- (BOOL)isEmpty {
+	return ![self isEqual:[NSNull null]];
 }
 
 @end

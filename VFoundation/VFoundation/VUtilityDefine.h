@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#pragma mark - Collection
+#import "NSStack.h"
+#import "NSQueue.h"
+#import "NSPriorityQueue.h"
+
+
 #import "VGCDManager.h"
+
 
 #pragma mark - VGCD
 

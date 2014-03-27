@@ -29,6 +29,5 @@
 - (BOOL)swapObjectAtIndex:(NSUInteger)fromIndex withObjectAtIndex:(NSUInteger)toIndex;
 
 - (void)removeFirstObject;
-- (void)removeLastObject;
 
 @end

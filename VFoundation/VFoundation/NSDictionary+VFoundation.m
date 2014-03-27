@@ -7,9 +7,8 @@
 //
 
 #import "NSDictionary+VFoundation.h"
-#import "NSString+VFoundation.h"
 #import "SJHelper.h"
-
+#import "VFoundation.h"
 
 
 @implementation NSDictionary (NSDictionaryVFoundation)
@@ -35,6 +34,14 @@
 
 - (NSMutableDictionary *)deepMutableCopy {
 	return (__bridge_transfer NSMutableDictionary *)CFPropertyListCreateDeepCopy(kCFAllocatorDefault, (__bridge CFDictionaryRef)self, kCFPropertyListMutableContainers);
+}
+
+- (BOOL)isEmpty {
+	BOOL isEmpty = [super isEmpty];
+	if (!isEmpty) {
+		isEmpty = !(self.count > 0 && self.count != NSNotFound);
+	}
+	return isEmpty;
 }
 
 @end

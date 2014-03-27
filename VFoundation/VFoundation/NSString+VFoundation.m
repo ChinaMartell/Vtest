@@ -7,11 +7,11 @@
 //
 
 #import "NSString+VFoundation.h"
+#import "VFoundation.h"
 #import <CommonCrypto/CommonDigest.h>
 #import "AESCrypt.h"
 #import "GTMBase64.h"
 #import "JSONKit.h"
-#import "VFoundationDefine.h"
 #import "UIDevice+hardware.h"
 #import "KeyChainManager.h"
 #import <AdSupport/AdSupport.h>
@@ -135,11 +135,16 @@
 	return result;
 }
 - (BOOL)isMeaningful {
-	NSString *tmp = [self trim];
-	if (tmp.length > 0 && ![tmp isEqual:[NSNull null]]) {
-		return YES;
+	return ![self isEmpty];
+}
+
+- (BOOL)isEmpty {
+	BOOL isEmpty = [super isEmpty];
+	if (!isEmpty) {
+		NSString *tmp = [self trim];
+		isEmpty = tmp.length > 0;
 	}
-	return NO;
+	return isEmpty;
 }
 
 @end

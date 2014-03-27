@@ -7,20 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
 /**
  *  NSArray' category in VFoundation
  */
 @interface NSArray (VFoundation)
-
-
 /**
  *  make deep copy of the array
  *
  *  @return the copy array
  */
 - (NSArray *)trueDeepCopy;
-
-
 @end

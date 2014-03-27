@@ -11,5 +11,11 @@
  *  NSObject' category in VFoundation
  */
 @interface NSObject (NSObjectVFoundation)
+/**
+ *  Return isEmpty
+ *
+ *  @return bool
+ */
+- (BOOL)isEmpty;
 
 @end

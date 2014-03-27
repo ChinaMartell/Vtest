@@ -109,7 +109,6 @@
  *  @return deleted string
  */
 - (NSString *)deleteStrings:(NSString *)str, ...NS_REQUIRES_NIL_TERMINATION;
-
 /**
  *  It is the best replacement of isEmpty that string does not include @"",[NSNull null],and nil
  *
