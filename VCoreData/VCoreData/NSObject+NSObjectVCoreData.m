@@ -219,4 +219,10 @@
 	return result;
 }
 
+#pragma mark - NSObect nsdeepcopying
+- (id)deepCopy {
+	NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self];
+	return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+}
+
 @end

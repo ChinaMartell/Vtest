@@ -19,6 +19,10 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	NSMutableArray *arra = [[NSMutableArray alloc] init];
+	[arra addObject:@"fff"];
+	NSMutableArray *xx = [arra deepCopy];
+	[xx addObject:@"aaa"];
 	UserEntity *enty = [[UserEntity alloc] init];
 	enty.userName = @"fuck";
 	enty.age = 29;

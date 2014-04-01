@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 @class VCoreDataClassModel;
+@protocol NSDeepCopying <NSObject>
+- (id)deepCopy;
+@end
+
 /**
  *  NSObject' category in VCoreData
  */
-@interface NSObject (NSObjectVCoreData) <NSCoding, NSCopying, NSMutableCopying>
+@interface NSObject (NSObjectVCoreData) <NSCoding, NSCopying, NSMutableCopying, NSDeepCopying>
 
 - (VCoreDataClassModel *)classModel;
 + (VCoreDataClassModel *)classModel;
@@ -41,8 +45,5 @@
 - (BOOL)del:(NSString *)str;
 + (BOOL)del:(NSString *)str;
 + (BOOL)del:(NSArray *)objs filter:(NSString *)str;
-
-
-
 
 @end
