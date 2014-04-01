@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43055C3E18EA80EC00AA4EF1 /* VCoreDataFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43055C3D18EA80EC00AA4EF1 /* VCoreDataFilter.m */; };
+		43055C4118EA810800AA4EF1 /* VCoreDataSQLFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43055C4018EA810800AA4EF1 /* VCoreDataSQLFilter.m */; };
+		43055C4418EA95C000AA4EF1 /* VCoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43055C4318EA95C000AA4EF1 /* VCoreDataModel.m */; };
 		43252CDC18D042FD004DA6EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252CDB18D042FD004DA6EC /* Foundation.framework */; };
 		43252CE118D042FD004DA6EC /* VCoreData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43252CE018D042FD004DA6EC /* VCoreData.h */; };
 		43252CE318D042FD004DA6EC /* VCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 43252CE218D042FD004DA6EC /* VCoreData.m */; };
@@ -16,6 +19,15 @@
 		43252CF018D042FD004DA6EC /* libVCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43252CD818D042FD004DA6EC /* libVCoreData.a */; };
 		43252CF618D042FD004DA6EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43252CF418D042FD004DA6EC /* InfoPlist.strings */; };
 		43252CF818D042FD004DA6EC /* VCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43252CF718D042FD004DA6EC /* VCoreDataTests.m */; };
+		4353C8FE18E50DC300F840CB /* VCoreDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353C8FD18E50DC300F840CB /* VCoreDataCache.m */; };
+		437967EF18E94A8F000E4458 /* NSString+NSStringVCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 437967EE18E94A8F000E4458 /* NSString+NSStringVCoreData.m */; };
+		438A4BD218E516AA00D63748 /* VCoreDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A4BD118E516AA00D63748 /* VCoreDataRequest.m */; };
+		438A4BD518E52C3300D63748 /* VCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A4BD418E52C3300D63748 /* VCoreDataManager.m */; };
+		438A4BD818E5407300D63748 /* NSObject+NSObjectVCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A4BD718E5407300D63748 /* NSObject+NSObjectVCoreData.m */; };
+		438A4BDF18E541D600D63748 /* VCoreDataDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A4BDE18E541D600D63748 /* VCoreDataDefine.m */; };
+		438A4BE218E5445900D63748 /* VCoreDataSQLPersister.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A4BE118E5445900D63748 /* VCoreDataSQLPersister.m */; };
+		438A4BE518E5456800D63748 /* VCoreDataPersister.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A4BE418E5456800D63748 /* VCoreDataPersister.m */; };
+		438A4BEC18E5598600D63748 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 438A4BEB18E5598600D63748 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +54,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		43055C3C18EA80EC00AA4EF1 /* VCoreDataFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCoreDataFilter.h; sourceTree = "<group>"; };
+		43055C3D18EA80EC00AA4EF1 /* VCoreDataFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCoreDataFilter.m; sourceTree = "<group>"; };
+		43055C3F18EA810800AA4EF1 /* VCoreDataSQLFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCoreDataSQLFilter.h; sourceTree = "<group>"; };
+		43055C4018EA810800AA4EF1 /* VCoreDataSQLFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCoreDataSQLFilter.m; sourceTree = "<group>"; };
+		43055C4218EA95C000AA4EF1 /* VCoreDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCoreDataModel.h; sourceTree = "<group>"; };
+		43055C4318EA95C000AA4EF1 /* VCoreDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCoreDataModel.m; sourceTree = "<group>"; };
 		43252CD818D042FD004DA6EC /* libVCoreData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVCoreData.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		43252CDB18D042FD004DA6EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43252CDF18D042FD004DA6EC /* VCoreData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VCoreData-Prefix.pch"; sourceTree = "<group>"; };
@@ -54,6 +72,23 @@
 		43252CF518D042FD004DA6EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43252CF718D042FD004DA6EC /* VCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCoreDataTests.m; sourceTree = "<group>"; };
 		43252D2618D04621004DA6EC /* libVFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVFoundation.a; path = "../VFoundation/build/Debug-iphoneos/libVFoundation.a"; sourceTree = "<group>"; };
+		4353C8FC18E50DC300F840CB /* VCoreDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCoreDataCache.h; sourceTree = "<group>"; };
+		4353C8FD18E50DC300F840CB /* VCoreDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCoreDataCache.m; sourceTree = "<group>"; };
+		437967ED18E94A8F000E4458 /* NSString+NSStringVCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringVCoreData.h"; sourceTree = "<group>"; };
+		437967EE18E94A8F000E4458 /* NSString+NSStringVCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringVCoreData.m"; sourceTree = "<group>"; };
+		438A4BD018E516AA00D63748 /* VCoreDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCoreDataRequest.h; sourceTree = "<group>"; };
+		438A4BD118E516AA00D63748 /* VCoreDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCoreDataRequest.m; sourceTree = "<group>"; };
+		438A4BD318E52C3300D63748 /* VCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCoreDataManager.h; sourceTree = "<group>"; };
+		438A4BD418E52C3300D63748 /* VCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCoreDataManager.m; sourceTree = "<group>"; };
+		438A4BD618E5407300D63748 /* NSObject+NSObjectVCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSObjectVCoreData.h"; sourceTree = "<group>"; };
+		438A4BD718E5407300D63748 /* NSObject+NSObjectVCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSObjectVCoreData.m"; sourceTree = "<group>"; };
+		438A4BDD18E541D600D63748 /* VCoreDataDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCoreDataDefine.h; sourceTree = "<group>"; };
+		438A4BDE18E541D600D63748 /* VCoreDataDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCoreDataDefine.m; sourceTree = "<group>"; };
+		438A4BE018E5445900D63748 /* VCoreDataSQLPersister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCoreDataSQLPersister.h; sourceTree = "<group>"; };
+		438A4BE118E5445900D63748 /* VCoreDataSQLPersister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCoreDataSQLPersister.m; sourceTree = "<group>"; };
+		438A4BE318E5456800D63748 /* VCoreDataPersister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCoreDataPersister.h; sourceTree = "<group>"; };
+		438A4BE418E5456800D63748 /* VCoreDataPersister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCoreDataPersister.m; sourceTree = "<group>"; };
+		438A4BEB18E5598600D63748 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438A4BEC18E5598600D63748 /* libsqlite3.dylib in Frameworks */,
 				43252CDC18D042FD004DA6EC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,6 +115,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43055C3718EA805100AA4EF1 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				437967ED18E94A8F000E4458 /* NSString+NSStringVCoreData.h */,
+				437967EE18E94A8F000E4458 /* NSString+NSStringVCoreData.m */,
+				43055C3C18EA80EC00AA4EF1 /* VCoreDataFilter.h */,
+				43055C3D18EA80EC00AA4EF1 /* VCoreDataFilter.m */,
+				43055C3F18EA810800AA4EF1 /* VCoreDataSQLFilter.h */,
+				43055C4018EA810800AA4EF1 /* VCoreDataSQLFilter.m */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
 		43252CCF18D042FD004DA6EC = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +150,7 @@
 		43252CDA18D042FD004DA6EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				438A4BEB18E5598600D63748 /* libsqlite3.dylib */,
 				43252D2618D04621004DA6EC /* libVFoundation.a */,
 				43252CDB18D042FD004DA6EC /* Foundation.framework */,
 				43252CE918D042FD004DA6EC /* XCTest.framework */,
@@ -112,9 +162,22 @@
 		43252CDD18D042FD004DA6EC /* VCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				435E4B3918E2C45E001A177F /* DataCenter */,
+				43055C3718EA805100AA4EF1 /* Filter */,
+				438A4BDC18E5410800D63748 /* Persister */,
+				438A4BD018E516AA00D63748 /* VCoreDataRequest.h */,
+				438A4BD118E516AA00D63748 /* VCoreDataRequest.m */,
+				438A4BDD18E541D600D63748 /* VCoreDataDefine.h */,
+				438A4BDE18E541D600D63748 /* VCoreDataDefine.m */,
+				438A4BD318E52C3300D63748 /* VCoreDataManager.h */,
+				438A4BD418E52C3300D63748 /* VCoreDataManager.m */,
 				43252CE018D042FD004DA6EC /* VCoreData.h */,
 				43252CE218D042FD004DA6EC /* VCoreData.m */,
+				4353C8FC18E50DC300F840CB /* VCoreDataCache.h */,
+				4353C8FD18E50DC300F840CB /* VCoreDataCache.m */,
+				438A4BD618E5407300D63748 /* NSObject+NSObjectVCoreData.h */,
+				438A4BD718E5407300D63748 /* NSObject+NSObjectVCoreData.m */,
+				43055C4218EA95C000AA4EF1 /* VCoreDataModel.h */,
+				43055C4318EA95C000AA4EF1 /* VCoreDataModel.m */,
 				43252CDE18D042FD004DA6EC /* Supporting Files */,
 			);
 			path = VCoreData;
@@ -146,11 +209,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		435E4B3918E2C45E001A177F /* DataCenter */ = {
+		438A4BDC18E5410800D63748 /* Persister */ = {
 			isa = PBXGroup;
 			children = (
+				438A4BE018E5445900D63748 /* VCoreDataSQLPersister.h */,
+				438A4BE118E5445900D63748 /* VCoreDataSQLPersister.m */,
+				438A4BE318E5456800D63748 /* VCoreDataPersister.h */,
+				438A4BE418E5456800D63748 /* VCoreDataPersister.m */,
 			);
-			name = DataCenter;
+			name = Persister;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +301,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438A4BD218E516AA00D63748 /* VCoreDataRequest.m in Sources */,
+				43055C4418EA95C000AA4EF1 /* VCoreDataModel.m in Sources */,
+				438A4BE518E5456800D63748 /* VCoreDataPersister.m in Sources */,
+				437967EF18E94A8F000E4458 /* NSString+NSStringVCoreData.m in Sources */,
+				43055C3E18EA80EC00AA4EF1 /* VCoreDataFilter.m in Sources */,
+				4353C8FE18E50DC300F840CB /* VCoreDataCache.m in Sources */,
+				43055C4118EA810800AA4EF1 /* VCoreDataSQLFilter.m in Sources */,
+				438A4BD818E5407300D63748 /* NSObject+NSObjectVCoreData.m in Sources */,
 				43252CE318D042FD004DA6EC /* VCoreData.m in Sources */,
+				438A4BE218E5445900D63748 /* VCoreDataSQLPersister.m in Sources */,
+				438A4BDF18E541D600D63748 /* VCoreDataDefine.m in Sources */,
+				438A4BD518E52C3300D63748 /* VCoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

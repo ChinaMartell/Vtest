@@ -7,8 +7,17 @@
 //
 
 #import "NSObject+VFoundation.h"
-
+#import "VFoundation.h"
 @implementation NSObject (NSObjectVFoundation)
++ (id)sharedInstance {
+	static dispatch_once_t once;
+	static id sharedInstance;
+	dispatch_once(&once, ^{
+	    sharedInstance = [[self alloc] init];
+	});
+	return sharedInstance;
+}
+
 /**
  *  catch the error of setValue for undefined key
  */
@@ -17,7 +26,7 @@
 }
 
 - (BOOL)isEmpty {
-	return ![self isEqual:[NSNull null]];
+	return [self isEqual:[NSNull null]];
 }
 
 @end

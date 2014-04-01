@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "UserEntity.h"
 #import <objc/runtime.h>
+#import "VCoreData.h"
 @interface ViewController ()
 
 @end
@@ -18,27 +19,12 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	NSPriorityQueue *q = [[NSPriorityQueue alloc] init];
-	[q enQueue:@"default" withPriority:NSQueuePriorityDefault];
-	[q enQueue:@"low" withPriority:NSQueuePriorityLow];
-	[q enQueue:@"high" withPriority:NSQueuePriorityHigh];
-	[q jumpQueue:@"max"];
-	for (id object in q) {
-		NSLog(@"aff:%@", object);
-	}
-	NSLog(@"ff");
-
-
-	NSStack *s = [[NSStack alloc] init];
-	[s push:@"ffff"];
-	[s push:@"fffaf"];
-	[s push:@"ffegff"];
-	[s push:@"fffhf"];
-	[s push:@"ffrtff"];
-	[s push:@"fffhaf"];
-	for (id object in s) {
-		NSLog(@"aaaaff:%@", object);
-	}
+	UserEntity *enty = [[UserEntity alloc] init];
+	enty.userName = @"fuck";
+	enty.age = 29;
+	UserEntity *aa = [enty mutableCopy];
+	aa.userName = @"fff";
+	NSLog(@"fff");
 }
 
 - (void)didReceiveMemoryWarning {

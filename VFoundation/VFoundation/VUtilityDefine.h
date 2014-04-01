@@ -13,6 +13,9 @@
 #import "NSPriorityQueue.h"
 
 
+#pragma mark - JSON
+#import "JSONKit.h"
+
 #import "VGCDManager.h"
 
 

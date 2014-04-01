@@ -27,6 +27,8 @@
 		4335BA7318DAD63000F13BA9 /* libVNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4335BA6F18DAD63000F13BA9 /* libVNetwork.a */; };
 		4335BA7418DAD63000F13BA9 /* libVUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4335BA7018DAD63000F13BA9 /* libVUIKit.a */; };
 		435E4B3818E2C332001A177F /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E4B3718E2C332001A177F /* UserEntity.m */; };
+		438A4BC418E50E7500D63748 /* libVViewModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 438A4BC318E50E7500D63748 /* libVViewModel.a */; };
+		438A4BEE18E5A13500D63748 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 438A4BED18E5A13500D63748 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		4335BA7018DAD63000F13BA9 /* libVUIKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVUIKit.a; path = "VUIKit/build/Debug-iphoneos/libVUIKit.a"; sourceTree = "<group>"; };
 		435E4B3618E2C332001A177F /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
 		435E4B3718E2C332001A177F /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
+		438A4BC318E50E7500D63748 /* libVViewModel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVViewModel.a; path = "VViewModel/build/Debug-iphoneos/libVViewModel.a"; sourceTree = "<group>"; };
+		438A4BED18E5A13500D63748 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		43DB08AB18E476DB002AE15E /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -74,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438A4BEE18E5A13500D63748 /* libsqlite3.dylib in Frameworks */,
+				438A4BC418E50E7500D63748 /* libVViewModel.a in Frameworks */,
 				4335BA7118DAD63000F13BA9 /* libVCoreData.a in Frameworks */,
 				4335BA7218DAD63000F13BA9 /* libVFoundation.a in Frameworks */,
 				4335BA7318DAD63000F13BA9 /* libVNetwork.a in Frameworks */,
@@ -119,6 +125,8 @@
 		4335BA2B18DAC91B00F13BA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				438A4BED18E5A13500D63748 /* libsqlite3.dylib */,
+				438A4BC318E50E7500D63748 /* libVViewModel.a */,
 				43DB08AB18E476DB002AE15E /* libc++.dylib */,
 				4335BA6D18DAD63000F13BA9 /* libVCoreData.a */,
 				4335BA6E18DAD63000F13BA9 /* libVFoundation.a */,
@@ -375,7 +383,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/** $(SRCROOT)/VCoreData/VCoreData/** $(SRCROOT)/VUIKit/VUIKit/** $(SRCROOT)/VNetwork/VNetwork/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/** $(SRCROOT)/VCoreData/VCoreData/** $(SRCROOT)/VUIKit/VUIKit/** $(SRCROOT)/VNetwork/VNetwork/** $(SRCROOT)/VViewModel/VViewModel/**";
 			};
 			name = Debug;
 		};
@@ -410,7 +418,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/** $(SRCROOT)/VCoreData/VCoreData/** $(SRCROOT)/VUIKit/VUIKit/** $(SRCROOT)/VNetwork/VNetwork/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/VFoundation/VFoundation/** $(SRCROOT)/VCoreData/VCoreData/** $(SRCROOT)/VUIKit/VUIKit/** $(SRCROOT)/VNetwork/VNetwork/** $(SRCROOT)/VViewModel/VViewModel/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -429,6 +437,7 @@
 					"$(PROJECT_DIR)/VFoundation/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/VNetwork/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/VUIKit/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/VViewModel/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,6 +459,7 @@
 					"$(PROJECT_DIR)/VFoundation/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/VNetwork/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/VUIKit/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/VViewModel/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";

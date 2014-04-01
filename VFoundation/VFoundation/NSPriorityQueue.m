@@ -186,9 +186,8 @@ CFComparisonResult NSPriorityQueueComparsionCallback(
     ) {
 	NSPriorityQueueNode *node1 = (__bridge NSPriorityQueueNode *)ptr1;
 	NSPriorityQueueNode *node2 = (__bridge NSPriorityQueueNode *)ptr2;
-//	NSCAssert(node1.comparator == node2.comparator, @"All the node should have the same comparator");
+	NSCAssert(node1.comparator == node2.comparator, @"All the node should have the same comparator");
 	NSCAssert(node1.comparator != nil, nil);
-
 	NSComparator comparator = node1.comparator;
 	return (CFComparisonResult)comparator(node1, node2);
 }

@@ -10,4 +10,7 @@
 
 @interface UserEntity : NSObject
 @property (nonatomic, strong) NSString *userName;
+@property (nonatomic, assign) NSInteger age;
+@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, strong) NSObject *fff;
 @end

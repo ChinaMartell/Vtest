@@ -142,7 +142,7 @@
 	BOOL isEmpty = [super isEmpty];
 	if (!isEmpty) {
 		NSString *tmp = [self trim];
-		isEmpty = tmp.length > 0;
+		isEmpty = !(tmp.length > 0);
 	}
 	return isEmpty;
 }

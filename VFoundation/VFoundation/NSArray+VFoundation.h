@@ -17,4 +17,5 @@
  *  @return the copy array
  */
 - (NSArray *)trueDeepCopy;
+- (NSArray *)arrayWithBlock:(id (^)(id obj))block;
 @end

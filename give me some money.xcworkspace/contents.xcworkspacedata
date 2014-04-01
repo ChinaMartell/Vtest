@@ -5,6 +5,9 @@
       location = "group:give me some money.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:VViewModel/VViewModel.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:VCoreData/VCoreData.xcodeproj">
    </FileRef>
    <FileRef

@@ -11,11 +11,16 @@
  *  NSObject' category in VFoundation
  */
 @interface NSObject (NSObjectVFoundation)
++ (id)sharedInstance;
 /**
  *  Return isEmpty
  *
  *  @return bool
  */
 - (BOOL)isEmpty;
-
+/**
+ *  Return object all properties like @{ @"propertyType":propertyType, @"name":name, @"vaule":value };
+ *
+ *  @return
+ */
 @end

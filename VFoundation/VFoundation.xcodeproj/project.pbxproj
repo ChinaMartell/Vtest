@@ -25,6 +25,7 @@
 		436E7CD618CF41800003E5A1 /* VUtilityDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 436E7CD518CF41800003E5A1 /* VUtilityDefine.m */; };
 		437F8B2C18E3BB3900808C8C /* NSStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F8B2B18E3BB3900808C8C /* NSStack.m */; };
 		437F8B2F18E3BB4A00808C8C /* NSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F8B2E18E3BB4A00808C8C /* NSQueue.m */; };
+		438A4BCF18E5124000D63748 /* VRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A4BCE18E5124000D63748 /* VRequest.m */; };
 		43972E2718CD7E9400F1CC3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43972E2618CD7E9400F1CC3E /* Foundation.framework */; };
 		43972E2C18CD7E9400F1CC3E /* VFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43972E2B18CD7E9400F1CC3E /* VFoundation.h */; };
 		43972E2E18CD7E9400F1CC3E /* VFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43972E2D18CD7E9400F1CC3E /* VFoundation.m */; };
@@ -118,6 +119,8 @@
 		437F8B2B18E3BB3900808C8C /* NSStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStack.m; sourceTree = "<group>"; };
 		437F8B2D18E3BB4A00808C8C /* NSQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSQueue.h; sourceTree = "<group>"; };
 		437F8B2E18E3BB4A00808C8C /* NSQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSQueue.m; sourceTree = "<group>"; };
+		438A4BCD18E5124000D63748 /* VRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRequest.h; sourceTree = "<group>"; };
+		438A4BCE18E5124000D63748 /* VRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRequest.m; sourceTree = "<group>"; };
 		43972E2318CD7E9400F1CC3E /* libVFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		43972E2618CD7E9400F1CC3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43972E2A18CD7E9400F1CC3E /* VFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VFoundation-Prefix.pch"; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				435859D018D49897003C7E28 /* HTML */,
+				438A4BCD18E5124000D63748 /* VRequest.h */,
+				438A4BCE18E5124000D63748 /* VRequest.m */,
 			);
 			name = Web;
 			sourceTree = "<group>";
@@ -543,6 +548,7 @@
 				436E7CD318CF41590003E5A1 /* VCategoryDefine.m in Sources */,
 				43972E6218CD834400F1CC3E /* NSDictionary+VFoundation.m in Sources */,
 				435859C818D497EA003C7E28 /* GTMNSString+HTML.m in Sources */,
+				438A4BCF18E5124000D63748 /* VRequest.m in Sources */,
 				27CB2CE418DAA5BF0055BAD6 /* SJHelper.m in Sources */,
 				43526CF218D30BF200388D89 /* GTMBase64.m in Sources */,
 				43972E6E18CD83A000F1CC3E /* NSNumber+VFoundation.m in Sources */,
