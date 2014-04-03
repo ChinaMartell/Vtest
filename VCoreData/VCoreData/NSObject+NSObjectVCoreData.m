@@ -29,7 +29,7 @@
 
 + (BOOL)puts:(NSArray *)array {
 	VCoreDataAddRequest *addRequest = [[VCoreDataAddRequest alloc] init];
-	addRequest.classModels = [array arrayWithBlock: ^id (id obj) {
+	addRequest.classModels = [array arrayWithBlock: ^id (id obj, NSInteger index) {
 	    return [obj classModel];
 	}];
 	return [[VCoreDataController sharedInstance] addData:addRequest];
@@ -91,7 +91,7 @@
 	queryRequest.filter = filter;
 	queryRequest.propertyModels = propertyArray;
 	queryRequest.resultClassModel = [resultClass classModel];
-	queryRequest.classModels = [objs arrayWithBlock: ^id (id obj) {
+	queryRequest.classModels = [objs arrayWithBlock: ^id (id obj, NSInteger index) {
 	    return [obj classModel];
 	}];
 	return [[VCoreDataController sharedInstance] queryData:queryRequest];
@@ -147,7 +147,7 @@
 	VCoreDataUpdateRequest *updateRequest = [[VCoreDataUpdateRequest alloc] init];
 	updateRequest.filter = filter;
 	updateRequest.propertyModels = propertyArray;
-	updateRequest.classModels = [objs arrayWithBlock: ^id (id obj) {
+	updateRequest.classModels = [objs arrayWithBlock: ^id (id obj, NSInteger index) {
 	    return [obj classModel];
 	}];
 	return [[VCoreDataController sharedInstance] updateData:updateRequest];
@@ -178,7 +178,7 @@
 	VCoreDataDelRequest *delRequest = [[VCoreDataDelRequest alloc] init];
 	delRequest.filter = filter;
 	delRequest.propertyModels = [[self classModel] allPropertyModels];
-	delRequest.classModels = [objs arrayWithBlock: ^id (id obj) {
+	delRequest.classModels = [objs arrayWithBlock: ^id (id obj, NSInteger index) {
 	    return [obj classModel];
 	}];
 	return [[VCoreDataController sharedInstance] deleteData:delRequest];

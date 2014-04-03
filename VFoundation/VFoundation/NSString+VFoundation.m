@@ -57,6 +57,24 @@
 	return self;
 }
 
+- (NSString *)replaceTarget:(NSString *)target string:(NSString *)string, ...{
+	NSMutableArray *paramArray = [NSMutableArray arrayWithObject:string];
+	va_list argList = nil;
+	va_start(argList, string);
+	NSString *arg = nil;
+	while ((arg = va_arg(argList, NSString *))) {
+		[paramArray addObject:arg];
+	}
+	va_end(argList);
+
+
+	NSArray *array = [self componentsSeparatedByString:target];
+	NSArray *resultArray = [array arrayWithBlock: ^id (id obj, NSInteger index) {
+	    return [obj addString:[paramArray objectAtIndex:index]];
+	}];
+	return [resultArray componentsJoinedByString:@""];
+}
+
 - (NSString *)replace:(NSString *)string ForTargets:(NSString *)target, ...{
 	NSString *result = [self replace:string ForTarget:target];
 	va_list argList = nil;
@@ -156,7 +174,7 @@
 	return [[self componentsSeparatedByString:@"."] lastObject];
 }
 
-- (NSString *)deleteprefixString {
+- (NSString *)deletePrefixString {
 	NSMutableArray *mArray = [NSMutableArray arrayWithArray:[self componentsSeparatedByString:@"."]];
 	[mArray removeFirstObject];
 	return [mArray componentsJoinedByString:@"."];

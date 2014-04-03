@@ -79,10 +79,11 @@
 	return isEmpty;
 }
 
-- (NSArray *)arrayWithBlock:(id (^)(id))block {
+- (NSArray *)arrayWithBlock:(id (^)(id, NSInteger))block {
 	NSMutableArray *result = [[NSMutableArray alloc] init];
+	int i = 0;
 	for (id obj in self) {
-		[result addObject:block(obj)];
+		[result addObject:block(obj, i++)];
 	}
 	return result;
 }

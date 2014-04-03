@@ -162,21 +162,14 @@
 		43252CDD18D042FD004DA6EC /* VCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				43CA9CD118ED7E5400837B00 /* Data */,
 				4364679618EB9FBF00DDF217 /* Model */,
 				43055C3718EA805100AA4EF1 /* Filter */,
 				438A4BDC18E5410800D63748 /* Persister */,
-				438A4BD018E516AA00D63748 /* VCoreDataRequest.h */,
-				438A4BD118E516AA00D63748 /* VCoreDataRequest.m */,
 				438A4BDD18E541D600D63748 /* VCoreDataDefine.h */,
 				438A4BDE18E541D600D63748 /* VCoreDataDefine.m */,
 				43252CE018D042FD004DA6EC /* VCoreData.h */,
 				43252CE218D042FD004DA6EC /* VCoreData.m */,
-				4353C8FC18E50DC300F840CB /* VCoreDataCache.h */,
-				4353C8FD18E50DC300F840CB /* VCoreDataCache.m */,
-				438A4BD618E5407300D63748 /* NSObject+NSObjectVCoreData.h */,
-				438A4BD718E5407300D63748 /* NSObject+NSObjectVCoreData.m */,
-				4364679718EBA3AE00DDF217 /* VCoreDataController.h */,
-				4364679818EBA3AE00DDF217 /* VCoreDataController.m */,
 				43252CDE18D042FD004DA6EC /* Supporting Files */,
 			);
 			path = VCoreData;
@@ -226,6 +219,21 @@
 				438A4BE418E5456800D63748 /* VCoreDataPersister.m */,
 			);
 			name = Persister;
+			sourceTree = "<group>";
+		};
+		43CA9CD118ED7E5400837B00 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				438A4BD018E516AA00D63748 /* VCoreDataRequest.h */,
+				438A4BD118E516AA00D63748 /* VCoreDataRequest.m */,
+				4353C8FC18E50DC300F840CB /* VCoreDataCache.h */,
+				4353C8FD18E50DC300F840CB /* VCoreDataCache.m */,
+				438A4BD618E5407300D63748 /* NSObject+NSObjectVCoreData.h */,
+				438A4BD718E5407300D63748 /* NSObject+NSObjectVCoreData.m */,
+				4364679718EBA3AE00DDF217 /* VCoreDataController.h */,
+				4364679818EBA3AE00DDF217 /* VCoreDataController.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

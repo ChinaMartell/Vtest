@@ -29,7 +29,7 @@
 	if (![result isMeaningful]) {
 		result = [_persister queryData:request];
 		VCoreDataAddRequest *addRequest = [request transformCopy:[VCoreDataAddRequest class]];
-		addRequest.classModels = [result arrayWithBlock: ^id (id obj) {
+		addRequest.classModels = [result arrayWithBlock: ^id (id obj,NSInteger index) {
 		    return [obj classModel];
 		}];
 		[_cache addData:addRequest];

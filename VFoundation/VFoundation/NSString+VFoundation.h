@@ -45,6 +45,15 @@
  */
 - (NSString *)replace:(NSString *)string ForTarget:(NSString *)target;
 /**
+ *  Replace with the specified string
+ *
+ *  @param target
+ *  @param string
+ *
+ *  @return replaced string
+ */
+- (NSString *)replaceTarget:(NSString *)target string:(NSString *)string, ...NS_REQUIRES_NIL_TERMINATION;
+/**
  *  Replace with the specified strings
  *
  *  @param string
@@ -128,7 +137,7 @@
  *
  *  @return deleted string
  */
-- (NSString *)deleteprefixString;
+- (NSString *)deletePrefixString;
 /**
  *  Get string by deleted prefix like "readMe.t.txt" will return readMe.t
  *

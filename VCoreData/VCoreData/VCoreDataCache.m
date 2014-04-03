@@ -56,7 +56,7 @@ typedef NS_ENUM (NSInteger, VCoreDataCacheLevel) {
 		return result;
 	}
 	if (![result isMeaningful]) { //to get second cache
-		NSMutableDictionary *classDict = [_secondCache objectForKey:[[request.classModels arrayWithBlock: ^id (id obj) {
+		NSMutableDictionary *classDict = [_secondCache objectForKey:[[request.classModels arrayWithBlock: ^id (id obj,NSInteger index) {
 		    return [obj modelName];
 		}] componentsJoinedByString:@"__"]];
 		[result addObjectsFromArray:[classDict objectForKey:request.filter]];
@@ -89,7 +89,7 @@ typedef NS_ENUM (NSInteger, VCoreDataCacheLevel) {
 		[_firstCache setObject:classDict forKey:[model modelName]];
 
 		//second cache
-		NSString *secondCacheClassKey = [[request.classModels arrayWithBlock: ^id (id obj) {
+		NSString *secondCacheClassKey = [[request.classModels arrayWithBlock: ^id (id obj,NSInteger index) {
 		    return [obj modelName];
 		}] componentsJoinedByString:@"__"];
 		NSMutableDictionary *classDictSecond = [_secondCache objectForKey:secondCacheClassKey];
