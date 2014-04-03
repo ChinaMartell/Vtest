@@ -7,12 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef NS_ENUM (NSInteger, NSQueuePriority) {
-	NSQueuePriorityMax = 2,
-	NSQueuePriorityHigh = 1,
-	NSQueuePriorityDefault = 0,
-	NSQueuePriorityLow = -1,
-};
+#import "VFoundationDefine.h"
 /**
  *  VFoundation Collection NSQueue
  */

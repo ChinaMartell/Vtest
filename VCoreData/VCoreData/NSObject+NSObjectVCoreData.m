@@ -22,13 +22,17 @@
 }
 
 - (BOOL)put {
-	return [[VCoreDataSQLPersister sharedInstance] addData:@[[self classModel]]];
+	VCoreDataAddRequest *addRequest = [[VCoreDataAddRequest alloc] init];
+	addRequest.classModels = @[[self classModel]];
+	return [[VCoreDataController sharedInstance] addData:addRequest];
 }
 
 + (BOOL)puts:(NSArray *)array {
-	return [[VCoreDataSQLPersister sharedInstance] addData:[array arrayWithBlock: ^id (id obj) {
+	VCoreDataAddRequest *addRequest = [[VCoreDataAddRequest alloc] init];
+	addRequest.classModels = [array arrayWithBlock: ^id (id obj) {
 	    return [obj classModel];
-	}]];
+	}];
+	return [[VCoreDataController sharedInstance] addData:addRequest];
 }
 
 - (NSArray *)all {
@@ -45,7 +49,7 @@
 	queryRequest.propertyModels = [[self classModel] allPropertyModels];
 	queryRequest.resultClassModel = [self classModel];
 	queryRequest.classModels = @[[self classModel]];
-	return [[VCoreDataSQLPersister sharedInstance] queryData:queryRequest];
+	return [[VCoreDataController sharedInstance] queryData:queryRequest];
 }
 
 + (NSArray *)get:(NSString *)filter {
@@ -64,7 +68,7 @@
 	queryRequest.propertyModels = propertyArray;
 	queryRequest.resultClassModel = [self classModel];
 	queryRequest.classModels = @[[self classModel]];
-	return [[VCoreDataSQLPersister sharedInstance] queryData:queryRequest];
+	return [[VCoreDataController sharedInstance] queryData:queryRequest];
 }
 
 + (NSArray *)get:(NSString *)filter properties:(NSArray *)array {
@@ -90,7 +94,7 @@
 	queryRequest.classModels = [objs arrayWithBlock: ^id (id obj) {
 	    return [obj classModel];
 	}];
-	return [[VCoreDataSQLPersister sharedInstance] queryData:queryRequest];
+	return [[VCoreDataController sharedInstance] queryData:queryRequest];
 }
 
 - (BOOL)update {
@@ -102,7 +106,7 @@
 	updateRequest.filter = filter;
 	updateRequest.propertyModels = [[self classModel] allPropertyModels];
 	updateRequest.classModels = @[[self classModel]];
-	return [[VCoreDataSQLPersister sharedInstance] updateData:updateRequest];
+	return [[VCoreDataController sharedInstance] updateData:updateRequest];
 }
 
 + (BOOL)update:(NSString *)filter {
@@ -121,7 +125,7 @@
 	updateRequest.propertyModels = propertyArray;
 	updateRequest.classModels = @[[self classModel]];
 
-	return [[VCoreDataSQLPersister sharedInstance] updateData:updateRequest];
+	return [[VCoreDataController sharedInstance] updateData:updateRequest];
 }
 
 + (BOOL)update:(NSString *)filter properties:(NSArray *)array {
@@ -146,7 +150,7 @@
 	updateRequest.classModels = [objs arrayWithBlock: ^id (id obj) {
 	    return [obj classModel];
 	}];
-	return [[VCoreDataSQLPersister sharedInstance] updateData:updateRequest];
+	return [[VCoreDataController sharedInstance] updateData:updateRequest];
 }
 
 - (BOOL)clear {
@@ -162,7 +166,7 @@
 	delRequest.filter = filter;
 	delRequest.propertyModels = [[self classModel] allPropertyModels];
 	delRequest.classModels = @[[self classModel]];
-	return [[VCoreDataSQLPersister sharedInstance] deleteData:delRequest];
+	return [[VCoreDataController sharedInstance] deleteData:delRequest];
 }
 
 + (BOOL)del:(NSString *)filter {
@@ -177,8 +181,117 @@
 	delRequest.classModels = [objs arrayWithBlock: ^id (id obj) {
 	    return [obj classModel];
 	}];
-	return [[VCoreDataSQLPersister sharedInstance] deleteData:delRequest];
+	return [[VCoreDataController sharedInstance] deleteData:delRequest];
 }
+
+- (id)execute:(NSString *)command params:(id)param, ...{
+	NSMutableArray *paramArray = [[NSMutableArray alloc] init];
+	VCoreDataPropertyModel *propertyModel = [[VCoreDataPropertyModel alloc] init];
+	propertyModel.name = nil;
+	propertyModel.propertyType = [param objectType];
+	propertyModel.type = [param dataType];
+	propertyModel.value = param;
+	[paramArray addObject:propertyModel];
+
+	va_list argList = nil;
+	va_start(argList, param);
+	id arg = nil;
+	while ((arg = va_arg(argList, id))) {
+		VCoreDataPropertyModel *propertyModel = [[VCoreDataPropertyModel alloc] init];
+		propertyModel.name = nil;
+		propertyModel.propertyType = [arg objectType];
+		propertyModel.type = [arg dataType];
+		propertyModel.value = arg;
+		[paramArray addObject:propertyModel];
+	}
+	va_end(argList);
+	VCoreDataExecuteRequest *exexuteRequest = [[VCoreDataExecuteRequest alloc] init];
+	exexuteRequest.command = command;
+	exexuteRequest.paramArray = paramArray;
+	return [[VCoreDataController sharedInstance] executeData:exexuteRequest];
+}
+
++ (id)execute:(NSString *)command params:(id)param, ...{
+	NSMutableArray *paramArray = [[NSMutableArray alloc] init];
+	VCoreDataPropertyModel *propertyModel = [[VCoreDataPropertyModel alloc] init];
+	propertyModel.name = nil;
+	propertyModel.propertyType = [param objectType];
+	propertyModel.type = [param dataType];
+	propertyModel.value = param;
+	[paramArray addObject:propertyModel];
+
+	va_list argList = nil;
+	va_start(argList, param);
+	id arg = nil;
+	while ((arg = va_arg(argList, id))) {
+		VCoreDataPropertyModel *propertyModel = [[VCoreDataPropertyModel alloc] init];
+		propertyModel.name = nil;
+		propertyModel.propertyType = [arg objectType];
+		propertyModel.type = [arg dataType];
+		propertyModel.value = arg;
+		[paramArray addObject:propertyModel];
+	}
+	va_end(argList);
+	VCoreDataExecuteRequest *exexuteRequest = [[VCoreDataExecuteRequest alloc] init];
+	exexuteRequest.command = command;
+	exexuteRequest.paramArray = paramArray;
+	return [[VCoreDataController sharedInstance] executeData:exexuteRequest];
+}
+
+- (id)executeWithPersisterType:(VCoreDataPersisterType)type command:(NSString *)command params:(id)param, ...{
+	NSMutableArray *paramArray = [[NSMutableArray alloc] init];
+	VCoreDataPropertyModel *propertyModel = [[VCoreDataPropertyModel alloc] init];
+	propertyModel.name = nil;
+	propertyModel.propertyType = [param objectType];
+	propertyModel.type = [param dataType];
+	propertyModel.value = param;
+	[paramArray addObject:propertyModel];
+
+	va_list argList = nil;
+	va_start(argList, param);
+	id arg = nil;
+	while ((arg = va_arg(argList, id))) {
+		VCoreDataPropertyModel *propertyModel = [[VCoreDataPropertyModel alloc] init];
+		propertyModel.name = nil;
+		propertyModel.propertyType = [arg objectType];
+		propertyModel.type = [arg dataType];
+		propertyModel.value = arg;
+		[paramArray addObject:propertyModel];
+	}
+	va_end(argList);
+	VCoreDataExecuteRequest *exexuteRequest = [[VCoreDataExecuteRequest alloc] init];
+	exexuteRequest.command = command;
+	exexuteRequest.paramArray = paramArray;
+	return [[VCoreDataController sharedInstance] executeData:exexuteRequest];
+}
+
++ (id)executeWithPersisterType:(VCoreDataPersisterType)type command:(NSString *)command params:(id)param, ...{
+	NSMutableArray *paramArray = [[NSMutableArray alloc] init];
+	VCoreDataPropertyModel *propertyModel = [[VCoreDataPropertyModel alloc] init];
+	propertyModel.name = nil;
+	propertyModel.propertyType = [param objectType];
+	propertyModel.type = [param dataType];
+	propertyModel.value = param;
+	[paramArray addObject:propertyModel];
+
+	va_list argList = nil;
+	va_start(argList, param);
+	id arg = nil;
+	while ((arg = va_arg(argList, id))) {
+		VCoreDataPropertyModel *propertyModel = [[VCoreDataPropertyModel alloc] init];
+		propertyModel.name = nil;
+		propertyModel.propertyType = [arg objectType];
+		propertyModel.type = [arg dataType];
+		propertyModel.value = arg;
+		[paramArray addObject:propertyModel];
+	}
+	va_end(argList);
+	VCoreDataExecuteRequest *exexuteRequest = [[VCoreDataExecuteRequest alloc] init];
+	exexuteRequest.command = command;
+	exexuteRequest.paramArray = paramArray;
+	return [[VCoreDataController sharedInstance] executeData:exexuteRequest];
+}
+
 
 #pragma mark - NSObect nscoding
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -223,6 +336,96 @@
 - (id)deepCopy {
 	NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self];
 	return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+}
+
+#pragma mark - NSObect nstransformcopying
+- (id)transformCopy:(Class)class {
+	id result = [[class alloc] init];
+	for (VCoreDataPropertyModel *propertyModel in[[result classModel] allPropertyModels]) {
+		NSString *name = propertyModel.name;
+		[result setValue:[self valueForKey:name] forKey:name];
+	}
+	return result;
+}
+
+@end
+
+@implementation NSObject (NSObjectVCoreDataType)
+
+- (id)objectType {
+	if ([self isKindOfClass:[NSValue class]]) {
+		NSValueType type = [(NSValue *)self valueType];
+		if (type == NSValueTypeUnKnown) {
+			return [[NSString alloc] initWithUTF8String:[(NSValue *)self objCType]];
+		}
+		else {
+			return @(type);
+		}
+	}
+	return NSStringFromClass([self class]);
+}
+
+- (VCoreDataType)dataType {
+	VCoreDataType type = VCoreDataTypeBlob;
+	if ([self isKindOfClass:[NSValue class]]) {
+		NSValue *obj = (NSValue *)self;
+		NSValueType valueType = [obj valueType];
+		if (valueType == NSValueTypeInt
+		    || valueType == NSValueTypeUInt
+		    || valueType == NSValueTypeShort
+		    || valueType == NSValueTypeUShort
+		    || valueType == NSValueTypeLong
+		    || valueType == NSValueTypeULong
+		    || valueType == NSValueTypeLongLong
+		    || valueType == NSValueTypeULongLong
+		    || valueType == NSValueTypeBool
+		    ) {
+			type = VCoreDataTypeInteger;
+		}
+		else if (valueType == NSValueTypeFloat
+		         || valueType == NSValueTypeDouble) {
+			type = VCoreDataTypeReal;
+		}
+		else {
+			NSString *str = [[NSString alloc] initWithUTF8String:[obj objCType]];
+			Class class = NSClassFromString(str);
+			if ([class isSubclassOfClass:[NSString class]]) {
+				type = VCoreDataTypeText;
+			}
+		}
+	}
+	else if ([self isKindOfClass:[NSString class]]) {
+		type = VCoreDataTypeText;
+	}
+	return type;
+}
+
+- (NSString *)dataTypeToString:(VCoreDataType)type {
+	switch (type) {
+		case VCoreDataTypeInteger:
+			return @"INTEGER";
+			break;
+
+		case VCoreDataTypeReal:
+			return @"REAL";
+			break;
+
+		case VCoreDataTypeText:
+			return @"TEXT";
+			break;
+
+		case VCoreDataTypeBlob:
+			return @"BLOB";
+			break;
+
+		case VCoreDataTypeNull:
+			return @"INTEGER";
+			break;
+
+
+		default:
+			break;
+	}
 }
 
 @end

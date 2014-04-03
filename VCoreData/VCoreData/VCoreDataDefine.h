@@ -7,16 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VFoundation.h"
-#import "NSObject+NSObjectVCoreData.h"
-#import "NSString+NSStringVCoreData.h"
-#import "VCoreDataManager.h"
-#import "VCoreDataSQLPersister.h"
-#import "VCoreDataFilter.h"
-#import "VCoreDataSQLFilter.h"
-#import "VCoreDataRequest.h"
-#import "VCoreDataCache.h"
-#import "VCoreDataModel.h"
+typedef NS_ENUM (NSInteger, VCoreDataType) {
+	VCoreDataTypeInteger = 1,
+	VCoreDataTypeReal,
+	VCoreDataTypeText,
+	VCoreDataTypeBlob,
+	VCoreDataTypeNull,
+};
+
+typedef NS_ENUM (NSInteger, VCoreDataPersisterType) {
+	VCoreDataPersisterTypeSQL,
+	VCoreDataPersisterTypeData,
+};
+
 @interface VCoreDataDefine : NSObject
 
 @end

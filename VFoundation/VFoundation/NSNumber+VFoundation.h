@@ -11,4 +11,5 @@
  *  NSNumber' category in VFoundation
  */
 @interface NSNumber (NSNumberVFoundation)
+
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "VCategoryDefine.h"
 #import "VUtilityDefine.h"
-#import <objc/runtime.h>
+
 #define C_DEFAULT_ENCODING kCFStringEncodingUTF8
 #define DEFAULT_ENCODING NSUTF8StringEncoding
 

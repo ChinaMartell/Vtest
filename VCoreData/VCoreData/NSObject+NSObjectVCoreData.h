@@ -7,15 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VCoreDataDefine.h"
+
 @class VCoreDataClassModel;
+
+
 @protocol NSDeepCopying <NSObject>
 - (id)deepCopy;
+@end
+@protocol NSTransformCopying <NSObject>
+
+- (id)transformCopy:(Class)class;
+
 @end
 
 /**
  *  NSObject' category in VCoreData
  */
-@interface NSObject (NSObjectVCoreData) <NSCoding, NSCopying, NSMutableCopying, NSDeepCopying>
+@interface NSObject (NSObjectVCoreData) <NSCoding, NSCopying, NSMutableCopying, NSDeepCopying, NSTransformCopying>
 
 - (VCoreDataClassModel *)classModel;
 + (VCoreDataClassModel *)classModel;
@@ -46,4 +55,19 @@
 + (BOOL)del:(NSString *)str;
 + (BOOL)del:(NSArray *)objs filter:(NSString *)str;
 
+- (id)execute:(NSString *)command params:(id)param, ...NS_REQUIRES_NIL_TERMINATION;
++ (id)execute:(NSString *)command params:(id)param, ...NS_REQUIRES_NIL_TERMINATION;
+- (id)executeWithPersisterType:(VCoreDataPersisterType)type command:(NSString *)command params:(id)param, ...NS_REQUIRES_NIL_TERMINATION;
++ (id)executeWithPersisterType:(VCoreDataPersisterType)type command:(NSString *)command params:(id)param, ...NS_REQUIRES_NIL_TERMINATION;
+
+
+@end
+
+
+
+
+@interface NSObject (NSObjectVCoreDataType)
+- (id)objectType;
+- (VCoreDataType)dataType;
++ (NSString *)dataTypeToString:(VCoreDataType)type;
 @end

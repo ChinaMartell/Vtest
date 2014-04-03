@@ -11,3 +11,6 @@
 @implementation VRequest
 
 @end
+@implementation VResponse
+
+@end

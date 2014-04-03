@@ -26,3 +26,7 @@
 @implementation VCoreDataDelRequest
 
 @end
+
+@implementation VCoreDataExecuteRequest
+
+@end

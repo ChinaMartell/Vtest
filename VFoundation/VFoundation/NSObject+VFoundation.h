@@ -19,8 +19,10 @@
  */
 - (BOOL)isEmpty;
 /**
- *  Return object all properties like @{ @"propertyType":propertyType, @"name":name, @"vaule":value };
+ *  It is the best replacement of isEmpty that string does not include @"",[NSNull null],and nil
  *
- *  @return
+ *  @return bool
  */
+- (BOOL)isMeaningful;
+
 @end

@@ -134,9 +134,8 @@
 	va_end(argList);
 	return result;
 }
-- (BOOL)isMeaningful {
-	return ![self isEmpty];
-}
+
+
 
 - (BOOL)isEmpty {
 	BOOL isEmpty = [super isEmpty];

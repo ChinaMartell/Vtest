@@ -25,67 +25,13 @@
 		VCoreDataPropertyModel *propertyModel = [[VCoreDataPropertyModel alloc] init];
 		objc_property_t property = propertyArray[i];
 		NSString *attribute = [[NSString alloc] initWithUTF8String:property_getAttributes(property)];
-		const char *rawPropertyType = [[[[attribute componentsSeparatedByString:@","] firstObject] substringFromIndex:1] UTF8String];
-		NSString *propertyType = NSStringFromClass([NSObject class]);
-		NSString *type = NSStringFromClass([NSObject class]);
-		if (strcmp(rawPropertyType, @encode(int)) == 0) {
-			propertyType = @"int";
-			type = @"INTEGER";
-		}
-		else if (strcmp(rawPropertyType, @encode(unsigned int)) == 0) {
-			propertyType = @"unsigned int";
-			type = @"INTEGER";
-		}
-		else if (strcmp(rawPropertyType, @encode(short)) == 0) {
-			propertyType = @"short";
-			type = @"INTEGER";
-		}
-		else if (strcmp(rawPropertyType, @encode(unsigned short)) == 0) {
-			propertyType = @"unsigned short";
-			type = @"INTEGER";
-		}
-		else if (strcmp(rawPropertyType, @encode(long)) == 0) {
-			propertyType = @"long";
-			type = @"INTEGER";
-		}
-		else if (strcmp(rawPropertyType, @encode(unsigned long)) == 0) {
-			propertyType = @"unsigned long";
-			type = @"INTEGER";
-		}
-		else if (strcmp(rawPropertyType, @encode(long long)) == 0) {
-			propertyType = @"long long";
-			type = @"INTEGER";
-		}
-		else if (strcmp(rawPropertyType, @encode(unsigned long long)) == 0) {
-			propertyType = @"unsigned long long";
-			type = @"INTEGER";
-		}
-		else if (strcmp(rawPropertyType, @encode(bool)) == 0) {
-			propertyType = @"bool";
-			type = @"INTEGER";
-		}
-		else if (strcmp(rawPropertyType, @encode(float)) == 0) {
-			propertyType = @"float";
-			type = @"REAL";
-		}
-		else if (strcmp(rawPropertyType, @encode(double)) == 0) {
-			propertyType = @"double";
-			type = @"REAL";
-		}
-		else {
-			NSString *rawPropertyTypeStr = [[NSString alloc] initWithUTF8String:rawPropertyType];
-			propertyType = [rawPropertyTypeStr deleteStrings:@"@", @"\"", nil];
-			if ([propertyType isEqualToString:NSStringFromClass([NSString class])] || [propertyType isEqualToString:NSStringFromClass([NSMutableString class])]) {
-				type = @"TEXT";
-			}
-			else {
-				type = @"BLOB";
-			}
-		}
-
+		const char *rawPropertyType = [[[[[attribute componentsSeparatedByString:@","] firstObject] substringFromIndex:1] deleteStrings:@"@", @"\"", nil] UTF8String];
+		NSValue *rawPropertyTypeValue = [NSValue valueWithBytes:&rawPropertyType objCType:rawPropertyType];
+		//get type
+		VCoreDataType type = [rawPropertyTypeValue dataType];
+		id propertyType = [rawPropertyTypeValue objectType];
 		NSString *name = [[NSString alloc] initWithUTF8String:property_getName(property)];
 		id value = [self.modelInstance valueForKey:name];
-
 		propertyModel.propertyType = propertyType;
 		propertyModel.type = type;
 		propertyModel.name = name;
@@ -94,6 +40,10 @@
 	}
 	free(propertyArray);
 	return result;
+}
+
+- (VCoreDataPropertyModel *)primaryPropertyModel {
+	return [[self allPropertyModels] firstObject];
 }
 
 - (NSString *)modelName {

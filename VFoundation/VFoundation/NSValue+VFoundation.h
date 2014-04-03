@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VFoundationDefine.h"
 /**
  *  NSValue' category in VFoundation
  */
 @interface NSValue (NSValueVFoundation)
-
+- (NSValueType)valueType;
 @end

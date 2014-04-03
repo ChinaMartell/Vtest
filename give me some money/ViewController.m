@@ -19,16 +19,11 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	NSMutableArray *arra = [[NSMutableArray alloc] init];
-	[arra addObject:@"fff"];
-	NSMutableArray *xx = [arra deepCopy];
-	[xx addObject:@"aaa"];
-	UserEntity *enty = [[UserEntity alloc] init];
-	enty.userName = @"fuck";
-	enty.age = 29;
-	UserEntity *aa = [enty mutableCopy];
-	aa.userName = @"fff";
-	NSLog(@"fff");
+	UserEntity *en = [[UserEntity alloc] init];
+//	en.userName = @"fuck";
+//	[en put];
+	[UserEntity get:@"userName='fuck'"];
+	[en execute:@"SELECT * FROM UserEntity WHERE userName=?" params:@"fuck", @(15), nil];
 }
 
 - (void)didReceiveMemoryWarning {

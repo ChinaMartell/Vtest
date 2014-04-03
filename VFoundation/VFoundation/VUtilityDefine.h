@@ -7,49 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#pragma mark - Collection
-#import "NSStack.h"
-#import "NSQueue.h"
-#import "NSPriorityQueue.h"
-
-
-#pragma mark - JSON
-#import "JSONKit.h"
-
-#import "VGCDManager.h"
-
-
-#pragma mark - VGCD
+typedef NS_ENUM (NSInteger, NSQueuePriority) {
+	NSQueuePriorityMax = 2,
+	NSQueuePriorityHigh = 1,
+	NSQueuePriorityDefault = 0,
+	NSQueuePriorityLow = -1,
+};
 
 @interface VUtilityDefine : NSObject
-/**
- *  It is a simplified version of dispatchMainQueueSync
- *
- *  @param block Will add by main queue
- */
-	void mainS(dispatch_block_t block);
-
-/**
- *  It is a simplified version of dispatchMainQueueAsync
- *
- *  @param block Will add by main queue
- */
-void mainA(dispatch_block_t block);
-
-/**
- *  It is a simplified version of dispatchGlobalQueueSync
- *
- *  @param block Will add by global queue
- */
-void globalS(dispatch_block_t block);
-
-/**
- *  It is a simplified version of dispatchGlobalQueueAsync
- *
- *  @param block Will add by global queue
- */
-void globalA(dispatch_block_t block);
-
-void asyncToMain(dispatch_block_t gBlock, dispatch_block_t mBlock);
 
 @end

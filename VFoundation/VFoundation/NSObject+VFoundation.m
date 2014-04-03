@@ -11,10 +11,16 @@
 @implementation NSObject (NSObjectVFoundation)
 + (id)sharedInstance {
 	static dispatch_once_t once;
-	static id sharedInstance;
+	static NSMutableDictionary *instanceDict;
 	dispatch_once(&once, ^{
-	    sharedInstance = [[self alloc] init];
+	    instanceDict = [[NSMutableDictionary alloc] init];
 	});
+	NSString *instanceKey = NSStringFromClass([self class]);
+	id sharedInstance = [instanceDict objectForKey:instanceKey];
+	if (!sharedInstance) {
+		sharedInstance = [[[self class] alloc] init];
+		[instanceDict setObject:sharedInstance forKey:instanceKey];
+	}
 	return sharedInstance;
 }
 
@@ -27,6 +33,10 @@
 
 - (BOOL)isEmpty {
 	return [self isEqual:[NSNull null]];
+}
+
+- (BOOL)isMeaningful {
+	return ![self isEmpty];
 }
 
 @end

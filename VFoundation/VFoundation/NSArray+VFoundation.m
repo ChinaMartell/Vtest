@@ -39,7 +39,7 @@
 		[self sjAddObjectSafe:anObject];
 	}
 	else {
-		NSAssert(NO, @"addObject:nil");
+//		NSAssert(NO, @"addObject:nil");
 	}
 }
 

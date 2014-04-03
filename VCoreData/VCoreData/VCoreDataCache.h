@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class VCoreDataRequest;
+@class VCoreDataQueryRequest;
+@class VCoreDataUpdateRequest;
+@class VCoreDataAddRequest;
+@class VCoreDataDelRequest;
 @interface VCoreDataCache : NSObject
+- (NSArray *)queryData:(VCoreDataQueryRequest *)request;
+- (BOOL)updateData:(VCoreDataUpdateRequest *)request;
+- (BOOL)addData:(VCoreDataAddRequest *)request;
+- (BOOL)deleteData:(VCoreDataDelRequest *)request;
 
 @end

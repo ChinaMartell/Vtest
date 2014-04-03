@@ -11,3 +11,6 @@
 @interface VRequest : NSObject
 
 @end
+@interface VResponse : NSObject
+
+@end

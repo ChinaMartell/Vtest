@@ -36,7 +36,7 @@
 	NSMutableArray *paramArray = [[NSMutableArray alloc] init];
 	int i = 0;
 	for (VCoreDataPropertyModel*propertyModel in[obj allPropertyModels]) {
-		NSString *type = propertyModel.type;
+		NSString *type = [NSObject dataTypeToString:propertyModel.type];
 		NSString *name = propertyModel.name;
 		NSString *param = [NSString stringWithFormat:@"%@ %@ ", name, type];
 		if (i == 0) {
@@ -47,9 +47,10 @@
 	}
 	NSString *sql = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@(%@)",[obj modelName], [paramArray componentsJoinedByString:@","]];
 
-	int success = [self execute:sql];
+	int success = [self executeSQL:sql];
 	return success == SQLITE_OK;
 }
+
 
 - (BOOL)isTableExist:(VCoreDataClassModel*)obj {
 	sqlite3_stmt *statement;
@@ -63,15 +64,11 @@
 	return isExist;
 }
 
-- (int)execute:(NSString *)sql {
+- (int)executeSQL:(NSString *)sql {
 	char *err = nil;
 	return sqlite3_exec(_database, [sql UTF8String], NULL, NULL, &err);
 }
 
-#pragma mark - VCoreDataSQLPersister action method
-- (NSArray *)executeSQL:(NSString *)str {
-	return nil;
-}
 
 #pragma mark - VCoreDataPersisterProtocol
 
@@ -106,7 +103,7 @@
 		id resultObj = resultClass?[[resultClass alloc] init]:[[NSMutableDictionary alloc] init];
 		int column = 0;
 		for (VCoreDataPropertyModel *propertyModel in propertyArray) {
-			NSString *type = propertyModel.type;
+			VCoreDataType type = propertyModel.type;
 			id value = [self bindOrGetValue:nil withStatement:statement withType:type withIndex:column++ isBind:NO];
 			[resultObj setValue:value forKey:propertyModel.name];
 		}
@@ -143,7 +140,7 @@
     }
     int i = 1;
     for (VCoreDataPropertyModel *propertyModel  in propertyArray) {
-        NSString *type = propertyModel.type;
+        VCoreDataType type = propertyModel.type;
         id value =propertyModel.value;
         [self bindOrGetValue:value withStatement:statement withType:type withIndex:i++ isBind:YES];
     }
@@ -153,7 +150,8 @@
 
 }
 
-- (BOOL)addData:(NSArray *)objs {
+- (BOOL)addData:(VCoreDataAddRequest *)request {
+    NSArray *objs=request.classModels;
 	BOOL isSuc = YES;
     if (objs.count>ENABLE_TRANSACTION_THRESHOLD_MAX) {
         sqlite3_exec(_database,"BEGIN",0,0,0);
@@ -178,7 +176,7 @@
 		}
 		int i = 1;
 		for (VCoreDataPropertyModel*propertyModel in propertyArray) {
-			NSString *type = propertyModel.type;
+			VCoreDataType type = propertyModel.type;
 			id value = propertyModel.value;
 			[self bindOrGetValue:value withStatement:statement withType:type withIndex:i++ isBind:YES];
 		}
@@ -213,43 +211,91 @@
 	return YES;
 }
 
-- (id)bindOrGetValue:(id)value withStatement:(sqlite3_stmt *)statement withType:(NSString *)type withIndex:(NSInteger)index isBind:(BOOL)isBind {
-	if ([type isEqualToString:@"INTEGER"]) {
-		if (isBind) {
-			sqlite3_bind_int(statement, index, [value intValue]);
+
+-(id)executeData:(VCoreDataExecuteRequest *)request{
+    NSString *sql=request.command;
+    NSArray *paramArray=request.paramArray;
+    if ([sql isMeaningful]) {
+        sqlite3_stmt *statement = nil;
+        int success = sqlite3_prepare_v2(_database, [sql UTF8String], -1, &statement, NULL);
+        if (success != SQLITE_OK) {
+            return nil;
+        }
+        int i = 1;
+		for (VCoreDataPropertyModel*propertyModel in paramArray) {
+			VCoreDataType type = propertyModel.type;
+			id value = propertyModel.value;
+			[self bindOrGetValue:value withStatement:statement withType:type withIndex:i++ isBind:YES];
 		}
-		else {
-			value = @(sqlite3_column_int(statement, index));
-		}
-	}
-	else if ([type isEqualToString:@"REAL"]) {
-		if (isBind) {
-			sqlite3_bind_double(statement, index, [value doubleValue]);
-		}
-		else {
-			value = @(sqlite3_column_double(statement, index));
-		}
-	}
-	else if ([type isEqualToString:@"TEXT"]) {
-		if (isBind) {
-			sqlite3_bind_text(statement, index, [value UTF8String], -1, SQLITE_TRANSIENT);
-		}
-		else {
-			value = [[NSString alloc] initWithUTF8String:(char *)sqlite3_column_text(statement, index)];
-		}
-	}
-	else if ([type isEqualToString:@"BLOB"]) {
-		if (isBind) {
-			NSData *data = [NSKeyedArchiver archivedDataWithRootObject:value];
-			sqlite3_bind_blob(statement, index, [data bytes], data.length, SQLITE_TRANSIENT);
-		}
-		else {
-			int i = index;
-			NSUInteger blobLen = sqlite3_column_bytes(statement, i);
-			NSMutableData *data = [NSMutableData dataWithBytes:sqlite3_column_blob(statement, index) length:blobLen];
-			value = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-		}
-	}
+        
+        NSMutableArray *result = [[NSMutableArray alloc] init];
+        while ((sqlite3_step(statement) == SQLITE_ROW)) {
+             NSMutableArray *resultObj = [[NSMutableArray alloc] init];
+            int count=sqlite3_column_count(statement);
+            for (int i=0; i<count;i++) {
+                VCoreDataType type = (VCoreDataType)sqlite3_column_type(statement, i);
+                id value = [self bindOrGetValue:nil withStatement:statement withType:type withIndex:i isBind:NO];
+                [resultObj addObject:value];
+            }
+            [result addObject:resultObj];
+        }
+        sqlite3_finalize(statement);
+        return result;
+
+    }
+    
+    return nil;
+}
+
+- (id)bindOrGetValue:(id)value withStatement:(sqlite3_stmt *)statement withType:(VCoreDataType)type withIndex:(NSInteger)index isBind:(BOOL)isBind {
+    switch (type) {
+        case VCoreDataTypeInteger:
+            if (isBind) {
+                sqlite3_bind_int(statement, index, [value intValue]);
+            }
+            else {
+                value = @(sqlite3_column_int(statement, index));
+            }
+
+            break;
+        case VCoreDataTypeReal:
+            if (isBind) {
+                sqlite3_bind_double(statement, index, [value doubleValue]);
+            }
+            else {
+                value = @(sqlite3_column_double(statement, index));
+            }
+
+            break;
+        case VCoreDataTypeText:
+            if (isBind) {
+                sqlite3_bind_text(statement, index, [value UTF8String], -1, SQLITE_TRANSIENT);
+            }
+            else {
+                value = [[NSString alloc] initWithUTF8String:(char *)sqlite3_column_text(statement, index)];
+            }
+
+            break;
+        case VCoreDataTypeBlob:
+            if (isBind) {
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:value];
+                sqlite3_bind_blob(statement, index, [data bytes], data.length, SQLITE_TRANSIENT);
+            }
+            else {
+                int i = index;
+                NSUInteger blobLen = sqlite3_column_bytes(statement, i);
+                NSMutableData *data = [NSMutableData dataWithBytes:sqlite3_column_blob(statement, index) length:blobLen];
+                value = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+            }
+
+            break;
+        case VCoreDataTypeNull:
+            
+            break;
+            
+        default:
+            break;
+    }
 	return value;
 }
 

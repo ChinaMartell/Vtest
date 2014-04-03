@@ -1,8 +1,8 @@
 //
-//  VCoreDataPersister.h
+//  VCoreDataController.h
 //  VCoreData
 //
-//  Created by shadow on 14-3-28.
+//  Created by shadow on 14-4-2.
 //  Copyright (c) 2014年 SJ. All rights reserved.
 //
 
@@ -13,13 +13,11 @@
 @class VCoreDataAddRequest;
 @class VCoreDataDelRequest;
 @class VCoreDataExecuteRequest;
-/**
- *  VCoreDataPersisterProtocol
- */
-@protocol VCoreDataPersisterProtocol <NSObject>
+@interface VCoreDataController : NSObject
 - (NSArray *)queryData:(VCoreDataQueryRequest *)request;
 - (BOOL)updateData:(VCoreDataUpdateRequest *)request;
 - (BOOL)addData:(VCoreDataAddRequest *)request;
 - (BOOL)deleteData:(VCoreDataDelRequest *)request;
 - (id)executeData:(VCoreDataExecuteRequest *)request;
+
 @end
