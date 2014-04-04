@@ -8,7 +8,6 @@
 
 #import "VCoreDataCache.h"
 #import "VCoreData.h"
-#define FIRST_CACHE_PROPERTY_KEY(a, b) [NSString stringWithFormat : @"%@_%@", a, b]
 typedef NS_ENUM (NSInteger, VCoreDataCacheLevel) {
 	VCoreDataCacheLevelFirst,
 	VCoreDataCacheLevelSecond,
@@ -40,23 +39,33 @@ typedef NS_ENUM (NSInteger, VCoreDataCacheLevel) {
 	if (!isMeanful || (isMeanful && isParsed)) {
 		for (VCoreDataClassModel *model in request.classModels) {
 			NSMutableDictionary *classDict = [_firstCache objectForKey:[model modelName]];
-			VCoreDataPropertyModel *primaryModel = [model primaryPropertyModel];
 			if (isMeanful) {
-				VCoreDataPropertyModel *filterPropertyModel = [model propertyModel:[paramArray firstObject]];
-				for (VCoreDataPropertyModel *propertyModel in[model allPropertyModels]) {
-					NSMutableDictionary *propertyDict = [classDict objectForKey:propertyModel.name];
-					NSString *propertyKey = FIRST_CACHE_PROPERTY_KEY(primaryModel.value, filterPropertyModel.value);
-					[result addObject:[propertyDict objectForKey:propertyKey]];
-				}
+				NSString *name = [paramArray firstObject];
+				id value = [paramArray lastObject];
+				NSMutableDictionary *propertyDict = [classDict objectForKey:name];
+				NSMutableDictionary *propertyValueDict = [propertyDict objectForKey:value];
+				NSArray *array = [[propertyValueDict allValues] arrayWithBlock: ^id (id obj, NSInteger index) {
+				    return [obj allValues];
+				}];
+				[result addObjectsFromArray:array];
 			}
 			else {
-				[result addObjectsFromArray:[[classDict objectForKey:primaryModel.name] allObjects]];
+				VCoreDataPropertyModel *primaryModel = [model primaryPropertyModel];
+				NSString *name = primaryModel.name;
+				NSMutableDictionary *propertyDict = [classDict objectForKey:name];
+				[result addObjectsFromArray:[[propertyDict allValues] arrayWithBlock: ^id (id pValueArray, NSInteger index) { //property value dict
+				    return [[pValueArray allValues] arrayWithBlock: ^id (id primaryArray, NSInteger index) { //p-v-k-v
+				        return [[primaryArray allValues] arrayWithBlock: ^id (id ob3, NSInteger index) {
+				            return [ob3 allValues];
+						}];
+					}];
+				}]];
 			}
 		}
 		return result;
 	}
 	if (![result isMeaningful]) { //to get second cache
-		NSMutableDictionary *classDict = [_secondCache objectForKey:[[request.classModels arrayWithBlock: ^id (id obj,NSInteger index) {
+		NSMutableDictionary *classDict = [_secondCache objectForKey:[[request.classModels arrayWithBlock: ^id (id obj, NSInteger index) {
 		    return [obj modelName];
 		}] componentsJoinedByString:@"__"]];
 		[result addObjectsFromArray:[classDict objectForKey:request.filter]];
@@ -82,14 +91,14 @@ typedef NS_ENUM (NSInteger, VCoreDataCacheLevel) {
 				if (!propertyDict) {
 					propertyDict = [[NSMutableDictionary alloc] init];
 				}
-				[propertyDict setObject:model.modelInstance forKey:FIRST_CACHE_PROPERTY_KEY(primaryModel.value, propertyModel.value)];
+				[propertyDict setObject:@{ primaryModel.value:model.modelInstance } forKey:propertyModel.value];
 				[classDict setObject:propertyDict forKey:propertyModel.name];
 			}
 		}
 		[_firstCache setObject:classDict forKey:[model modelName]];
 
 		//second cache
-		NSString *secondCacheClassKey = [[request.classModels arrayWithBlock: ^id (id obj,NSInteger index) {
+		NSString *secondCacheClassKey = [[request.classModels arrayWithBlock: ^id (id obj, NSInteger index) {
 		    return [obj modelName];
 		}] componentsJoinedByString:@"__"];
 		NSMutableDictionary *classDictSecond = [_secondCache objectForKey:secondCacheClassKey];
@@ -109,14 +118,11 @@ typedef NS_ENUM (NSInteger, VCoreDataCacheLevel) {
 	if (!isMeanful || (isMeanful && isParsed)) {
 		for (VCoreDataClassModel *model in request.classModels) {
 			if (isMeanful) {
+				NSString *name = [paramArray firstObject];
+				id value = [paramArray lastObject];
 				NSMutableDictionary *classDict = [_firstCache objectForKey:[model modelName]];
-				VCoreDataPropertyModel *filterPropertyModel = [model propertyModel:[paramArray firstObject]];
-				VCoreDataPropertyModel *primaryModel = [model primaryPropertyModel];
-				for (VCoreDataPropertyModel *propertyModel in[model allPropertyModels]) {
-					NSMutableDictionary *propertyDict = [classDict objectForKey:propertyModel.name];
-					NSString *propertyKey = FIRST_CACHE_PROPERTY_KEY(primaryModel.value, filterPropertyModel.value);
-					[propertyDict removeObjectForKey:propertyKey];
-				}
+				NSMutableDictionary *propertyDict = [classDict objectForKey:name];
+				[propertyDict removeObjectForKey:value];
 			}
 			else {
 				[_firstCache removeObjectForKey:[model modelName]];

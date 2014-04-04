@@ -83,7 +83,12 @@
 	NSMutableArray *result = [[NSMutableArray alloc] init];
 	int i = 0;
 	for (id obj in self) {
-		[result addObject:block(obj, i++)];
+		if ([obj isKindOfClass:[NSArray class]]) {
+			[result addObjectsFromArray:block(obj, i++)];
+		}
+		else {
+			[result addObject:block(obj, i++)];
+		}
 	}
 	return result;
 }

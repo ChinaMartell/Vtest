@@ -400,7 +400,7 @@
 	return type;
 }
 
-- (NSString *)dataTypeToString:(VCoreDataType)type {
++ (NSString *)dataTypeToString:(VCoreDataType)type {
 	switch (type) {
 		case VCoreDataTypeInteger:
 			return @"INTEGER";

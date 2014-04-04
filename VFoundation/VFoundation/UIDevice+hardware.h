@@ -131,5 +131,4 @@ typedef enum {
 
 - (BOOL)bluetoothCheck;             //是否支持蓝牙
 
-- (NSString *)macAddress;
 @end
